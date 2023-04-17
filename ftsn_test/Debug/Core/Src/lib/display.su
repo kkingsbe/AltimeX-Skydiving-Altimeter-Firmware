@@ -1,0 +1,10 @@
+../Core/Src/lib/display.c:12:6:Display_Configure_Pins	48	static
+../Core/Src/lib/display.c:42:6:Display_Write_Byte	24	static
+../Core/Src/lib/display.c:185:6:Display_Turn_On	24	static
+../Core/Src/lib/display.c:195:6:Display_Turn_Off	24	static
+../Core/Src/lib/display.c:205:6:Display_All_Points_On	24	static
+../Core/Src/lib/display.c:215:6:Display_All_Points_Off	24	static
+../Core/Src/lib/display.c:225:6:Display_Booster_Ratio_Set	24	static
+../Core/Src/lib/display.c:235:6:Display_Set_Timer	16	static
+../Core/Src/lib/display.c:241:6:Display_Data_Read	48	static
+../Core/Src/lib/display.c:313:6:delay_ns	16	static
