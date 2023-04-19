@@ -18,3 +18,11 @@
 2023-04-19 00:34:41,043 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 2023-04-19 00:34:41,048 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 2023-04-19 00:34:41,053 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2023-04-19 09:40:01,582 [INFO] Activator:176 - 
+
+
+2023-04-19 09:40:01,587 [INFO] Activator:177 - !SESSION log4j initialized
+2023-04-19 09:40:12,409 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-04-19 09:40:39,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-04-19 09:40:39,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-04-19 09:40:39,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

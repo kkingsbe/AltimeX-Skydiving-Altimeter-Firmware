@@ -5728,3 +5728,1589 @@ Finished building: default.size.stdout
  
 Finished building: baro_test.list
  
+09:41:28 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25648	     20	   2268	  27936	   6d20	baro_test.elf
+Finished building: default.size.stdout
+ 
+09:45:30 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Read_Data':
+../Core/Src/lib/bmp581.c:115:2: error: unknown type name 'uintt16_t'; did you mean 'uint16_t'?
+  115 |  uintt16_t t_temp = temp_conc >> 16;
+      |  ^~~~~~~~~
+      |  uint16_t
+../Core/Src/lib/bmp581.c:115:12: warning: unused variable 't_temp' [-Wunused-variable]
+  115 |  uintt16_t t_temp = temp_conc >> 16;
+      |            ^~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+  161 | }
+      | ^
+make: *** [Core/Src/lib/subdir.mk:25: Core/Src/lib/bmp581.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:47:36 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Read_Data':
+../Core/Src/lib/bmp581.c:115:11: warning: unused variable 't_temp' [-Wunused-variable]
+  115 |  uint16_t t_temp = temp_conc >> 16;
+      |           ^~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+  161 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25656	     20	   2268	  27944	   6d28	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:48:02 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25656	     20	   2268	  27944	   6d28	baro_test.elf
+Finished building: default.size.stdout
+ 
+09:49:49 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25656	     20	   2268	  27944	   6d28	baro_test.elf
+Finished building: default.size.stdout
+ 
+09:51:08 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+  168 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:51:48 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+  169 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:52:01 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:53:06 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+09:53:17 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+09:54:02 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:95:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   95 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:170:1: warning: control reaches end of non-void function [-Wreturn-type]
+  170 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:58:03 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+  169 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+09:59:54 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:00:07 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:00:12 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:04:16 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:05:21 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+  169 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:05:56 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+  169 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:07:19 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:94:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   94 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+  169 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  109 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:108:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  108 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:08:10 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:09:45 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:109:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  109 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:108:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  108 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:10:23 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:11:22 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:109:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  109 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:108:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  108 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:11:38 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:109:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  109 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:108:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  108 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:12:01 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:11: warning: unused variable 'test' [-Wunused-variable]
+  120 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:110:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  110 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:109:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  109 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:13:21 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:11: warning: unused variable 'test' [-Wunused-variable]
+  120 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:112:12: warning: unused variable 'pressure' [-Wunused-variable]
+  112 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20888	     20	   2252	  23160	   5a78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:14:21 **** Build of configuration Debug for project led_test ****
+make -j8 all 
+arm-none-eabi-size   led_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20936	     20	   2180	  23136	   5a60	led_test.elf
+Finished building: default.size.stdout
+ 
+10:14:31 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:11: warning: unused variable 'test' [-Wunused-variable]
+  120 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:112:12: warning: unused variable 'pressure' [-Wunused-variable]
+  112 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20888	     20	   2252	  23160	   5a78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:14:44 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:11: warning: unused variable 'test' [-Wunused-variable]
+  120 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:112:12: warning: unused variable 'pressure' [-Wunused-variable]
+  112 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20888	     20	   2252	  23160	   5a78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:14:56 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: unused variable 'pressure' [-Wunused-variable]
+  112 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+../Core/Src/main.c:111:12: warning: unused variable 'temp_c' [-Wunused-variable]
+  111 |   uint32_t temp_c = 0;
+      |            ^~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20888	     20	   2252	  23160	   5a78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:15:34 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:12: warning: unused variable 'pressure' [-Wunused-variable]
+  111 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+../Core/Src/main.c:110:12: warning: unused variable 'temp_c' [-Wunused-variable]
+  110 |   uint32_t temp_c = 0;
+      |            ^~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20888	     20	   2252	  23160	   5a78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:16:07 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25696	     20	   2268	  27984	   6d50	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:17:20 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:17:36 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:18:07 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:18:19 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:18:35 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:18:58 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:19:16 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25704	     20	   2268	  27992	   6d58	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:19:44 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25720	     20	   2268	  28008	   6d68	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:20:00 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25720	     20	   2268	  28008	   6d68	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:20:25 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:11: warning: unused variable 'test' [-Wunused-variable]
+  119 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25720	     20	   2268	  28008	   6d68	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:20:57 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:11: warning: unused variable 'test' [-Wunused-variable]
+  124 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25720	     20	   2268	  28008	   6d68	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:21:11 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: unused variable 'test' [-Wunused-variable]
+  123 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:22:00 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: warning: unused variable 'test' [-Wunused-variable]
+  122 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:22:28 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: warning: unused variable 'test' [-Wunused-variable]
+  122 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25736	     20	   2268	  28024	   6d78	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:22:50 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: warning: unused variable 'test' [-Wunused-variable]
+  122 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:110:12: warning: unused variable 'pressure' [-Wunused-variable]
+  110 |   uint32_t pressure = 0;
+      |            ^~~~~~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25592	     20	   2268	  27880	   6ce8	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:23:17 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: warning: unused variable 'test' [-Wunused-variable]
+  122 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:26:22 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: warning: unused variable 'test' [-Wunused-variable]
+  122 |  uint32_t test = temp_c - 20;
+      |           ^~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25728	     20	   2268	  28016	   6d70	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:27:01 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:27:15 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:31:43 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:2: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  122 |  *temp_over_time[i] = *temp_c;
+      |  ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:23: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  122 |  *temp_over_time[i] = *temp_c;
+      |                       ^~~~~~~
+../Core/Src/main.c:123:2: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  123 |  *pressure_over_time[i] = *pressure;
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:27: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  123 |  *pressure_over_time[i] = *pressure;
+      |                           ^~~~~~~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:32:15 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: variable 'pressure_over_time' set but not used [-Wunused-but-set-variable]
+  112 |   uint32_t pressure_over_time [100];
+      |            ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:12: warning: variable 'temp_over_time' set but not used [-Wunused-but-set-variable]
+  111 |   uint32_t temp_over_time [100];
+      |            ^~~~~~~~~~~~~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25792	     20	   2268	  28080	   6db0	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:36:15 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25720	     20	   2268	  28008	   6d68	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:40:02 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  25712	     20	   2268	  28000	   6d60	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:47:07 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:22: warning: passing argument 1 of 'BMP_Read_Data' makes pointer from integer without a cast [-Wint-conversion]
+  120 |  alt = BMP_Read_Data(ref_pressure);
+      |                      ^~~~~~~~~~~~
+      |                      |
+      |                      uint32_t {aka long unsigned int}
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:180:16: warning: passing argument 1 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                ^~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/bmp581.h:52:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint32_t' {aka 'long unsigned int'}
+   52 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure);
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/lib/bmp581.c:114:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/main.c:120:8: error: too few arguments to function 'BMP_Read_Data'
+  120 |  alt = BMP_Read_Data(ref_pressure);
+      |        ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/bmp581.h:52:6: note: declared here
+   52 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure);
+      |      ^~~~~~~~~~~~~
+../Core/Src/lib/bmp581.c:180:20: warning: passing argument 2 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                    ^~
+      |                    |
+      |                    uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:112:12: warning: variable 'alt' set but not used [-Wunused-but-set-variable]
+  112 |   uint16_t alt = 0;
+      |            ^~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/lib/bmp581.c:114:48: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                                      ~~~~~~~~~~^~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:47:22 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: variable 'alt' set but not used [-Wunused-but-set-variable]
+  112 |   uint16_t alt = 0;
+      |            ^~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29304	    120	   2264	  31688	   7bc8	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:48:58 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: At top level:
+../Core/Src/lib/bmp581.c:176:8: error: conflicting types for 'BMP_Get_RelAlt_Ft'
+  176 | double BMP_Get_RelAlt_Ft(uint16_t reference_pressure)
+      |        ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/lib/bmp581.c:7:
+../Core/Inc/bmp581.h:57:10: note: previous declaration of 'BMP_Get_RelAlt_Ft' was here
+   57 | uint16_t BMP_Get_RelAlt_Ft(uint16_t reference_pressure);
+      |          ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:180:16: warning: passing argument 1 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                ^~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/lib/bmp581.c:180:20: warning: passing argument 2 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                    ^~
+      |                    |
+      |                    uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:48: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                                      ~~~~~~~~~~^~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:10: warning: variable 'alt' set but not used [-Wunused-but-set-variable]
+  112 |   double alt = 0.0;
+      |          ^~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:25: Core/Src/lib/bmp581.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:49:09 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:180:16: warning: passing argument 1 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                ^~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/lib/bmp581.c:180:20: warning: passing argument 2 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                    ^~
+      |                    |
+      |                    uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:48: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                                      ~~~~~~~~~~^~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:10: warning: variable 'alt' set but not used [-Wunused-but-set-variable]
+  112 |   double alt = 0.0;
+      |          ^~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29296	    120	   2264	  31680	   7bc0	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:50:00 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:180:16: warning: passing argument 1 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                ^~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/lib/bmp581.c:180:20: warning: passing argument 2 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                    ^~
+      |                    |
+      |                    uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:48: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                                      ~~~~~~~~~~^~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29304	    120	   2264	  31688	   7bc8	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:50:17 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29304	    120	   2264	  31688	   7bc8	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:50:26 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29304	    120	   2264	  31688	   7bc8	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:51:30 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:180:16: warning: passing argument 1 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                ^~
+      |                |
+      |                uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:30: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                    ~~~~~~~~~~^~~~~~
+../Core/Src/lib/bmp581.c:180:20: warning: passing argument 2 of 'BMP_Read_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |  BMP_Read_Data(&t, &p);
+      |                    ^~
+      |                    |
+      |                    uint16_t * {aka short unsigned int *}
+../Core/Src/lib/bmp581.c:114:48: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  114 | void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure)
+      |                                      ~~~~~~~~~~^~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29312	    120	   2264	  31696	   7bd0	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:51:59 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29312	    120	   2264	  31696	   7bd0	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:54:20 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = pow(frac_p, (double)1.0/5.257);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29328	    120	   2264	  31712	   7be0	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:55:00 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:51: error: expected ',' or ';' before ')' token
+  183 |  double terma = pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |                                                   ^
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+make: *** [Core/Src/lib/subdir.mk:25: Core/Src/lib/bmp581.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:55:16 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = (pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29384	    120	   2264	  31768	   7c18	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:56:28 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: At top level:
+../Core/Src/lib/bmp581.c:176:8: error: conflicting types for 'BMP_Get_RelAlt_Ft'
+  176 | double BMP_Get_RelAlt_Ft(uint32_t reference_pressure)
+      |        ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/lib/bmp581.c:7:
+../Core/Inc/bmp581.h:57:8: note: previous declaration of 'BMP_Get_RelAlt_Ft' was here
+   57 | double BMP_Get_RelAlt_Ft(uint16_t reference_pressure);
+      |        ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = (pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+make: *** [Core/Src/lib/subdir.mk:25: Core/Src/lib/bmp581.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:56:41 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = (pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:10: warning: variable 'alt' set but not used [-Wunused-but-set-variable]
+  112 |   double alt = 0.0;
+      |          ^~~
+../Core/Src/main.c:108:11: warning: unused variable 'bmp_status' [-Wunused-variable]
+  108 |   uint8_t bmp_status = BMP_Get_Device_Status();
+      |           ^~~~~~~~~~
+../Core/Src/main.c:107:23: warning: unused variable 'bmp_mode' [-Wunused-variable]
+  107 |   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
+      |                       ^~~~~~~~
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29384	    120	   2264	  31768	   7c18	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:56:59 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29384	    120	   2264	  31768	   7c18	baro_test.elf
+Finished building: default.size.stdout
+ 
+10:57:23 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_RelAlt_Ft':
+../Core/Src/lib/bmp581.c:183:9: warning: unused variable 'terma' [-Wunused-variable]
+  183 |  double terma = (pow(frac_p, (double)1.0/5.257) - 1) * (t + 273.15);
+      |         ^~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    120	   2264	  31784	   7c28	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+10:58:48 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29336	    120	   2264	  31720	   7be8	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+11:02:24 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Src/lib/bmp581.c:98:10: warning: unused variable 'chip_id' [-Wunused-variable]
+   98 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+  173 | }
+      | ^
+arm-none-eabi-gcc -o "baro_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\baro_test\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baro_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: baro_test.elf
+ 
+arm-none-eabi-size   baro_test.elf 
+arm-none-eabi-objdump -h -S  baro_test.elf  > "baro_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  29360	    120	   2264	  31744	   7c00	baro_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: baro_test.list
+ 
+11:04:07 **** Incremental Build of configuration Debug for project baro_test ****
+make -j8 all 
+arm-none-eabi-size   baro_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29360	    120	   2264	  31744	   7c00	baro_test.elf
+Finished building: default.size.stdout
+ 

@@ -83,9 +83,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  Strip_Set_Timer(&htim2);
-  Strip_Clear();
-  Set_Brightness(5);
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -102,23 +100,28 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-  //HAL_StatusTypeDef res = HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(71<<1), 3, 5);
+  Strip_Set_Timer(&htim2);
+  Strip_Clear();
 
   BMP_Init_Default_Addr(&hi2c1);
   enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
   uint8_t bmp_status = BMP_Get_Device_Status();
-  uint16_t temp_c = 0;
-  uint16_t pressure = 0;
+  uint32_t temp_c = 0;
+  uint32_t ref_pressure = 0;
+  BMP_Read_Data(&temp_c, &ref_pressure);
+  double alt = 0.0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	BMP_Read_Data(&temp_c, &pressure);
-	Strip_Progress_Bar_Single_Color(temp_c - 20, GREEN);
+	Set_Brightness(20);
+	alt = BMP_Get_RelAlt_Ft(ref_pressure);
+	uint32_t test = temp_c - 25;
+	Strip_Progress_Bar_Single_Color(test, GREEN);
 	Strip_Send();
-	HAL_Delay(100);
+	HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
