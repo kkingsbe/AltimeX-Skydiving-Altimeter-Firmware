@@ -1,0 +1,17 @@
+18:19:16 **** Incremental Build of configuration Debug for project led_test ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "led_test.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\led_test\STM32F103C8TX_FLASH.ld" -Wl,-Map="led_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_test.elf
+ 
+arm-none-eabi-size   led_test.elf 
+arm-none-eabi-objdump -h -S  led_test.elf  > "led_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20936	     20	   2180	  23136	   5a60	led_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: led_test.list
+ 
+
+18:19:18 Build Finished. 0 errors, 0 warnings. (took 2s.377ms)
+

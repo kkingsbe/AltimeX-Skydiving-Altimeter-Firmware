@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0000ef83  00000000  00000000  00047619  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00089dfb  00000000  00000000  0005659c  2**0
+ 18 .debug_str    00089e05  00000000  00000000  0005659c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000e0397  2**0
+ 19 .comment      00000050  00000000  00000000  000e03a1  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003aa4  00000000  00000000  000e03e8  2**2
+ 20 .debug_frame  00003aa4  00000000  00000000  000e03f4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1866,8 +1866,8 @@ int main(void)
  800119e:	80bb      	strh	r3, [r7, #4]
   while (1)
   {
-	  Set_Brightness(90);
- 80011a0:	205a      	movs	r0, #90	; 0x5a
+	  Set_Brightness(5);
+ 80011a0:	2005      	movs	r0, #5
  80011a2:	f7ff fe49 	bl	8000e38 <Set_Brightness>
 	  if(k == 0) {
  80011a6:	88bb      	ldrh	r3, [r7, #4]
@@ -2024,7 +2024,7 @@ int main(void)
  80012d2:	88fb      	ldrh	r3, [r7, #6]
  80012d4:	3301      	adds	r3, #1
  80012d6:	80fb      	strh	r3, [r7, #6]
-	  Set_Brightness(90);
+	  Set_Brightness(5);
  80012d8:	e762      	b.n	80011a0 <main+0x30>
  80012da:	bf00      	nop
  80012dc:	20000200 	.word	0x20000200

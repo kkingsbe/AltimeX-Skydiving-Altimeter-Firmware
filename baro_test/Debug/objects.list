@@ -1,4 +1,6 @@
 "./Core/Src/lib/bmp581.o"
+"./Core/Src/lib/led_strip.o"
+"./Core/Src/lib/ws2813b_controller.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32f1xx_hal_msp.o"
 "./Core/Src/stm32f1xx_it.o"

@@ -5,13 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/lib/bmp581.c 
+../Core/Src/lib/bmp581.c \
+../Core/Src/lib/led_strip.c \
+../Core/Src/lib/ws2813b_controller.c 
 
 OBJS += \
-./Core/Src/lib/bmp581.o 
+./Core/Src/lib/bmp581.o \
+./Core/Src/lib/led_strip.o \
+./Core/Src/lib/ws2813b_controller.o 
 
 C_DEPS += \
-./Core/Src/lib/bmp581.d 
+./Core/Src/lib/bmp581.d \
+./Core/Src/lib/led_strip.d \
+./Core/Src/lib/ws2813b_controller.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +27,7 @@ Core/Src/lib/%.o Core/Src/lib/%.su Core/Src/lib/%.cyclo: ../Core/Src/lib/%.c Cor
 clean: clean-Core-2f-Src-2f-lib
 
 clean-Core-2f-Src-2f-lib:
-	-$(RM) ./Core/Src/lib/bmp581.cyclo ./Core/Src/lib/bmp581.d ./Core/Src/lib/bmp581.o ./Core/Src/lib/bmp581.su
+	-$(RM) ./Core/Src/lib/bmp581.cyclo ./Core/Src/lib/bmp581.d ./Core/Src/lib/bmp581.o ./Core/Src/lib/bmp581.su ./Core/Src/lib/led_strip.cyclo ./Core/Src/lib/led_strip.d ./Core/Src/lib/led_strip.o ./Core/Src/lib/led_strip.su ./Core/Src/lib/ws2813b_controller.cyclo ./Core/Src/lib/ws2813b_controller.d ./Core/Src/lib/ws2813b_controller.o ./Core/Src/lib/ws2813b_controller.su
 
 .PHONY: clean-Core-2f-Src-2f-lib
 
