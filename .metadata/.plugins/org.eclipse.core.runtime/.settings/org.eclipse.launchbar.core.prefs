@@ -1,10 +1,13 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ftsn_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open Source ColorAlti Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:led_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ftsn_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open Source ColorAlti Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open Source ColorAlti Demo Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:led_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open Source ColorAlti FINAL Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C Scan Debug
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C\ Scan\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C\ Scan\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ FINAL\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:led_test\ Debug/activeLaunchMode=run

@@ -67,11 +67,11 @@ static void MX_TIM1_Init(void);
 void set_strip(uint16_t alt, uint16_t step)
 {
 	Strip_Clear();
+	uint8_t num_led = 10;
 	uint8_t state = 0;
 	uint16_t exit = 12500;
 	uint16_t breakoff = 5500;
 	uint16_t deploy = 4500;
-
 	if(alt > breakoff + 1500) state = 0; //Freefall
 	else if(alt > breakoff) state = 1; //Pre breakoff
 	else if(alt > breakoff - 500) state = 2; //Breakoff
@@ -80,14 +80,14 @@ void set_strip(uint16_t alt, uint16_t step)
 
 	if(state == 0)
 	{
-		uint8_t leds = 6 * (1-(float)(alt - (breakoff + 1500)) / (exit - (breakoff + 1500)));
+		uint8_t leds = (num_led + 1) * (1-(float)(alt - (breakoff + 1500)) / (exit - (breakoff + 1500)));
 
 		Strip_Progress_Bar_Single_Color(leds, SKYBLUE);
 	}
 
 	if(state == 1)
 	{
-		uint8_t leds = 6 * (1-(float)(alt - breakoff) / ((breakoff + 1500) - breakoff));
+		uint8_t leds = (num_led + 1) * (1-(float)(alt - breakoff) / ((breakoff + 1500) - breakoff));
 
 		Strip_Progress_Bar_Single_Color(leds, GREEN);
 	}
@@ -97,13 +97,13 @@ void set_strip(uint16_t alt, uint16_t step)
 		uint8_t on = (step) % 2 == 0;
 		if(on)
 		{
-			Strip_Progress_Bar_Single_Color(5, GREEN);
+			Strip_Progress_Bar_Single_Color(num_led, GREEN);
 		}
 	}
 
 	if(state == 3)
 	{
-		uint8_t leds = 6 * (1-(float)(alt - deploy) / ((deploy + 500) - deploy));
+		uint8_t leds = (num_led + 1) * (1-(float)(alt - deploy) / ((deploy + 500) - deploy));
 
 		Strip_Progress_Bar_Single_Color(leds, RED);
 	}
@@ -113,11 +113,15 @@ void set_strip(uint16_t alt, uint16_t step)
 		uint8_t on = (step) % 2 == 0;
 		if(on)
 		{
-			Strip_Progress_Bar_Single_Color(5, RED);
+			Strip_Progress_Bar_Single_Color(num_led, RED);
 		}
 	}
 
 	Strip_Send();
+
+	//TODO: Detect if under canopy
+	//Add blinking on ascent
+	//Use actual altitude
 }
 
 /* USER CODE END 0 */
@@ -162,13 +166,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_Delay(10000);
   uint16_t j = 0;
   uint16_t alt = 12500;//12500;
   while (1)
   {
 	Set_Brightness(20);
 	set_strip(alt, j);
-	alt -= 20; //4x speed
+	//Standby mode for first 20 secs
+	if(HAL_GetTick() > 20000) alt -= 20; //4x speed
+	if(alt <= 0) alt = 12500;
 	j++;
 	HAL_Delay(100); //10hz
     /* USER CODE END WHILE */

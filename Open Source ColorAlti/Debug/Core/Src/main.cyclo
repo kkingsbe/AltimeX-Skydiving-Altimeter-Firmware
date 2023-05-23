@@ -1,9 +1,9 @@
 main.c:67:6:set_strip	12
-main.c:129:5:main	1
-main.c:185:6:SystemClock_Config	3
-main.c:224:13:MX_I2C1_Init	2
-main.c:258:13:MX_TIM1_Init	4
-main.c:304:13:MX_TIM2_Init	7
-main.c:365:13:MX_DMA_Init	1
-main.c:383:13:MX_GPIO_Init	1
-main.c:428:6:Error_Handler	1
+main.c:133:5:main	3
+main.c:192:6:SystemClock_Config	3
+main.c:231:13:MX_I2C1_Init	2
+main.c:265:13:MX_TIM1_Init	4
+main.c:311:13:MX_TIM2_Init	7
+main.c:372:13:MX_DMA_Init	1
+main.c:390:13:MX_GPIO_Init	1
+main.c:435:6:Error_Handler	1
