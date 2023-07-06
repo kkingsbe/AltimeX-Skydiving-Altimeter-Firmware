@@ -9,14 +9,21 @@
 struct BMP_Config bmpConfig;
 enum BMP_Measurement_Mode bmpCurrentMode;
 
-void BMP_Init_Default_Addr(I2C_HandleTypeDef* i2c_config)
+uint8_t BMP_Init_Default_Addr(I2C_HandleTypeDef* i2c_config)
 {
-	BMP_Init(i2c_config, BMP_DEFAULT_ADDRESS);
+	uint8_t res = BMP_Init(i2c_config, BMP_DEFAULT_ADDRESS);
+	return res;
 }
 
-void BMP_Init(I2C_HandleTypeDef* i2c_config, uint16_t address)
+uint8_t BMP_Init(I2C_HandleTypeDef* i2c_config, uint16_t address)
 {
 	HAL_Delay(1000);
+	HAL_StatusTypeDef i2c_status = HAL_I2C_IsDeviceReady(bmpConfig.i2c_config, (uint16_t)(bmpConfig.address<<1), 3, 5);
+
+	if(i2c_status == HAL_BUSY) {
+		return 0;
+	}
+
 	bmpConfig.i2c_config = i2c_config;
 	bmpConfig.address = address;
 	bmpCurrentMode = NONE;
@@ -29,6 +36,7 @@ void BMP_Init(I2C_HandleTypeDef* i2c_config, uint16_t address)
 
 	//Configure FIFO
 	BMP_Configure_FIFO();
+	return 1;
 }
 
 void BMP_Configure_FIFO()
@@ -47,6 +55,7 @@ void BMP_Switch_Power_Mode(enum BMP_Power_Mode new_mode)
 	uint8_t odr_config[1];
 	BMP_Reg_Read(BMP_ODR_CONFIG, 1, odr_config);
 	odr_config[0] &= 0xFC; // Clear the lower 2 bits
+	odr_config[0] &= 0x7F; // Clear first bit
 
 	uint8_t mode_code; //Stores the 2 bit mode code
 
@@ -68,6 +77,9 @@ void BMP_Switch_Power_Mode(enum BMP_Power_Mode new_mode)
 	//Write new power mode configuration
 	HAL_I2C_Mem_Write(bmpConfig.i2c_config, (uint16_t)(bmpConfig.address<<1), BMP_ODR_CONFIG, 1, odr_config, 1, 100);
 	HAL_Delay(10);
+
+	uint8_t osr_config[1];
+	BMP_Reg_Read(0x38, 1, osr_config);
 
 	//Wait for mode change to apply
 	uint8_t current_odr_config[1];

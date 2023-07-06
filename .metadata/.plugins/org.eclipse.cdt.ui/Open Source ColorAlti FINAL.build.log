@@ -1,10 +1,10 @@
-20:27:58 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
-make -j8 all 
+18:24:54 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
 arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  24800	    144	   2592	  27536	   6b90	Open Source ColorAlti FINAL.elf
+  25072	    144	   2592	  27808	   6ca0	Open Source ColorAlti FINAL.elf
 Finished building: default.size.stdout
  
 
-20:27:58 Build Finished. 0 errors, 0 warnings. (took 567ms)
+18:24:55 Build Finished. 0 errors, 0 warnings. (took 229ms)
 

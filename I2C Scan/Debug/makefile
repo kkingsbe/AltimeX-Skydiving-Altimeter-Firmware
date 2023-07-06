@@ -60,8 +60,8 @@ all: main-build
 main-build: I2C\ Scan.elf secondary-outputs
 
 # Tool invocations
-I2C\ Scan.elf I2C\ Scan.map: $(OBJS) $(USER_OBJS) C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\I2C\ Scan\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "I2C Scan.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\I2C Scan\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C Scan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+I2C\ Scan.elf I2C\ Scan.map: $(OBJS) $(USER_OBJS) C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\I2C\ Scan\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "I2C Scan.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\I2C Scan\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C Scan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

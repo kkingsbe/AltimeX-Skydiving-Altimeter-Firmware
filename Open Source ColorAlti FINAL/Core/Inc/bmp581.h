@@ -43,8 +43,8 @@ enum BMP_Power_Mode {
 extern struct BMP_Config bmpConfig;
 extern enum BMP_Measurement_Mode bmpCurrentMode;
 
-void BMP_Init_Default_Addr(I2C_HandleTypeDef* i2c_config);
-void BMP_Init(I2C_HandleTypeDef* i2c_config, uint16_t address);
+uint8_t BMP_Init_Default_Addr(I2C_HandleTypeDef* i2c_config);
+uint8_t BMP_Init(I2C_HandleTypeDef* i2c_config, uint16_t address);
 void BMP_Reg_Read(uint16_t reg_addr, uint16_t reg_size, uint8_t* data_output);
 void BMP_Switch_Power_Mode(enum BMP_Power_Mode new_mode);
 enum BMP_Power_Mode BMP_Get_Mode();

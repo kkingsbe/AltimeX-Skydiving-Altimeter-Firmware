@@ -104,8 +104,8 @@ int main(void)
 	Strip_Set_Timer(&htim2);
 	Strip_Clear();
 
-	//HAL_Delay(1000);
-	BMP_Init_Default_Addr(&hi2c1);
+	HAL_Delay(1000);
+	uint8_t bmp_startup_result = BMP_Init(&hi2c1, 0x47);
 	uint8_t bmp_status = BMP_Get_Device_Status();
 	enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
 	uint32_t temp_c = 0;
