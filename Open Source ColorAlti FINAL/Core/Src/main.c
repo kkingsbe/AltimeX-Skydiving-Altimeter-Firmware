@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "coloralti_state_controller.h"
 #include "coloralti_led_controller.h"
-#include "bmp581.h"
+#include "LPS22HB.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -105,12 +105,9 @@ int main(void)
 	Strip_Clear();
 
 	HAL_Delay(1000);
-	uint8_t bmp_startup_result = BMP_Init(&hi2c1, 0x47);
-	uint8_t bmp_status = BMP_Get_Device_Status();
-	enum BMP_Power_Mode bmp_mode = BMP_Get_Mode();
-	uint32_t temp_c = 0;
-	uint32_t ref_pressure = 0;
-	BMP_Read_Data(&temp_c, &ref_pressure);
+	uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+	double refP = LPS_Get_Pressure();
+	double refT = LPS_Get_Temp();
 	double alt = 0.0;
 
   /* USER CODE END 2 */
@@ -119,7 +116,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	alt = BMP_Get_RelAlt_Ft(ref_pressure);
+	alt = LPS_Get_RelAlt_Ft(refP);
 	StateController_updateState(alt);
 	ColorAlti_displayLeds(StateController_currentState, alt);
 	HAL_Delay(100); //10hz

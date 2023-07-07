@@ -9,7 +9,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C\ Scan\ Debug/activeLaunchMo
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C\ Scan\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ Debug/activeLaunchTarget=null\:---
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ FINAL\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ FINAL\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Open\ Source\ ColorAlti\ FINAL\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:baro_test\ Debug/activeLaunchTarget=null\:---
