@@ -701,3 +701,15 @@ java.lang.Exception: localhost:2331: Connection timed out.
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-07-06 21:59:57.200
 !MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-07-06 22:28:59.610
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-07-06 22:30:08.275
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-07-06 22:30:49.941
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-07-06 22:31:51.354
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16

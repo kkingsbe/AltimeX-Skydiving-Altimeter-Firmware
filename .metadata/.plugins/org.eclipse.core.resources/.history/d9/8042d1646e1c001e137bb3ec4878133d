@@ -131,13 +131,13 @@ double LPS_Get_Temp()
 
 double LPS_Get_TempF()
 {
-	double tempC = LPS_Get_Temp();
+	uint16_t tempC = LPS_Get_Temp();
 	return (tempC * (9/5.0)) + 32;
 }
 
 double LPS_Get_PressureATM()
 {
-	double pressHPA = LPS_Get_Pressure();
+	uint16_t pressHPA = LPS_Get_Pressure();
 	return pressHPA * 0.0009869233;
 }
 
@@ -145,7 +145,7 @@ double LPS_Get_PressureATM()
 double LPS_Get_RelAlt_Ft(uint32_t reference_pressure)
 {
 	double p = LPS_Get_Pressure();
-	double t = LPS_Get_Temp();
+	uint16_t t = LPS_Get_Temp();
 
 	//Hypsometric formula: https://keisan.casio.com/exec/system/1224585971
 	double frac_p = (double)reference_pressure / p;
