@@ -8,38 +8,29 @@
 #include "coloralti_state_controller.h"
 extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
 
-uint16_t ascentThreshold = 500;
-uint16_t ascentThresholdTime = 1000; //ms that altitude must be above the ascentThreshold before transitioning between states
 uint8_t testingAscent = 0; //1 while validating ascent
 uint32_t ascentTestStart = 0; //ms, the timestamp of when the altitude crossed the ascentThreshold
 
 uint32_t gearCheckNotificationStart = 0; //ms, the timestamp of when the gearcheck notification was displayed
-uint32_t gearCheckNotificationLength = 5000; //ms, the length of the gearcheck notification
 uint8_t displayedGearCheck = 0; //1 once gearcheck has been shown
 
 uint16_t prevAlt = 0; //Stores the previous altitude
 uint8_t freefallTest = 0; //1 while validating freefall start
 uint32_t freefallTestStart = 0; //ms, the timestamp of when freefall test started
 uint16_t freefallStartAlt = 0; //ft, the altitude where freefall may have begun
-uint32_t freefallThresholdTime = 2000; //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
 
 uint16_t deployTestPrevAlt = 0; //Stores the previous altitude while testing for deploy
 uint32_t deployTestPrevTime = 0; //ms, the timestamp of the previous datapoint
 uint8_t deployTest = 0; //1 while validating deployment test
 uint32_t deployTestStart = 0; //ms, the timestamp for starting to validate deployment
-uint32_t deployTestThresholdTime = 2000; //ms, threshold time that vertical speed has to be under 50mph
 uint16_t deployTestStartAlt = 0; //ft, altitude at beginning of current deployment test
 
-void StateController_updateState(uint16_t alt)
+void StateController_updateState(struct ColorAltiConfig* config, uint16_t alt)
 {
-	uint16_t exit = 12500;
-	uint16_t breakoff = 5500;
-	uint16_t deploy = 4500;
-
 	if(StateController_currentState == COLORALTI_STANDBY)
 	{
 		//If the altitude is above the ascent threshold altitude
-		if(alt > ascentThreshold)
+		if(alt > config->ascentThreshold)
 		{
 			//If this is the first tick where above ascent threshold altitude
 			if(testingAscent == 0)
@@ -52,7 +43,7 @@ void StateController_updateState(uint16_t alt)
 			if(testingAscent == 1)
 			{
 				//If ascentThresholdTime has elapsed, transition to ASCENT state
-				if(HAL_GetTick() - ascentTestStart >= ascentThresholdTime)
+				if(HAL_GetTick() - ascentTestStart >= config->ascentThresholdTime)
 				{
 					StateController_currentState = COLORALTI_ASCENT;
 				}
@@ -60,7 +51,7 @@ void StateController_updateState(uint16_t alt)
 		}
 
 		//If the altitude is below the ascent threshold altitude
-		if(alt < ascentThreshold)
+		if(alt < config->ascentThreshold)
 		{
 			//Set testingAscent to false if it was true
 			if(testingAscent == 1)
@@ -89,7 +80,7 @@ void StateController_updateState(uint16_t alt)
 		}
 
 		//If gearCheckNotificaitonLength has elapsed, transition out of GEARCHECK state
-		if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + gearCheckNotificationLength)
+		if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
 		{
 			StateController_currentState = COLORALTI_DETECT_FREEFALL_START;
 		}
@@ -119,10 +110,13 @@ void StateController_updateState(uint16_t alt)
 			}
 
 			//If we have been successfully testing for freefall for longer than the threshold time
-			if(freefallTest == 1 && HAL_GetTick() > freefallTestStart + freefallThresholdTime)
+			if(freefallTest == 1 && HAL_GetTick() > freefallTestStart + config->freefallThresholdTime)
 			{
+				double elapsedTimeSec = (double)(HAL_GetTick() - freefallTestStart) / 1000;
+				double avgSpeedFps = ((double)(freefallStartAlt - alt) / elapsedTimeSec);
+
 				//If average speed is above 80mph
-				if(((double)(freefallStartAlt - alt) / (double)(freefallTestStart - HAL_GetTick())) >= 117.0) //80mph to fps
+				if(avgSpeedFps >= 117.0) //80mph to fps
 				{
 					StateController_currentState = COLORALTI_FREEFALL;
 				}
@@ -144,7 +138,7 @@ void StateController_updateState(uint16_t alt)
 
 	if(StateController_currentState == COLORALTI_FREEFALL)
 	{
-		if(alt < breakoff + 1500)
+		if(alt < config->breakoff + 1500)
 		{
 			StateController_currentState = COLORALTI_APPROACHING_BREAKOFF;
 		}
@@ -152,7 +146,7 @@ void StateController_updateState(uint16_t alt)
 
 	if(StateController_currentState == COLORALTI_APPROACHING_BREAKOFF)
 	{
-		if(alt < breakoff)
+		if(alt < config->breakoff)
 		{
 			StateController_currentState = COLORALTI_BREAKOFF;
 		}
@@ -160,7 +154,7 @@ void StateController_updateState(uint16_t alt)
 
 	if(StateController_currentState == COLORALTI_BREAKOFF)
 	{
-		if(alt < breakoff - 500)
+		if(alt < config->breakoff - 500)
 		{
 			StateController_currentState = COLORALTI_TRACK;
 		}
@@ -168,7 +162,7 @@ void StateController_updateState(uint16_t alt)
 
 	if(StateController_currentState == COLORALTI_TRACK)
 	{
-		if(alt < deploy)
+		if(alt < config->deploy)
 		{
 			StateController_currentState = COLORALTI_DEPLOY;
 		}
@@ -192,7 +186,7 @@ void StateController_updateState(uint16_t alt)
 			//If average vertical speed has been < 50mph for deployThresholdTime
 			if(((double)(deployTestStartAlt - alt) / (double)(HAL_GetTick() - deployTestStart)) <= 73.0)
 			{
-				if(HAL_GetTick() > deployTestStart + deployTestThresholdTime)
+				if(HAL_GetTick() > deployTestStart + config->deployTestThresholdTime)
 				{
 					StateController_currentState = COLORALTI_CANOPY;
 				}

@@ -8,6 +8,7 @@
 #ifndef INC_COLORALTI_STATE_CONTROLLER_H_
 #define INC_COLORALTI_STATE_CONTROLLER_H_
 #include "stm32f1xx_hal.h"
+#include "coloralti_config.h"
 #include "math.h"
 
 enum ColorAltiState {
@@ -25,6 +26,6 @@ enum ColorAltiState {
 
 extern enum ColorAltiState StateController_currentState;
 
-void StateController_updateState(uint16_t alt);
+void StateController_updateState(struct ColorAltiConfig* config, uint16_t alt);
 
 #endif /* INC_COLORALTI_STATE_CONTROLLER_H_ */

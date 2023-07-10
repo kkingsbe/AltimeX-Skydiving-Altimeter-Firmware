@@ -1,0 +1,10 @@
+19:06:52 **** Incremental Build of configuration Debug for project USB Test ****
+make -j16 all 
+arm-none-eabi-size   USB\ Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35396	    388	   6436	  42220	   a4ec	USB Test.elf
+Finished building: default.size.stdout
+ 
+
+19:06:53 Build Finished. 0 errors, 0 warnings. (took 233ms)
+

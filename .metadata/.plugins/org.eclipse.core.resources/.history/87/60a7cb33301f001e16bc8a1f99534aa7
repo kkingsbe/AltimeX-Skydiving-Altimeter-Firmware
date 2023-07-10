@@ -1,0 +1,86 @@
+/*
+ * coloralti_led_controller.c
+ *
+ *  Created on: Apr 30, 2023
+ *      Author: kking
+ */
+
+#include "coloralti_led_controller.h"
+
+uint32_t standbyLastFlash = 0;
+uint32_t standbyFlashOnLength = 1000;
+uint32_t standbyFlashOffLength = 10000;
+uint32_t lastLedTurnonTime = 0;
+
+void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t alt)
+{
+	if(state == COLORALTI_STANDBY)
+	{
+		uint32_t standbyFlashLength = standbyFlashOnLength + standbyFlashOffLength;
+		Set_Brightness(5);
+
+		//If the current time is greater than the last flash time + the flash length, we are onto a new flash now.
+		if(HAL_GetTick() > standbyLastFlash + standbyFlashLength) {
+			standbyLastFlash = HAL_GetTick();
+		}
+		else
+		{
+			//If the current time is greater than the last flash time + the flash, we are in the on portion of the flash.
+			if(standbyLastFlash + standbyFlashOffLength < HAL_GetTick())
+			{
+				Strip_Progress_Bar_Single_Color(10, GREEN);
+			}
+			else
+			{
+				Strip_Clear();
+			}
+		}
+	}
+
+	if(state == COLORALTI_ASCENT)
+	{
+
+	}
+
+	if(state == COLORALTI_GEARCHECK)
+	{
+
+	}
+
+	if(state == COLORALTI_DETECT_FREEFALL_START)
+	{
+
+	}
+
+	if(state == COLORALTI_FREEFALL)
+	{
+
+	}
+
+	if(state == COLORALTI_APPROACHING_BREAKOFF)
+	{
+
+	}
+
+	if(state == COLORALTI_BREAKOFF)
+	{
+
+	}
+
+	if(state == COLORALTI_TRACK)
+	{
+
+	}
+
+	if(state == COLORALTI_DEPLOY)
+	{
+
+	}
+
+	if(state == COLORALTI_CANOPY)
+	{
+
+	}
+
+	Strip_Send();
+}

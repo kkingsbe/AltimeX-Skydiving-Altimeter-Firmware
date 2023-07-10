@@ -1,0 +1,30 @@
+/*
+ * coloralti_led_controller.h
+ *
+ *  Created on: Apr 30, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_COLORALTI_LED_CONTROLLER_H_
+#define INC_COLORALTI_LED_CONTROLLER_H_
+#include "coloralti_state_controller.h"
+#include "led_strip.h"
+
+struct ColorAltiConfig {
+		uint16_t ascentThreshold;             //The altitude you must pass for it to transition into the ascent state
+		uint16_t ascentThresholdTime;         //ms that altitude must be above the ascentThreshold before transitioning between states
+
+		uint32_t gearCheckNotificationStart;  //ms, the timestamp of when the gearcheck notification was displayed
+		uint32_t gearCheckNotificationLength; //ms, the length of the gearcheck notification
+
+		uint32_t freefallThresholdTime;       //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
+
+		uint16_t exit;                        //Exit altitude
+		uint16_t breakoff;                    //Breakoff altitude
+		uint16_t deploy;                      //Deployment altitude
+};
+
+void StateController_setConfig(ColorAltiConfig newConfig);
+void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t alt);
+
+#endif /* INC_COLORALTI_LED_CONTROLLER_H_ */

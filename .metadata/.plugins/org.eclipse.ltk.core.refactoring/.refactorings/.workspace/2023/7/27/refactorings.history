@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;USB Test/Core/Src/usb_descriptors.c&apos;" deleteContents="false" description="Delete resource &apos;USB Test/Core/Src/usb_descriptors.c&apos;" element1="/USB Test/Core/Src/usb_descriptors.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1688769951956"/>&#x0A;<refactoring comment="Delete resource &apos;USB Test/Core/Inc/tusb_config.h&apos;" deleteContents="false" description="Delete resource &apos;USB Test/Core/Inc/tusb_config.h&apos;" element1="/USB Test/Core/Inc/tusb_config.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1688769954997"/>
+</session>

@@ -8,8 +8,9 @@
 #ifndef INC_COLORALTI_LED_CONTROLLER_H_
 #define INC_COLORALTI_LED_CONTROLLER_H_
 #include "coloralti_state_controller.h"
+#include "coloralti_config.h"
 #include "led_strip.h"
 
-void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t alt);
+void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct ColorAltiConfig* config, uint16_t alt);
 
 #endif /* INC_COLORALTI_LED_CONTROLLER_H_ */

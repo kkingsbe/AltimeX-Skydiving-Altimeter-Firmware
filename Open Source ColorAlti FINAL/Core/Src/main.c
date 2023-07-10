@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "led_strip.h"
 #include "coloralti_state_controller.h"
 #include "coloralti_led_controller.h"
 #include "LPS22HB.h"
@@ -83,7 +84,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+	Strip_Set_Timer(&htim2);
+	Strip_Clear();
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -101,25 +103,46 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
 
-	Strip_Set_Timer(&htim2);
-	Strip_Clear();
-
 	HAL_Delay(1000);
 	uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
 	double refP = LPS_Get_Pressure();
 	double refT = LPS_Get_Temp();
-	double alt = 0.0;
+	double tempF = LPS_Get_TempF();
+	//double alt = 0.0;
+	uint16_t alt = 0;
 
+	struct ColorAltiConfig config;
+	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
+	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
+	config.deployTestThresholdTime = 2000;     //ms, threshold time that vertical speed has to be under 50mph
+	config.gearCheckNotificationLength = 5000; //ms, the length of the gearcheck notification
+	config.freefallThresholdTime = 2000;       //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
+	config.exit = 12500;                       //Exit altitude
+	config.breakoff = 5500;                    //Breakoff altitude
+	config.deploy = 4500;                      //Deployment altitude
+	config.standbyFlashOnLength = 250;         //How long the light is on for when in standby mode
+	config.standbyFlashOffLength = 5000;       //Period between each flash in standby mode
+	config.numLeds = 10;                       //The number of leds being used
+	config.gearCheckAlt = 10000;               //The altitude that the gear check notification is given
+	config.brightness = 20;                    //LED brightness
+	config.standbyBrightness = 5;              //Brightness of LEDS while in standby mode
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint16_t step = 0;
   while (1)
   {
-	alt = LPS_Get_RelAlt_Ft(refP);
-	StateController_updateState(alt);
-	ColorAlti_displayLeds(StateController_currentState, alt);
-	HAL_Delay(100); //10hz
+    Set_Brightness(20);
+    tempF = LPS_Get_TempF();
+    if(HAL_GetTick() > 70000) alt -= 29; //Standby for first 10secs. Ascend for next 60 secs. Descend after that
+    if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
+    if(alt < 0) alt = 12500;
+    //alt = LPS_Get_RelAlt_Ft(refP);
+    StateController_updateState(&config, alt);
+    ColorAlti_displayLeds(StateController_currentState, step, &config, alt);
+    step++;
+    HAL_Delay(100); //10hz
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

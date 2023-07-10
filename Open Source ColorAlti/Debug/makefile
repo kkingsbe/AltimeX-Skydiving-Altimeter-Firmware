@@ -35,34 +35,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Open Source ColorAlti Demo
+BUILD_ARTIFACT_NAME := Open Source ColorAlti
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Open\ Source\ ColorAlti\ Demo.elf \
+Open\ Source\ ColorAlti.elf \
 
 MAP_FILES += \
-Open\ Source\ ColorAlti\ Demo.map \
+Open\ Source\ ColorAlti.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Open\ Source\ ColorAlti\ Demo.list \
+Open\ Source\ ColorAlti.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Open\ Source\ ColorAlti\ Demo.elf secondary-outputs
+main-build: Open\ Source\ ColorAlti.elf secondary-outputs
 
 # Tool invocations
-Open\ Source\ ColorAlti\ Demo.elf Open\ Source\ ColorAlti\ Demo.map: $(OBJS) $(USER_OBJS) C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\Open\ Source\ ColorAlti\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Open Source ColorAlti Demo.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\kking\STM32CubeIDE\workspace_1.12.0\Altimeter\Open Source ColorAlti\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti Demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Open\ Source\ ColorAlti.elf Open\ Source\ ColorAlti.map: $(OBJS) $(USER_OBJS) C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open\ Source\ ColorAlti\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Open Source ColorAlti.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -71,14 +71,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Open\ Source\ ColorAlti\ Demo.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Open Source ColorAlti Demo.list"
+Open\ Source\ ColorAlti.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Open Source ColorAlti.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Open\ Source\ ColorAlti\ Demo.elf Open\ Source\ ColorAlti\ Demo.list Open\ Source\ ColorAlti\ Demo.map Open\\ Source\\ ColorAlti\\ Demo.elf default.size.stdout
+	-$(RM) Open\ Source\ ColorAlti.elf Open\ Source\ ColorAlti.list Open\ Source\ ColorAlti.map Open\\ Source\\ ColorAlti.elf default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

@@ -1,17 +1,10 @@
-22:31:49 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+13:08:09 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/lib/LPS22HB.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
-arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Open Source ColorAlti FINAL.elf
- 
 arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
-arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
    text	   data	    bss	    dec	    hex	filename
-  24840	    144	   2592	  27576	   6bb8	Open Source ColorAlti FINAL.elf
+  28632	     20	   2588	  31240	   7a08	Open Source ColorAlti FINAL.elf
 Finished building: default.size.stdout
  
-Finished building: Open Source ColorAlti FINAL.list
- 
 
-22:31:50 Build Finished. 0 errors, 0 warnings. (took 544ms)
+13:08:09 Build Finished. 0 errors, 0 warnings. (took 239ms)
 

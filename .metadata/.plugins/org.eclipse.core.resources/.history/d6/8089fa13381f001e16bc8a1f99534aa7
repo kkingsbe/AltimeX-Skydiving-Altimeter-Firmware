@@ -1,0 +1,205 @@
+/*
+ * coloralti_state_controller.c
+ *
+ *  Created on: Apr 30, 2023
+ *      Author: kking
+ */
+
+#include "coloralti_state_controller.h"
+extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+
+uint8_t testingAscent = 0; //1 while validating ascent
+uint32_t ascentTestStart = 0; //ms, the timestamp of when the altitude crossed the ascentThreshold
+
+uint32_t gearCheckNotificationStart = 0; //ms, the timestamp of when the gearcheck notification was displayed
+uint8_t displayedGearCheck = 0; //1 once gearcheck has been shown
+
+uint16_t prevAlt = 0; //Stores the previous altitude
+uint8_t freefallTest = 0; //1 while validating freefall start
+uint32_t freefallTestStart = 0; //ms, the timestamp of when freefall test started
+uint16_t freefallStartAlt = 0; //ft, the altitude where freefall may have begun
+
+uint16_t deployTestPrevAlt = 0; //Stores the previous altitude while testing for deploy
+uint32_t deployTestPrevTime = 0; //ms, the timestamp of the previous datapoint
+uint8_t deployTest = 0; //1 while validating deployment test
+uint32_t deployTestStart = 0; //ms, the timestamp for starting to validate deployment
+uint16_t deployTestStartAlt = 0; //ft, altitude at beginning of current deployment test
+
+void StateController_updateState(ColorAltiConfig* config, uint16_t alt)
+{
+	if(StateController_currentState == COLORALTI_STANDBY)
+	{
+		//If the altitude is above the ascent threshold altitude
+		if(alt > config->ascentThreshold)
+		{
+			//If this is the first tick where above ascent threshold altitude
+			if(testingAscent == 0)
+			{
+				testingAscent = 1;
+				ascentTestStart = HAL_GetTick();
+			}
+
+			//If it was already above the ascent threshold altitude
+			if(testingAscent == 1)
+			{
+				//If ascentThresholdTime has elapsed, transition to ASCENT state
+				if(HAL_GetTick() - ascentTestStart >= config->ascentThresholdTime)
+				{
+					StateController_currentState = COLORALTI_ASCENT;
+				}
+			}
+		}
+
+		//If the altitude is below the ascent threshold altitude
+		if(alt < config->ascentThreshold)
+		{
+			//Set testingAscent to false if it was true
+			if(testingAscent == 1)
+			{
+				testingAscent = 0;
+			}
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_ASCENT)
+	{
+		//If the altitude is above 10k ft, change to gear check state
+		if(alt > 10000)
+		{
+			StateController_currentState = COLORALTI_GEARCHECK;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_GEARCHECK)
+	{
+		//Gear check notificiation is shown while in GEARCHECK state
+		if(displayedGearCheck == 0)
+		{
+			gearCheckNotificationStart = HAL_GetTick();
+			displayedGearCheck = 1;
+		}
+
+		//If gearCheckNotificaitonLength has elapsed, transition out of GEARCHECK state
+		if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+		{
+			StateController_currentState = COLORALTI_DETECT_FREEFALL_START;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_DETECT_FREEFALL_START)
+	{
+		/**
+		 * What alt do we think freefall started at?
+		 * What is our current altitude?
+		 * How much time has elapsed?
+		 * (Calculate average speed from that)
+		 * If current altitude is above where we think freefall started, then start over :)
+		 */
+
+		//NOTE TO FUTURE SELF: If there are any issues with it not detecting freefall, it is probably due to sensor noise. Use a filter / moving average on the sensor data to smooth
+
+		//If currently lower than the previously calculated altitude
+		if(prevAlt > alt)
+		{
+			//If not currently testing for freefall, start testing for freefall
+			if(freefallTest == 0)
+			{
+				freefallTest = 1;
+				freefallTestStart = HAL_GetTick();
+				freefallStartAlt = alt;
+			}
+
+			//If we have been successfully testing for freefall for longer than the threshold time
+			if(freefallTest == 1 && HAL_GetTick() > freefallTestStart + config->freefallThresholdTime)
+			{
+				//If average speed is above 80mph
+				if(((double)(freefallStartAlt - alt) / (double)(freefallTestStart - HAL_GetTick())) >= 117.0) //80mph to fps
+				{
+					StateController_currentState = COLORALTI_FREEFALL;
+				}
+			}
+		}
+
+		//If currently higher than previously calculated altitude
+		if(prevAlt < alt)
+		{
+			//Stop testing for freefall
+			if(freefallTest == 1)
+			{
+				freefallTest = 0;
+			}
+		}
+
+		prevAlt = alt;
+	}
+
+	if(StateController_currentState == COLORALTI_FREEFALL)
+	{
+		if(alt < config->breakoff + 1500)
+		{
+			StateController_currentState = COLORALTI_APPROACHING_BREAKOFF;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_APPROACHING_BREAKOFF)
+	{
+		if(alt < config->breakoff)
+		{
+			StateController_currentState = COLORALTI_BREAKOFF;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_BREAKOFF)
+	{
+		if(alt < config->breakoff - 500)
+		{
+			StateController_currentState = COLORALTI_TRACK;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_TRACK)
+	{
+		if(alt < config->deploy)
+		{
+			StateController_currentState = COLORALTI_DEPLOY;
+		}
+	}
+
+	if(StateController_currentState == COLORALTI_DEPLOY)
+	{
+
+		if(deployTest == 0)
+		{
+			//If average vertical speed over last two measurements is less than than 50mph
+			if(((double)(deployTestPrevAlt - alt) / (double)(HAL_GetTick() - deployTestPrevTime)) <= 73.0) //50mph to fps
+			{
+				deployTest = 1;
+				deployTestStart = HAL_GetTick();
+				deployTestStartAlt = alt;
+			}
+		}
+		if(deployTest == 1)
+		{
+			//If average vertical speed has been < 50mph for deployThresholdTime
+			if(((double)(deployTestStartAlt - alt) / (double)(HAL_GetTick() - deployTestStart)) <= 73.0)
+			{
+				if(HAL_GetTick() > deployTestStart + config->deployTestThresholdTime)
+				{
+					StateController_currentState = COLORALTI_CANOPY;
+				}
+			}
+		}
+
+		deployTestPrevTime = HAL_GetTick();
+		deployTestPrevAlt = alt;
+	}
+
+	if(StateController_currentState == COLORALTI_CANOPY)
+	{
+		//Go back into standby mode once under 100ft
+		if(alt <= 100)
+		{
+			StateController_currentState = COLORALTI_STANDBY;
+		}
+	}
+}
