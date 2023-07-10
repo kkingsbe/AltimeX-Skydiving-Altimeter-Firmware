@@ -1,2 +1,7 @@
 1689003527429	Rename resource 'coloraltistate.g'
 1689003535542	Rename resource 'coloralti_config.g'
+1689025051301	Rename resource 'coloralti_state_controller.h'
+1689025117400	Rename resource 'coloralti_led_controller.h'
+1689025155083	Rename resource 'coloralti_config.h'
+1689025218404	Rename resource 'coloralti_state_controller.c'
+1689025426880	Rename resource 'coloralti_led_controller.c'

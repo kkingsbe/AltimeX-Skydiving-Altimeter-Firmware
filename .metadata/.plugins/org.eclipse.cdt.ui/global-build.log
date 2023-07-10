@@ -17587,3 +17587,191 @@ Finished building: default.size.stdout
  
 Finished building: Open Source ColorAlti FINAL.list
  
+17:45:20 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/LPS22HB.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/lib/led_strip.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-gcc "../Core/Src/lib/ws2813b_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/lib/altimex_state_controller.c:8:
+../Core/Inc/altimex_state_controller.h:29:41: error: 'AltimexState' defined as wrong kind of tag
+   29 | void StateController_updateState(struct AltimexState* config, uint16_t alt);
+      |                                         ^~~~~~~~~~~~
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/lib/altimex_led_controller.c:8:
+../Core/Inc/altimex_state_controller.h:29:41: error: 'AltimexState' defined as wrong kind of tag
+   29 | void StateController_updateState(struct AltimexState* config, uint16_t alt);
+      |                                         ^~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:29:41: warning: 'struct AltimexState' declared inside parameter list will not be visible outside of this definition or declaration
+../Core/Inc/altimex_state_controller.h:29:41: warning: 'struct AltimexState' declared inside parameter list will not be visible outside of this definition or declaration
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/altimex_state_controller.h:29:41: error: 'AltimexState' defined as wrong kind of tag
+   29 | void StateController_updateState(struct AltimexState* config, uint16_t alt);
+      |                                         ^~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.c:9:26: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum AltimexState StateController_currentState = ALTIMEX_STANDBY;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Inc/altimex_state_controller.h:29:41: warning: 'struct AltimexState' declared inside parameter list will not be visible outside of this definition or declaration
+../Core/Src/lib/bmp581.c:110:10: warning: unused variable 'chip_id' [-Wunused-variable]
+  110 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/altimex_state_controller.c:28:6: error: conflicting types for 'StateController_updateState'
+   28 | void StateController_updateState(struct AltimexConfig* config, uint16_t alt)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/lib/altimex_state_controller.c:8:
+../Core/Inc/altimex_state_controller.h:29:6: note: previous declaration of 'StateController_updateState' was here
+   29 | void StateController_updateState(struct AltimexState* config, uint16_t alt);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/altimex_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:33: warning: passing argument 1 of 'StateController_updateState' from incompatible pointer type [-Wincompatible-pointer-types]
+  144 |     StateController_updateState(&config, alt);
+      |                                 ^~~~~~~
+      |                                 |
+      |                                 struct AltimexConfig *
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:20:
+../Core/Inc/altimex_state_controller.h:29:55: note: expected 'struct AltimexState *' but argument is of type 'struct AltimexConfig *'
+   29 | void StateController_updateState(struct AltimexState* config, uint16_t alt);
+      |                                  ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/lib/bmp581.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+  190 | }
+      | ^
+make: *** [Core/Src/lib/subdir.mk:34: Core/Src/lib/altimex_led_controller.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** [Core/Src/lib/subdir.mk:34: Core/Src/lib/altimex_state_controller.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:46:08 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/altimex_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/altimex_state_controller.c:9:26: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum AltimexState StateController_currentState = ALTIMEX_STANDBY;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/altimex_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  32240	    120	   2592	  34952	   8888	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:47:35 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28648	     20	   2588	  31256	   7a18	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:48:04 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:48:27 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:48:38 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:48:53 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:49:04 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 

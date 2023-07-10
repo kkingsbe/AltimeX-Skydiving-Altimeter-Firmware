@@ -17,13 +17,13 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <altimex_led_controller.h>
+#include <altimex_state_controller.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "led_strip.h"
-#include "coloralti_state_controller.h"
-#include "coloralti_led_controller.h"
 #include "LPS22HB.h"
 /* USER CODE END Includes */
 
@@ -109,9 +109,9 @@ int main(void)
 	double refT = LPS_Get_Temp();
 	double tempF = LPS_Get_TempF();
 	//double alt = 0.0;
-	uint16_t alt = 0;
+	uint16_t alt = 12500;
 
-	struct ColorAltiConfig config;
+	struct AltimexConfig config;
 	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
 	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
 	config.deployTestThresholdTime = 2000;     //ms, threshold time that vertical speed has to be under 50mph
@@ -136,13 +136,13 @@ int main(void)
     tempF = LPS_Get_TempF();
     //if(HAL_GetTick() > 70000) alt -= 29; //Standby for first 10secs. Ascend for next 60 secs. Descend after that
     //if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
-    //if(alt < 0) alt = 12500;
-    //if(alt < 2500) alt -= 5;
-    //else alt -= 29;
+    if(alt < 0) alt = 12500;
+    if(alt < 2500) alt -= 5;
+    else alt -= 29;
 
-    alt = LPS_Get_RelAlt_Ft(refP);
+    //alt = LPS_Get_RelAlt_Ft(refP);
     StateController_updateState(&config, alt);
-    ColorAlti_displayLeds(StateController_currentState, step, &config, alt);
+    Altimex_displayLeds(StateController_currentState, step, &config, alt);
     step++;
     HAL_Delay(100); //10hz
     /* USER CODE END WHILE */

@@ -1,7 +1,6 @@
-Core/Src/lib/coloralti_led_controller.o: \
- ../Core/Src/lib/coloralti_led_controller.c \
- ../Core/Inc/coloralti_led_controller.h \
- ../Core/Inc/coloralti_state_controller.h \
+Core/Src/lib/altimex_state_controller.o: \
+ ../Core/Src/lib/altimex_state_controller.c \
+ ../Core/Inc/altimex_state_controller.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -27,10 +26,8 @@ Core/Src/lib/coloralti_led_controller.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/coloralti_config.h ../Core/Inc/led_strip.h \
- ../Core/Inc/ws2813b_controller.h
-../Core/Inc/coloralti_led_controller.h:
-../Core/Inc/coloralti_state_controller.h:
+ ../Core/Inc/altimex_config.h
+../Core/Inc/altimex_state_controller.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -56,6 +53,4 @@ Core/Src/lib/coloralti_led_controller.o: \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
-../Core/Inc/coloralti_config.h:
-../Core/Inc/led_strip.h:
-../Core/Inc/ws2813b_controller.h:
+../Core/Inc/altimex_config.h:
