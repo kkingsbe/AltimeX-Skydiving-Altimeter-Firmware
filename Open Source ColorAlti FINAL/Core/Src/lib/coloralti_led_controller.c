@@ -18,20 +18,29 @@ void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct Colo
 		uint32_t standbyFlashLength = config->standbyFlashOnLength + config->standbyFlashOffLength;
 		Set_Brightness(config->standbyBrightness);
 
-		//If the current time is greater than the last flash time + the flash length, we are onto a new flash now.
-		if(HAL_GetTick() > standbyLastFlash + standbyFlashLength) {
-			standbyLastFlash = HAL_GetTick();
-		}
-		else
+		//If board has just been turned on
+		if(standbyLastFlash == 0 && HAL_GetTick() < 3000)
 		{
-			//If the current time is greater than the last flash time + the flash, we are in the on portion of the flash.
-			if(standbyLastFlash + config->standbyFlashOffLength < HAL_GetTick())
-			{
-				Strip_Progress_Bar_Single_Color(config->numLeds, GREEN);
+			uint8_t on = (step) % 2 == 0;
+			uint8_t leds = on * config->numLeds;
+			Strip_Progress_Bar_Single_Color(leds, PURPLE);
+		}
+		else {
+			//If the current time is greater than the last flash time + the flash length, we are onto a new flash now.
+			if(HAL_GetTick() > standbyLastFlash + standbyFlashLength) {
+				standbyLastFlash = HAL_GetTick();
 			}
 			else
 			{
-				Strip_Clear();
+				//If the current time is greater than the last flash time + the flash, we are in the on portion of the flash.
+				if(standbyLastFlash + config->standbyFlashOffLength < HAL_GetTick())
+				{
+					Strip_Progress_Bar_Single_Color(config->numLeds, GREEN);
+				}
+				else
+				{
+					Strip_Clear();
+				}
 			}
 		}
 	}
@@ -66,15 +75,14 @@ void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct Colo
 	{
 		Set_Brightness(config->brightness);
 		uint8_t leds = (config->numLeds) * (1-(float)(alt - (config->breakoff + 1500)) / (config->exit - (config->breakoff + 1500)));
-		Strip_Progress_Bar_Single_Color(leds, SKYBLUE);
+		Strip_Progress_Bar_Single_Color(leds + 1, SKYBLUE);
 	}
 
 	//LED bar fills up approaching breakoff altitude
 	if(state == COLORALTI_APPROACHING_BREAKOFF)
 	{
-		Set_Brightness(config->brightness);
 		uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->breakoff) / ((config->breakoff + 1500) - config->breakoff));
-		Strip_Progress_Bar_Single_Color(config->numLeds, GREEN);
+		Strip_Progress_Bar_Single_Color(leds, GREEN);
 	}
 
 	//Flashes green for a few secs
@@ -82,10 +90,8 @@ void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct Colo
 	{
 		Set_Brightness(config->brightness);
 		uint8_t on = (step) % 2 == 0;
-		if(on)
-		{
-			Strip_Progress_Bar_Single_Color(config->numLeds, GREEN);
-		}
+		uint8_t leds = on * config->numLeds;
+		Strip_Progress_Bar_Single_Color(leds, GREEN);
 	}
 
 	//LED bar fills up approaching deployment altitude
@@ -93,7 +99,7 @@ void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct Colo
 	{
 		Set_Brightness(config->brightness);
 		uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->deploy) / ((config->deploy + 500) - config->deploy));
-		Strip_Progress_Bar_Single_Color(config->numLeds, RED);
+		Strip_Progress_Bar_Single_Color(leds, RED);
 	}
 
 	//Flashes red until detects canopy deployment
@@ -101,16 +107,17 @@ void ColorAlti_displayLeds(enum ColorAltiState state, uint16_t step, struct Colo
 	{
 		Set_Brightness(config->brightness);
 		uint8_t on = (step) % 2 == 0;
-		if(on)
-		{
-			Strip_Progress_Bar_Single_Color(config->numLeds, RED);
-		}
+		uint8_t leds = on * config->numLeds;
+		Strip_Progress_Bar_Single_Color(leds, RED);
 	}
 
-	//Not sure yet
+	//Flashes purple
 	if(state == COLORALTI_CANOPY)
 	{
 		Set_Brightness(config->brightness);
+		uint8_t on = (step/10) % 2 == 0;
+		uint8_t leds = on * config->numLeds;
+		Strip_Progress_Bar_Single_Color(leds, PURPLE);
 	}
 
 	Strip_Send();

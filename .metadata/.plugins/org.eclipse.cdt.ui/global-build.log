@@ -16999,3 +16999,591 @@ arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf
   28632	     20	   2588	  31240	   7a08	Open Source ColorAlti FINAL.elf
 Finished building: default.size.stdout
  
+14:02:53 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28488	     20	   2588	  31096	   7978	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:05:10 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28504	     20	   2588	  31112	   7988	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:06:45 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:98:11: warning: unused variable 'leds' [-Wunused-variable]
+   98 |   uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->deploy) / ((config->deploy + 500) - config->deploy));
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28456	     20	   2588	  31064	   7958	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:08:25 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:99:11: warning: unused variable 'leds' [-Wunused-variable]
+   99 |   uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->deploy) / ((config->deploy + 500) - config->deploy));
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28464	     20	   2588	  31072	   7960	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:09:26 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:96:11: warning: unused variable 'leds' [-Wunused-variable]
+   96 |   uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->deploy) / ((config->deploy + 500) - config->deploy));
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28456	     20	   2588	  31064	   7958	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:13:16 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:92:11: warning: unused variable 'leds' [-Wunused-variable]
+   92 |   uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->deploy) / ((config->deploy + 500) - config->deploy));
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28496	     20	   2588	  31104	   7980	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+14:37:22 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28488	     20	   2588	  31096	   7978	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:34:37 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:101:11: warning: unused variable 'leds' [-Wunused-variable]
+  101 |   uint8_t leds = on * config->numLeds;
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28504	     20	   2588	  31112	   7988	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:36:10 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+../Core/Src/lib/coloralti_led_controller.c: In function 'ColorAlti_displayLeds':
+../Core/Src/lib/coloralti_led_controller.c:101:11: warning: unused variable 'leds' [-Wunused-variable]
+  101 |   uint8_t leds = on * config->numLeds;
+      |           ^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28568	     20	   2588	  31176	   79c8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:37:03 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28560	     20	   2588	  31168	   79c0	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:38:52 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28568	     20	   2588	  31176	   79c8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:40:16 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28696	     20	   2588	  31304	   7a48	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:43:34 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_state_controller.d" -MT"Core/Src/lib/coloralti_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c:9:28: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/coloralti_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28544	     20	   2588	  31152	   79b0	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:44:29 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28544	     20	   2588	  31152	   79b0	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+15:47:45 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_state_controller.d" -MT"Core/Src/lib/coloralti_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_state_controller.o"
+../Core/Src/lib/coloralti_state_controller.c:9:28: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/coloralti_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/lib/coloralti_state_controller.c:179:7: error: 'averageSpeedFps' undeclared (first use in this function); did you mean 'avgSpeedFps'?
+  179 |    if(averageSpeedFps <= 73.0) //50mph to fps
+      |       ^~~~~~~~~~~~~~~
+      |       avgSpeedFps
+../Core/Src/lib/coloralti_state_controller.c:179:7: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/lib/coloralti_state_controller.c:178:11: warning: unused variable 'avgSpeedFps' [-Wunused-variable]
+  178 |    double avgSpeedFps = ((double)(deployTestStartAlt - alt) / elapsedTimeSec);
+      |           ^~~~~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:34: Core/Src/lib/coloralti_state_controller.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:47:55 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_state_controller.d" -MT"Core/Src/lib/coloralti_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_state_controller.o"
+../Core/Src/lib/coloralti_state_controller.c:9:28: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/coloralti_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28552	     20	   2588	  31160	   79b8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:50:33 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28552	     20	   2588	  31160	   79b8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+15:54:09 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_state_controller.d" -MT"Core/Src/lib/coloralti_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_state_controller.o"
+../Core/Src/lib/coloralti_state_controller.c:9:28: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/coloralti_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/lib/coloralti_state_controller.c:178:25: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  178 |    double avgSpeedFps = abs((double)(deployTestStartAlt - alt) / elapsedTimeSec);
+      |                         ^~~
+../Core/Src/lib/coloralti_state_controller.c:178:64: warning: 'abs' argument 1 type is 'double' where 'int' is expected in a call to built-in function declared without prototype [-Wbuiltin-declaration-mismatch]
+  178 |    double avgSpeedFps = abs((double)(deployTestStartAlt - alt) / elapsedTimeSec);
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+<built-in>: note: built-in 'abs' declared here
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28576	     20	   2588	  31184	   79d0	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:57:27 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_state_controller.d" -MT"Core/Src/lib/coloralti_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_state_controller.o"
+../Core/Src/lib/coloralti_state_controller.c:9:28: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum ColorAltiState StateController_currentState = COLORALTI_STANDBY;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/coloralti_state_controller.c: In function 'StateController_updateState':
+../Core/Src/lib/coloralti_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28560	     20	   2588	  31168	   79c0	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+15:58:57 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28584	     20	   2588	  31192	   79d8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+16:00:27 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28584	     20	   2588	  31192	   79d8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+16:00:51 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28584	     20	   2588	  31192	   79d8	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:06:48 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28712	     20	   2588	  31320	   7a58	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:07:42 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28712	     20	   2588	  31320	   7a58	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:08:17 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28728	     20	   2588	  31336	   7a68	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:08:33 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28728	     20	   2588	  31336	   7a68	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:11:31 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:108:9: warning: unused variable 'refP' [-Wunused-variable]
+  108 |  double refP = LPS_Get_Pressure();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  28656	     20	   2588	  31264	   7a20	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:12:29 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  110 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:109:9: warning: unused variable 'refT' [-Wunused-variable]
+  109 |  double refT = LPS_Get_Temp();
+      |         ^~~~
+../Core/Src/main.c:107:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  107 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  32240	    120	   2592	  34952	   8888	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:13:22 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  32240	    120	   2592	  34952	   8888	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 
+17:13:35 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32240	    120	   2592	  34952	   8888	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+17:13:43 **** Incremental Build of configuration Debug for project Open Source ColorAlti FINAL ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/coloralti_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/coloralti_led_controller.d" -MT"Core/Src/lib/coloralti_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/coloralti_led_controller.o"
+arm-none-eabi-gcc -o "Open Source ColorAlti FINAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Open Source ColorAlti FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Open Source ColorAlti FINAL.elf
+ 
+arm-none-eabi-size   Open\ Source\ ColorAlti\ FINAL.elf 
+arm-none-eabi-objdump -h -S  Open\ Source\ ColorAlti\ FINAL.elf  > "Open Source ColorAlti FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  32240	    120	   2592	  34952	   8888	Open Source ColorAlti FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: Open Source ColorAlti FINAL.list
+ 

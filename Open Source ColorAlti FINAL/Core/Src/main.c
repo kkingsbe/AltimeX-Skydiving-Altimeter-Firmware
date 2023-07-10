@@ -133,12 +133,14 @@ int main(void)
   uint16_t step = 0;
   while (1)
   {
-    Set_Brightness(20);
     tempF = LPS_Get_TempF();
-    if(HAL_GetTick() > 70000) alt -= 29; //Standby for first 10secs. Ascend for next 60 secs. Descend after that
-    if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
-    if(alt < 0) alt = 12500;
-    //alt = LPS_Get_RelAlt_Ft(refP);
+    //if(HAL_GetTick() > 70000) alt -= 29; //Standby for first 10secs. Ascend for next 60 secs. Descend after that
+    //if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
+    //if(alt < 0) alt = 12500;
+    //if(alt < 2500) alt -= 5;
+    //else alt -= 29;
+
+    alt = LPS_Get_RelAlt_Ft(refP);
     StateController_updateState(&config, alt);
     ColorAlti_displayLeds(StateController_currentState, step, &config, alt);
     step++;

@@ -174,7 +174,9 @@ void StateController_updateState(struct ColorAltiConfig* config, uint16_t alt)
 		if(deployTest == 0)
 		{
 			//If average vertical speed over last two measurements is less than than 50mph
-			if(((double)(deployTestPrevAlt - alt) / (double)(HAL_GetTick() - deployTestPrevTime)) <= 73.0) //50mph to fps
+			double elapsedTimeSec = (double)(HAL_GetTick() - deployTestStart) / 1000;
+			double avgSpeedFps = fabs((double)(deployTestStartAlt - alt) / elapsedTimeSec);
+			if(avgSpeedFps <= 73.0) //50mph to fps
 			{
 				deployTest = 1;
 				deployTestStart = HAL_GetTick();
@@ -199,10 +201,12 @@ void StateController_updateState(struct ColorAltiConfig* config, uint16_t alt)
 
 	if(StateController_currentState == COLORALTI_CANOPY)
 	{
+		/*
 		//Go back into standby mode once under 100ft
 		if(alt <= 100)
 		{
 			StateController_currentState = COLORALTI_STANDBY;
 		}
+		*/
 	}
 }
