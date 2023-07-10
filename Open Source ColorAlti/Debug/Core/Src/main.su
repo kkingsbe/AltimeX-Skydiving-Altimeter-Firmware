@@ -1,9 +1,0 @@
-../Core/Src/main.c:67:6:set_strip	40	static
-../Core/Src/main.c:133:5:main	16	static
-../Core/Src/main.c:192:6:SystemClock_Config	72	static
-../Core/Src/main.c:231:13:MX_I2C1_Init	8	static
-../Core/Src/main.c:265:13:MX_TIM1_Init	32	static
-../Core/Src/main.c:311:13:MX_TIM2_Init	64	static
-../Core/Src/main.c:372:13:MX_DMA_Init	16	static
-../Core/Src/main.c:390:13:MX_GPIO_Init	32	static
-../Core/Src/main.c:435:6:Error_Handler	4	static,ignoring_inline_asm
