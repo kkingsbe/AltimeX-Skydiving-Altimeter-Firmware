@@ -1,0 +1,18 @@
+/*
+ * altimex_serial.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#include "altimex_serial.h"
+
+void print(char* data, UART_HandleTypeDef* uart)
+{
+
+}
+
+void println(char* data, UART_HandleTypeDef* uart)
+{
+
+}

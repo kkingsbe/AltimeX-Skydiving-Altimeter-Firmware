@@ -49,10 +49,31 @@ void Altimex_displayLeds(enum AltimexState state, uint16_t step, struct AltimexC
 	if(state == ALTIMEX_ASCENT)
 	{
 		Set_Brightness(config->brightness);
+		uint32_t standbyFlashLength = config->standbyFlashOnLength + config->standbyFlashOffLength;
+
+		//If the current time is greater than the last flash time + the flash length, we are onto a new flash now.
+		if(HAL_GetTick() > standbyLastFlash + standbyFlashLength) {
+			standbyLastFlash = HAL_GetTick();
+		}
+		else
+		{
+			//If the current time is greater than the last flash time + the flash, we are in the on portion of the flash.
+			if(standbyLastFlash + config->standbyFlashOffLength < HAL_GetTick())
+			{
+				Strip_Progress_Bar_Single_Color(config->numLeds, YELLOW);
+			}
+			else
+			{
+				Strip_Clear();
+			}
+		}
+
+		/*
 		uint8_t flash = (step / 5) % 2 == 0;
 		uint8_t i = (config->numLeds * (alt / (double)config->gearCheckAlt)) + 1;
 		if(flash) i++;
 		Strip_Progress_Bar_Single_Color(i, GREEN);
+		*/
 	}
 
 	//Flashes green for a few secs
@@ -81,6 +102,7 @@ void Altimex_displayLeds(enum AltimexState state, uint16_t step, struct AltimexC
 	//LED bar fills up approaching breakoff altitude
 	if(state == ALTIMEX_APPROACHING_BREAKOFF)
 	{
+		Set_Brightness(config->brightness);
 		uint8_t leds = (config->numLeds + 1) * (1-(float)(alt - config->breakoff) / ((config->breakoff + 1500) - config->breakoff));
 		Strip_Progress_Bar_Single_Color(leds, GREEN);
 	}

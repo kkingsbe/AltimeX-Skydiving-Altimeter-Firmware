@@ -54,6 +54,7 @@ void BMP_Read_Data(uint32_t* temp_c, uint32_t* pressure);
 uint8_t BMP_Get_Device_Status();
 uint16_t BMP_Read_Temperature();
 uint16_t BMP_Read_Pressure();
+
 double BMP_Get_RelAlt_Ft(uint32_t reference_pressure);
 
 #endif /* INC_BMP581_H_ */

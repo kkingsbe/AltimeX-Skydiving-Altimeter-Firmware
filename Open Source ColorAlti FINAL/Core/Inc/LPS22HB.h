@@ -7,6 +7,7 @@
 
 #include "stm32f1xx_hal.h"
 #include "math.h"
+#include "altimex_serial.h"
 //#include <stdint.h>
 
 #ifndef INC_LPS22HB_H_
@@ -54,11 +55,12 @@ enum LPS_LPFP_BANDWIDTH {
 struct LPS_CONFIG {
 	I2C_HandleTypeDef* i2c_config;
 	uint16_t address;
+	UART_HandleTypeDef* uart;
 };
 
 #define LPS_DEFAULT_ADDRESS 0x5C
 
-uint8_t LPS_Init(I2C_HandleTypeDef* i2c_config, uint16_t address);
+uint8_t LPS_Init(I2C_HandleTypeDef* i2c_config, uint16_t address, UART_HandleTypeDef* uart);
 void LPS_Reg_Read(uint16_t reg_addr, uint16_t reg_size, uint8_t* data_output);
 void LPS_Set_Odr(enum LPS_ODR new_odr);
 enum LPS_ODR LPS_Get_Odr();
@@ -68,6 +70,9 @@ double LPS_Get_Pressure();
 double LPS_Get_Temp();
 double LPS_Get_TempF();
 double LPS_Get_PressureATM();
-double LPS_Get_RelAlt_Ft(uint32_t reference_pressure);
+double LPS_Get_RelAlt_Ft(double reference_pressure);
+
+double LPS_Get_Calibration_Temperature(uint8_t num_samples, uint8_t sample_time_ms);
+double LPS_Get_Calibration_Pressure(uint8_t num_samples, uint8_t sample_time_ms);
 
 #endif /* INC_LPS22HB_H_ */

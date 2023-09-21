@@ -26,6 +26,6 @@ enum AltimexState {
 
 extern enum AltimexState StateController_currentState;
 
-void StateController_updateState(struct AltimexConfig* config, uint16_t alt);
+void StateController_updateState(struct AltimexConfig* config, double alt);
 
 #endif /* INC_ALTIMEX_STATE_CONTROLLER_H_ */

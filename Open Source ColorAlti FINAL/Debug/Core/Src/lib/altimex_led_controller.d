@@ -27,6 +27,7 @@ Core/Src/lib/altimex_led_controller.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/altimex_config.h ../Core/Inc/led_strip.h \
  ../Core/Inc/ws2813b_controller.h
 ../Core/Inc/altimex_led_controller.h:
@@ -56,6 +57,7 @@ Core/Src/lib/altimex_led_controller.o: \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/altimex_config.h:
 ../Core/Inc/led_strip.h:
 ../Core/Inc/ws2813b_controller.h:

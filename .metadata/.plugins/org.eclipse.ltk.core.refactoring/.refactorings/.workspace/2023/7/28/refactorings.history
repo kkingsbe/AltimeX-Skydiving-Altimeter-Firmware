@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Open Source ColorAlti FINAL&apos; to &apos;AltimeX Final&apos;" description="Rename resource &apos;Open Source ColorAlti FINAL&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Open Source ColorAlti FINAL" name="AltimeX Final" stamp="1689118554398" updateReferences="true"/>
+</session>

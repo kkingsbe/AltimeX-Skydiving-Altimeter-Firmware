@@ -1,0 +1,15 @@
+/*
+ * altimex_serial.h
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_ALTIMEX_SERIAL_H_
+#define INC_ALTIMEX_SERIAL_H_
+#include "stm32f1xx_hal.h"
+
+void print(char* data, UART_HandleTypeDef* uart)
+void println
+
+#endif /* INC_ALTIMEX_SERIAL_H_ */

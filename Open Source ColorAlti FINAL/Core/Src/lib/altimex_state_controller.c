@@ -14,18 +14,18 @@ uint32_t ascentTestStart = 0; //ms, the timestamp of when the altitude crossed t
 uint32_t gearCheckNotificationStart = 0; //ms, the timestamp of when the gearcheck notification was displayed
 uint8_t displayedGearCheck = 0; //1 once gearcheck has been shown
 
-uint16_t prevAlt = 0; //Stores the previous altitude
+double prevAlt = 0; //Stores the previous altitude
 uint8_t freefallTest = 0; //1 while validating freefall start
 uint32_t freefallTestStart = 0; //ms, the timestamp of when freefall test started
-uint16_t freefallStartAlt = 0; //ft, the altitude where freefall may have begun
+double freefallStartAlt = 0; //ft, the altitude where freefall may have begun
 
-uint16_t deployTestPrevAlt = 0; //Stores the previous altitude while testing for deploy
+double deployTestPrevAlt = 0; //Stores the previous altitude while testing for deploy
 uint32_t deployTestPrevTime = 0; //ms, the timestamp of the previous datapoint
 uint8_t deployTest = 0; //1 while validating deployment test
 uint32_t deployTestStart = 0; //ms, the timestamp for starting to validate deployment
-uint16_t deployTestStartAlt = 0; //ft, altitude at beginning of current deployment test
+double deployTestStartAlt = 0; //ft, altitude at beginning of current deployment test
 
-void StateController_updateState(struct AltimexConfig* config, uint16_t alt)
+void StateController_updateState(struct AltimexConfig* config, double alt)
 {
 	if(StateController_currentState == ALTIMEX_STANDBY)
 	{
@@ -64,7 +64,7 @@ void StateController_updateState(struct AltimexConfig* config, uint16_t alt)
 	if(StateController_currentState == ALTIMEX_ASCENT)
 	{
 		//If the altitude is above 10k ft, change to gear check state
-		if(alt > 10000)
+		if(alt > config->gearCheckAlt)
 		{
 			StateController_currentState = ALTIMEX_GEARCHECK;
 		}
@@ -138,7 +138,7 @@ void StateController_updateState(struct AltimexConfig* config, uint16_t alt)
 
 	if(StateController_currentState == ALTIMEX_FREEFALL)
 	{
-		if(alt < config->breakoff + 1500)
+		if(alt < config->breakoff + 1500.0)
 		{
 			StateController_currentState = ALTIMEX_APPROACHING_BREAKOFF;
 		}
@@ -154,7 +154,7 @@ void StateController_updateState(struct AltimexConfig* config, uint16_t alt)
 
 	if(StateController_currentState == ALTIMEX_BREAKOFF)
 	{
-		if(alt < config->breakoff - 500)
+		if(alt < config->breakoff - 500.0)
 		{
 			StateController_currentState = ALTIMEX_TRACK;
 		}

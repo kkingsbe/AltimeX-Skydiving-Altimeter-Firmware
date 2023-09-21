@@ -1,0 +1,33 @@
+/*
+ * altimex_serial.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#include "altimex_serial.h"
+
+void printf(float data, UART_HandleTypeDef* uart)
+{
+	char charData[20];
+	sprintf(charData, "%f", data);
+	println(charData, uart);
+}
+
+void printd(double data, UART_HandleTypeDef* uart)
+{
+	char charData[20];
+	sprintf(charData, "%f", data);
+	println(charData, uart);
+}
+
+void print(char* data, UART_HandleTypeDef* uart)
+{
+	HAL_UART_Transmit(&huart1, data, sizeof(data), 100);
+}
+
+void println(char* data, UART_HandleTypeDef* uart)
+{
+	char printData [sizeof(data) / sizeof(data[0])];
+	HAL_UART_Transmit(&huart1, data, sizeof(data), 100);
+}

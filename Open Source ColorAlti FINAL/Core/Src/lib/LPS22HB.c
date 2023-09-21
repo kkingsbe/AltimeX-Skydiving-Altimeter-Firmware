@@ -8,11 +8,12 @@
 
 struct LPS_CONFIG lpsConfig;
 
-uint8_t LPS_Init(I2C_HandleTypeDef* i2c_config, uint16_t address)
+uint8_t LPS_Init(I2C_HandleTypeDef* i2c_config, uint16_t address, UART_HandleTypeDef* uart)
 {
 	HAL_Delay(1000);
 	lpsConfig.i2c_config = i2c_config;
 	lpsConfig.address = address;
+	lpsConfig.uart = uart;
 
 	//Make sure the sensor is powered on and discovered on the I2C bus
 	HAL_StatusTypeDef i2c_status = HAL_I2C_IsDeviceReady(i2c_config, (uint16_t)(LPS_DEFAULT_ADDRESS<<1), 3, 5);
@@ -142,7 +143,7 @@ double LPS_Get_PressureATM()
 }
 
 //Reference pressure is pressure in Pa at surface
-double LPS_Get_RelAlt_Ft(uint32_t reference_pressure)
+double LPS_Get_RelAlt_Ft(double reference_pressure)
 {
 	double p = LPS_Get_Pressure();
 	double t = LPS_Get_Temp();
@@ -153,6 +154,50 @@ double LPS_Get_RelAlt_Ft(uint32_t reference_pressure)
 	double fraction_top = (exponential - 1) * (t + 273.15);
 	double alt_m = fraction_top / 0.0065;
 	return alt_m * 3.281; //Convert to ft and return
+}
+
+double LPS_Get_Calibration_Temperature(uint8_t num_samples, uint8_t sample_time_ms)
+{
+	char msg[] = "\r\n\nCalibrating LPS Temperature:";
+	println(msg, strlen(msg), lpsConfig.uart);
+
+	double cum_val = 0;
+	double avg_val = 0;
+	uint8_t sample = 0;
+	while(sample < num_samples) {
+		double _temp = LPS_Get_Temp();
+		print(".", 1, lpsConfig.uart);
+		cum_val += _temp;
+		HAL_Delay(sample_time_ms);
+		sample ++;
+	}
+	avg_val = cum_val / (double)num_samples;
+	char msg2[] = "\r\nAverage Temperature (C): ";
+	print(msg2, strlen(msg2), lpsConfig.uart);
+	printd(avg_val, lpsConfig.uart);
+	return avg_val;
+}
+
+double LPS_Get_Calibration_Pressure(uint8_t num_samples, uint8_t sample_time_ms)
+{
+	char msg[] = "\r\n\nCalibrating LPS Pressure:\n";
+	println(msg, strlen(msg), lpsConfig.uart);
+
+	double cum_val = 0;
+	double avg_val = 0;
+	uint8_t sample = 0;
+	while(sample < num_samples) {
+		double _temp = LPS_Get_Pressure();
+		print(".", 1, lpsConfig.uart);
+		cum_val += _temp;
+		HAL_Delay(sample_time_ms);
+		sample ++;
+	}
+	avg_val = cum_val / (double)num_samples;
+	char msg2[] = "\r\nAverage Pressure (PA): ";
+	print(msg2, strlen(msg2), lpsConfig.uart);
+	printd(avg_val, lpsConfig.uart);
+	return avg_val;
 }
 
 /*
