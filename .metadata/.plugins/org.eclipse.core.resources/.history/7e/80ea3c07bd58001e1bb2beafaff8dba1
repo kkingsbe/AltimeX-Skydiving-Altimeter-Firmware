@@ -1,0 +1,14 @@
+/*
+ * altimex_storage.h
+ *
+ *  Created on: Sep 21, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_ALTIMEX_STORAGE_H_
+#define INC_ALTIMEX_STORAGE_H_
+
+void read();
+void write();
+
+#endif /* INC_ALTIMEX_STORAGE_H_ */

@@ -26,6 +26,7 @@
 #include "led_strip.h"
 #include "LPS22HB.h"
 #include "altimex_serial.h"
+#include "altimex_storage.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -138,7 +139,14 @@ int main(void)
   uint16_t step = 0;
   while (1)
   {
-    tempF = LPS_Get_TempF();
+	//uint8_t data[] = "hello!!!";
+	//STORAGE_write(&hi2c1, 0, 8, &data);
+	uint8_t data_read[8] = {'\0'};
+	STORAGE_read(&hi2c1, 0, 8, &data_read);
+	//println(data_read, strlen(data_read), &huart1);
+
+	tempF = LPS_Get_TempF();
+	printd(tempF, &huart1);
     /*
     if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
     if(alt < 0) alt = 12500;

@@ -3821,3 +3821,237 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-20 20:40:53.340
 !MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+!SESSION 2023-09-21 10:35:27.842 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-21 10:36:08.621
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-21 10:36:08.630
+!MESSAGE Log4j2 initialized with config file C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-21 10:36:17.484
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-09-21 16:14:51.168 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-21 16:15:16.636
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-21 16:15:16.644
+!MESSAGE Log4j2 initialized with config file C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-21 16:15:25.705
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:05:47.580
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:07:56.160
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:08:47.359
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:10:28.310
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:29:38.855
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:30:10.380
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:30:41.069
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:31:15.423
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:31:36.262
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 17:32:03.618
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:28:46.151
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:29:44.092
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-09-21 18:30:00.276
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-09-21 18:30:00.280
+!MESSAGE Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-09-21 18:30:23.012
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-09-21 18:30:23.012
+!MESSAGE Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-09-21 18:30:38.890
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-09-21 18:30:38.891
+!MESSAGE Failed to execute MI command:
+target remote localhost:2331
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:30:51.709
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:30:56.196
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:33:03.593
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-21 18:33:06.478
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 24 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-21 18:33:06.478
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-21 18:33:06.479
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 24 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-09-21 18:33:06.480
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:33:28.869
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:33:45.000
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:34:35.020
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:34:52.781
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:35:15.319
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-09-21 18:36:42.897
+!MESSAGE SWV configuration; base: 72000000; minDiv: 18; maxDiv: 2147483647; maxSWO: 4000000; limit: 2147483647 => SWO: 4000000; CPU: 64000000; div: 16
+!SESSION 2023-09-22 11:01:03.375 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-22 11:01:34.224
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-22 11:01:34.231
+!MESSAGE Log4j2 initialized with config file C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-22 11:01:43.606
+!MESSAGE Started RMI Server, listening on port 41337

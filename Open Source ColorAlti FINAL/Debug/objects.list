@@ -2,6 +2,7 @@
 "./Core/Src/lib/altimex_led_controller.o"
 "./Core/Src/lib/altimex_serial.o"
 "./Core/Src/lib/altimex_state_controller.o"
+"./Core/Src/lib/altimex_storage.o"
 "./Core/Src/lib/bmp581.o"
 "./Core/Src/lib/led_strip.o"
 "./Core/Src/lib/ws2813b_controller.o"

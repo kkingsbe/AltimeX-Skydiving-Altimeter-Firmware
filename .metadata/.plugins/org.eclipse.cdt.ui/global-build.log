@@ -21598,3 +21598,1587 @@ arm-none-eabi-size   AltimeX\ Final.elf
   49448	    484	   2720	  52652	   cdac	AltimeX Final.elf
 Finished building: default.size.stdout
  
+17:05:17 **** Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:141:2: error: too few arguments to function 'HAL_I2C_Mem_Read'
+  141 |  HAL_I2C_Mem_Read()
+      |  ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:19: note: declared here
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:141:20: error: expected ';' before 'uint8_t'
+  141 |  HAL_I2C_Mem_Read()
+      |                    ^
+      |                    ;
+  142 |  uint8_t data_out[8];
+      |  ~~~~~~~            
+../Core/Src/main.c:143:41: error: 'data_out' undeclared (first use in this function)
+  143 |  HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 8, data_out, 8, 1000);
+      |                                         ^~~~~~~~
+../Core/Src/main.c:143:41: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:05:38 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49472	    484	   2720	  52676	   cdc4	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:07:52 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:20: warning: unused variable 'read_res' [-Wunused-variable]
+  144 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 8, data_out, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 8, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49512	    484	   2720	  52716	   cdec	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:08:44 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:20: warning: unused variable 'read_res' [-Wunused-variable]
+  144 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA2, 0x0, 8, data_out, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 8, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49512	    484	   2720	  52716	   cdec	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:10:26 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:20: warning: unused variable 'read_res' [-Wunused-variable]
+  144 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 1, data_out, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 1, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49512	    484	   2720	  52716	   cdec	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:20:05 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'I2C_Memory_Read':
+../Core/Src/main.c:137:22: error: 'I2C_TIMEOUT_MAX' undeclared (first use in this function); did you mean 'I2C_SR1_TIMEOUT_Msk'?
+  137 |   uint32_t timeout = I2C_TIMEOUT_MAX;
+      |                      ^~~~~~~~~~~~~~~
+      |                      I2C_SR1_TIMEOUT_Msk
+../Core/Src/main.c:137:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:140:3: warning: implicit declaration of function 'I2C_GenerateSTART' [-Wimplicit-function-declaration]
+  140 |   I2C_GenerateSTART(I2Cx, ENABLE);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:143:12: warning: implicit declaration of function 'I2C_CheckEvent' [-Wimplicit-function-declaration]
+  143 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |            ^~~~~~~~~~~~~~
+../Core/Src/main.c:143:33: error: 'I2C_EVENT_MASTER_MODE_SELECT' undeclared (first use in this function)
+  143 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:147:3: warning: implicit declaration of function 'I2C_Send7bitAddress' [-Wimplicit-function-declaration]
+  147 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Transmitter);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:147:35: error: 'I2C_Direction_Transmitter' undeclared (first use in this function)
+  147 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Transmitter);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:150:33: error: 'I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED' undeclared (first use in this function)
+  150 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:155:3: warning: implicit declaration of function 'I2C_SendData' [-Wimplicit-function-declaration]
+  155 |   I2C_SendData(I2Cx, address);
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:158:33: error: 'I2C_EVENT_MASTER_BYTE_TRANSMITTED' undeclared (first use in this function)
+  158 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:169:35: error: 'I2C_Direction_Receiver' undeclared (first use in this function)
+  169 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Receiver);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:172:33: error: 'I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED' undeclared (first use in this function)
+  172 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:177:3: warning: implicit declaration of function 'I2C_AcknowledgeConfig' [-Wimplicit-function-declaration]
+  177 |   I2C_AcknowledgeConfig(I2Cx, DISABLE);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:180:33: error: 'I2C_EVENT_MASTER_BYTE_RECEIVED' undeclared (first use in this function)
+  180 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_RECEIVED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:185:3: warning: implicit declaration of function 'I2C_GenerateSTOP' [-Wimplicit-function-declaration]
+  185 |   I2C_GenerateSTOP(I2Cx, ENABLE);
+      |   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:186:12: warning: implicit declaration of function 'I2C_ReceiveData' [-Wimplicit-function-declaration]
+  186 |     Data = I2C_ReceiveData(I2Cx);
+      |            ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:21: warning: passing argument 1 of 'I2C_Memory_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  202 |     I2C_Memory_Read(&hi2c1, 0xA0);
+      |                     ^~~~~~
+      |                     |
+      |                     I2C_HandleTypeDef *
+../Core/Src/main.c:135:35: note: expected 'I2C_TypeDef *' but argument is of type 'I2C_HandleTypeDef *'
+  135 |  int I2C_Memory_Read(I2C_TypeDef* I2Cx, uint8_t address)
+      |                      ~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:198:10: warning: unused variable 'data_out' [-Wunused-variable]
+  198 |  uint8_t data_out[8] = {'\0'};
+      |          ^~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:20:51 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'I2C_Memory_Read':
+../Core/Src/main.c:140:3: warning: implicit declaration of function 'I2C_GenerateSTART' [-Wimplicit-function-declaration]
+  140 |   I2C_GenerateSTART(I2Cx, ENABLE);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:143:12: warning: implicit declaration of function 'I2C_CheckEvent' [-Wimplicit-function-declaration]
+  143 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |            ^~~~~~~~~~~~~~
+../Core/Src/main.c:143:33: error: 'I2C_EVENT_MASTER_MODE_SELECT' undeclared (first use in this function)
+  143 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:143:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:147:3: warning: implicit declaration of function 'I2C_Send7bitAddress' [-Wimplicit-function-declaration]
+  147 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Transmitter);
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:147:35: error: 'I2C_Direction_Transmitter' undeclared (first use in this function)
+  147 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Transmitter);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:150:33: error: 'I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED' undeclared (first use in this function)
+  150 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:155:3: warning: implicit declaration of function 'I2C_SendData' [-Wimplicit-function-declaration]
+  155 |   I2C_SendData(I2Cx, address);
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:158:33: error: 'I2C_EVENT_MASTER_BYTE_TRANSMITTED' undeclared (first use in this function)
+  158 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:169:35: error: 'I2C_Direction_Receiver' undeclared (first use in this function)
+  169 |   I2C_Send7bitAddress(I2Cx, 0xA0, I2C_Direction_Receiver);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:172:33: error: 'I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED' undeclared (first use in this function)
+  172 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:177:3: warning: implicit declaration of function 'I2C_AcknowledgeConfig' [-Wimplicit-function-declaration]
+  177 |   I2C_AcknowledgeConfig(I2Cx, DISABLE);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:180:33: error: 'I2C_EVENT_MASTER_BYTE_RECEIVED' undeclared (first use in this function)
+  180 |     while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_RECEIVED))
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:185:3: warning: implicit declaration of function 'I2C_GenerateSTOP' [-Wimplicit-function-declaration]
+  185 |   I2C_GenerateSTOP(I2Cx, ENABLE);
+      |   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:186:12: warning: implicit declaration of function 'I2C_ReceiveData' [-Wimplicit-function-declaration]
+  186 |     Data = I2C_ReceiveData(I2Cx);
+      |            ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:202:21: warning: passing argument 1 of 'I2C_Memory_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  202 |     I2C_Memory_Read(&hi2c1, 0xA0);
+      |                     ^~~~~~
+      |                     |
+      |                     I2C_HandleTypeDef *
+../Core/Src/main.c:135:35: note: expected 'I2C_TypeDef *' but argument is of type 'I2C_HandleTypeDef *'
+  135 |  int I2C_Memory_Read(I2C_TypeDef* I2Cx, uint8_t address)
+      |                      ~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:198:10: warning: unused variable 'data_out' [-Wunused-variable]
+  198 |  uint8_t data_out[8] = {'\0'};
+      |          ^~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:29:06 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:44: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |     HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:146:24: error: 'I2C_TIMEOUT_MAX' undeclared (first use in this function); did you mean 'I2C_SR1_TIMEOUT_Msk'?
+  146 |     uint32_t timeout = I2C_TIMEOUT_MAX;
+      |                        ^~~~~~~~~~~~~~~
+      |                        I2C_SR1_TIMEOUT_Msk
+../Core/Src/main.c:146:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:147:11: warning: implicit declaration of function 'I2C_CheckEvent' [-Wimplicit-function-declaration]
+  147 |    while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |           ^~~~~~~~~~~~~~
+../Core/Src/main.c:147:26: error: 'I2Cx' undeclared (first use in this function); did you mean 'I2C1'?
+  147 |    while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |                          ^~~~
+      |                          I2C1
+../Core/Src/main.c:147:32: error: 'I2C_EVENT_MASTER_MODE_SELECT' undeclared (first use in this function)
+  147 |    while(!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:29:33 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:44: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |     HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49480	    484	   2720	  52684	   cdcc	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:30:06 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:70: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                                                                      ^~~~~~~~~
+      |                                                                      |
+      |                                                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:145:20: warning: unused variable 'read_res' [-Wunused-variable]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49480	    484	   2720	  52684	   cdcc	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:30:38 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:70: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  144 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                                                                      ^~~~~~~~~
+      |                                                                      |
+      |                                                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:144:20: warning: unused variable 'read_res' [-Wunused-variable]
+  144 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_out, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 1, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49512	    484	   2720	  52716	   cdec	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:31:11 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:70: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                                                                      ^~~~~~~~
+      |                                                                      |
+      |                                                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:145:20: warning: unused variable 'read_res' [-Wunused-variable]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 1, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49528	    484	   2720	  52732	   cdfc	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:31:33 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:70: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                                                                      ^~~~~~~~
+      |                                                                      |
+      |                                                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:145:20: warning: unused variable 'read_res' [-Wunused-variable]
+  145 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:142:10: warning: unused variable 'data_out' [-Wunused-variable]
+  142 |  uint8_t data_out[8] = {'a'};
+      |          ^~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49488	    484	   2720	  52692	   cdd4	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:32:01 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:146:70: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
+  146 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                                                                      ^~~~~~~~
+      |                                                                      |
+      |                                                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_state_controller.h:10,
+                 from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Src/main.c:18:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:146:20: warning: unused variable 'read_res' [-Wunused-variable]
+  146 |  HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+      |                    ^~~~~~~~
+../Core/Src/main.c:143:20: warning: unused variable 'write_res' [-Wunused-variable]
+  143 |  HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(&hi2c1, 0xA1, 0x0, 1, data_out, 8, 1000);
+      |                    ^~~~~~~~~
+../Core/Src/main.c:115:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  115 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:114:9: warning: unused variable 'refT' [-Wunused-variable]
+  114 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:112:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  112 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49528	    484	   2720	  52732	   cdfc	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+17:45:01 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/LPS22HB.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_led_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_serial.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_serial.d" -MT"Core/Src/lib/altimex_serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_serial.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_state_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-gcc "../Core/Src/lib/bmp581.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/bmp581.d" -MT"Core/Src/lib/bmp581.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/bmp581.o"
+arm-none-eabi-gcc "../Core/Src/lib/led_strip.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-gcc "../Core/Src/lib/ws2813b_controller.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/lib/altimex_storage.c:9:
+../Core/Inc/altimex_storage.h:11:1: error: unknown type name 'HAL_StatusTypeDef'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      | ^~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_storage.h:11:32: error: unknown type name 'uint8_t'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                ^~~~~~~
+../Core/Inc/altimex_storage.h:11:48: error: unknown type name 'size_t'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                                ^~~~~~
+../Core/Inc/altimex_storage.h:1:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+  +++ |+#include <stddef.h>
+    1 | /*
+../Core/Inc/altimex_storage.h:11:60: error: unknown type name 'uint8_t'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                                            ^~~~~~~
+../Core/Inc/altimex_storage.h:12:1: error: unknown type name 'HAL_StatusTypeDef'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      | ^~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_storage.h:12:33: error: unknown type name 'uint8_t'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                 ^~~~~~~
+../Core/Inc/altimex_storage.h:12:49: error: unknown type name 'size_t'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                                 ^~~~~~
+../Core/Inc/altimex_storage.h:12:49: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+../Core/Inc/altimex_storage.h:12:61: error: unknown type name 'uint8_t'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                                             ^~~~~~~
+../Core/Src/lib/altimex_storage.c:11:1: error: unknown type name 'HAL_StatusTypeDef'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      | ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:11:32: error: unknown type name 'I2C_HandleTypeDef'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:11:57: error: unknown type name 'uint16_t'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                         ^~~~~~~~
+../Core/Src/lib/altimex_storage.c:11:74: error: unknown type name 'size_t'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                                          ^~~~~~
+../Core/Src/lib/altimex_storage.c:10:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    9 | #include "altimex_storage.h"
+  +++ |+#include <stddef.h>
+   10 | 
+../Core/Src/lib/altimex_storage.c:11:86: error: unknown type name 'uint8_t'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                                                      ^~~~~~~
+../Core/Src/lib/altimex_storage.c:18:1: error: unknown type name 'HAL_StatusTypeDef'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      | ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:18:33: error: unknown type name 'I2C_HandleTypeDef'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                 ^~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:18:58: error: unknown type name 'uint16_t'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                          ^~~~~~~~
+../Core/Src/lib/altimex_storage.c:18:75: error: unknown type name 'size_t'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                                           ^~~~~~
+../Core/Src/lib/altimex_storage.c:18:75: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+../Core/Src/lib/altimex_storage.c:18:87: error: unknown type name 'uint8_t'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                                                                                       ^~~~~~~
+make: *** [Core/Src/lib/subdir.mk:40: Core/Src/lib/altimex_storage.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/lib/altimex_serial.c:8:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:11:1: note: 'printf' is declared in header '<stdio.h>'
+   10 | #include "stm32f1xx_hal.h"
+  +++ |+#include <stdio.h>
+   11 | 
+../Core/Src/lib/altimex_serial.c: In function 'printf':
+../Core/Src/lib/altimex_serial.c:13:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   13 |  sprintf(charData, "%f", data);
+      |  ^~~~~~~
+../Core/Src/lib/altimex_serial.c:13:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/lib/altimex_serial.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "altimex_serial.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../Core/Src/lib/altimex_serial.c:14:15: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   14 |  size_t len = strlen(charData);
+      |               ^~~~~~
+../Core/Src/lib/altimex_serial.c:14:15: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/lib/altimex_serial.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "altimex_serial.h"
+  +++ |+#include <string.h>
+    9 | 
+../Core/Src/lib/altimex_serial.c: In function 'printd':
+../Core/Src/lib/altimex_serial.c:21:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   21 |  sprintf(charData, "%f", data);
+      |  ^~~~~~~
+../Core/Src/lib/altimex_serial.c:21:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lib/altimex_serial.c:22:15: warning: incompatible implicit declaration of built-in function 'strlen'
+   22 |  size_t len = strlen(charData);
+      |               ^~~~~~
+../Core/Src/lib/altimex_serial.c:22:15: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/lib/altimex_serial.c: In function 'print':
+../Core/Src/lib/altimex_serial.c:28:26: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   28 |  HAL_UART_Transmit(uart, data, len, 100);
+      |                          ^~~~
+      |                          |
+      |                          char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/altimex_serial.h:10,
+                 from ../Core/Src/lib/altimex_serial.c:8:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Device_Status':
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/lib/bmp581.c:110:10: warning: unused variable 'chip_id' [-Wunused-variable]
+  110 |  uint8_t chip_id = chipid_rx_dat[0];
+      |          ^~~~~~~
+../Core/Src/lib/altimex_state_controller.c:9:26: warning: 'StateController_currentState' initialized and declared 'extern'
+    9 | extern enum AltimexState StateController_currentState = ALTIMEX_STANDBY;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:16: warning: passing argument 1 of 'STORAGE_write' makes integer from pointer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                ^~~~~~
+      |                |
+      |                I2C_HandleTypeDef *
+../Core/Src/lib/altimex_state_controller.c: In function 'StateController_updateState':
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/lib/LPS22HB.c:7:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Src/lib/altimex_state_controller.c:83:25: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   83 |   if(displayedGearCheck == 1 & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |      ~~~~~~~~~~~~~~~~~~~^~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:41: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                 ~~~~~~~~^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/lib/bmp581.c: In function 'BMP_Get_Mode':
+../Core/Src/main.c:143:27: warning: passing argument 3 of 'STORAGE_write' makes pointer from integer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                           ^
+      |                           |
+      |                           int
+../Core/Src/lib/bmp581.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+  190 | }
+      | ^
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:70: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                                             ~~~~~~~~~^~~~
+../Core/Src/main.c:143:2: error: too many arguments to function 'STORAGE_write'
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |  ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:19: note: declared here
+   12 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~~
+../Core/Src/main.c:145:15: warning: passing argument 1 of 'STORAGE_read' makes integer from pointer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |               ^~~~~~
+      |               |
+      |               I2C_HandleTypeDef *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:11:40: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                ~~~~~~~~^~~~~~
+../Core/Src/lib/LPS22HB.c: In function 'LPS_Get_Calibration_Temperature':
+../Core/Src/main.c:145:26: warning: passing argument 3 of 'STORAGE_read' makes pointer from integer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                          ^
+      |                          |
+      |                          int
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:11:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                                            ~~~~~~~~~^~~~
+../Core/Src/lib/LPS22HB.c:162:15: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  162 |  println(msg, strlen(msg), lpsConfig.uart);
+      |               ^~~~~~
+../Core/Src/main.c:145:2: error: too many arguments to function 'STORAGE_read'
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |  ^~~~~~~~~~~~
+../Core/Src/lib/LPS22HB.c:162:15: warning: incompatible implicit declaration of built-in function 'strlen'
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:11:19: note: declared here
+   11 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~
+../Core/Src/lib/LPS22HB.c:8:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    7 | #include "LPS22HB.h"
+  +++ |+#include <string.h>
+    8 | 
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+../Core/Src/lib/LPS22HB.c: In function 'LPS_Get_Calibration_Pressure':
+../Core/Src/lib/LPS22HB.c:184:15: warning: incompatible implicit declaration of built-in function 'strlen'
+  184 |  println(msg, strlen(msg), lpsConfig.uart);
+      |               ^~~~~~
+../Core/Src/lib/LPS22HB.c:184:15: note: include '<string.h>' or provide a declaration of 'strlen'
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:46:55 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/altimex_storage.c:11:19: error: conflicting types for 'STORAGE_read'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                   ^~~~~~~~~~~~
+In file included from ../Core/Src/lib/altimex_storage.c:9:
+../Core/Inc/altimex_storage.h:12:19: note: previous declaration of 'STORAGE_read' was here
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:18:19: error: conflicting types for 'STORAGE_write'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                   ^~~~~~~~~~~~~
+In file included from ../Core/Src/lib/altimex_storage.c:9:
+../Core/Inc/altimex_storage.h:13:19: note: previous declaration of 'STORAGE_write' was here
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~~
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:16: warning: passing argument 1 of 'STORAGE_write' makes integer from pointer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                ^~~~~~
+      |                |
+      |                I2C_HandleTypeDef *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:41: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                 ~~~~~~~~^~~~~~
+../Core/Src/main.c:143:27: warning: passing argument 3 of 'STORAGE_write' makes pointer from integer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                           ^
+      |                           |
+      |                           int
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:70: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                                             ~~~~~~~~~^~~~
+../Core/Src/main.c:143:2: error: too many arguments to function 'STORAGE_write'
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |  ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:19: note: declared here
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~~
+../Core/Src/main.c:145:15: warning: passing argument 1 of 'STORAGE_read' makes integer from pointer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |               ^~~~~~
+      |               |
+      |               I2C_HandleTypeDef *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:40: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                ~~~~~~~~^~~~~~
+../Core/Src/main.c:145:26: warning: passing argument 3 of 'STORAGE_read' makes pointer from integer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                          ^
+      |                          |
+      |                          int
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                                            ~~~~~~~~~^~~~
+../Core/Src/main.c:145:2: error: too many arguments to function 'STORAGE_read'
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |  ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:19: note: declared here
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:40: Core/Src/lib/altimex_storage.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:28:06 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/altimex_storage.c:11:19: error: conflicting types for 'STORAGE_read'
+   11 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                   ^~~~~~~~~~~~
+In file included from ../Core/Src/lib/altimex_storage.c:9:
+../Core/Inc/altimex_storage.h:12:19: note: previous declaration of 'STORAGE_read' was here
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~
+../Core/Src/lib/altimex_storage.c:18:19: error: conflicting types for 'STORAGE_write'
+   18 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data)
+      |                   ^~~~~~~~~~~~~
+In file included from ../Core/Src/lib/altimex_storage.c:9:
+../Core/Inc/altimex_storage.h:13:19: note: previous declaration of 'STORAGE_write' was here
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:40: Core/Src/lib/altimex_storage.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:16: warning: passing argument 1 of 'STORAGE_write' makes integer from pointer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                ^~~~~~
+      |                |
+      |                I2C_HandleTypeDef *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:41: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                 ~~~~~~~~^~~~~~
+../Core/Src/main.c:143:27: warning: passing argument 3 of 'STORAGE_write' makes pointer from integer without a cast [-Wint-conversion]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                           ^
+      |                           |
+      |                           int
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:70: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                                                             ~~~~~~~~~^~~~
+../Core/Src/main.c:143:2: error: too many arguments to function 'STORAGE_write'
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |  ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:19: note: declared here
+   13 | HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~~
+../Core/Src/main.c:145:15: warning: passing argument 1 of 'STORAGE_read' makes integer from pointer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |               ^~~~~~
+      |               |
+      |               I2C_HandleTypeDef *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:40: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'I2C_HandleTypeDef *'
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                ~~~~~~~~^~~~~~
+../Core/Src/main.c:145:26: warning: passing argument 3 of 'STORAGE_read' makes pointer from integer without a cast [-Wint-conversion]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                          ^
+      |                          |
+      |                          int
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int'
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                                                            ~~~~~~~~~^~~~
+../Core/Src/main.c:145:2: error: too many arguments to function 'STORAGE_read'
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |  ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:19: note: declared here
+   12 | HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+      |                   ^~~~~~~~~~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:28:41 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:30: warning: passing argument 4 of 'STORAGE_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                              ^~~~~
+      |                              |
+      |                              uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   13 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                       ~~~~~~~~~^~~~
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49600	    484	   2720	  52804	   ce44	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:29:41 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:30: warning: passing argument 4 of 'STORAGE_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                              ^~~~~
+      |                              |
+      |                              uint8_t (*)[9] {aka unsigned char (*)[9]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[9]' {aka 'unsigned char (*)[9]'}
+   13 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                       ~~~~~~~~~^~~~
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:29:57 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:30:19 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:30:35 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:30:50 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:30:54 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49632	    484	   2720	  52836	   ce64	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:33:00 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:30: warning: passing argument 4 of 'STORAGE_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                              ^~~~~
+      |                              |
+      |                              uint8_t (*)[9] {aka unsigned char (*)[9]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[9]' {aka 'unsigned char (*)[9]'}
+   13 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                       ~~~~~~~~~^~~~
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:146:22: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  146 |  println(&data_read, strlen(data_read), &huart1);
+      |                      ^~~~~~
+../Core/Src/main.c:146:22: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   29 | #include "altimex_storage.h"
+  +++ |+#include <string.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:146:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  146 |  println(&data_read, strlen(data_read), &huart1);
+      |                             ^~~~~~~~~
+      |                             |
+      |                             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:146:29: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:146:10: warning: passing argument 1 of 'println' from incompatible pointer type [-Wincompatible-pointer-types]
+  146 |  println(&data_read, strlen(data_read), &huart1);
+      |          ^~~~~~~~~~
+      |          |
+      |          uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:15:20: note: expected 'char *' but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   15 | void println(char* data, size_t len, UART_HandleTypeDef* uart);
+      |              ~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49648	    484	   2720	  52852	   ce74	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:33:26 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:30: warning: passing argument 4 of 'STORAGE_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                              ^~~~~
+      |                              |
+      |                              uint8_t (*)[9] {aka unsigned char (*)[9]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[9]' {aka 'unsigned char (*)[9]'}
+   13 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                       ~~~~~~~~~^~~~
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[1] {aka unsigned char (*)[1]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:146:21: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                     ^~~~~~
+../Core/Src/main.c:146:21: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   29 | #include "altimex_storage.h"
+  +++ |+#include <string.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:146:28: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                            ^~~~~~~~~
+      |                            |
+      |                            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:146:28: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:146:10: warning: pointer targets in passing argument 1 of 'println' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |          ^~~~~~~~~
+      |          |
+      |          uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:15:20: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   15 | void println(char* data, size_t len, UART_HandleTypeDef* uart);
+      |              ~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49648	    484	   2720	  52852	   ce74	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:33:43 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49648	    484	   2720	  52852	   ce74	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:34:32 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:30: warning: passing argument 4 of 'STORAGE_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |  STORAGE_write(&hi2c1, 0, 8, &data);
+      |                              ^~~~~
+      |                              |
+      |                              uint8_t (*)[9] {aka unsigned char (*)[9]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:13:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[9]' {aka 'unsigned char (*)[9]'}
+   13 | HAL_StatusTypeDef STORAGE_write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                       ~~~~~~~~~^~~~
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:146:21: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                     ^~~~~~
+../Core/Src/main.c:146:21: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   29 | #include "altimex_storage.h"
+  +++ |+#include <string.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:146:28: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                            ^~~~~~~~~
+      |                            |
+      |                            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:146:28: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:146:10: warning: pointer targets in passing argument 1 of 'println' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |          ^~~~~~~~~
+      |          |
+      |          uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:15:20: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   15 | void println(char* data, size_t len, UART_HandleTypeDef* uart);
+      |              ~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49664	    484	   2720	  52868	   ce84	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:34:51 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-size   AltimeX\ Final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49664	    484	   2720	  52868	   ce84	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+18:35:13 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:146:21: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                     ^~~~~~
+../Core/Src/main.c:146:21: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:30:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   29 | #include "altimex_storage.h"
+  +++ |+#include <string.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:146:28: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |                            ^~~~~~~~~
+      |                            |
+      |                            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:146:28: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:146:10: warning: pointer targets in passing argument 1 of 'println' differ in signedness [-Wpointer-sign]
+  146 |  println(data_read, strlen(data_read), &huart1);
+      |          ^~~~~~~~~
+      |          |
+      |          uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:15:20: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   15 | void println(char* data, size_t len, UART_HandleTypeDef* uart);
+      |              ~~~~~~^~~~
+../Core/Src/main.c:116:9: warning: variable 'tempF' set but not used [-Wunused-but-set-variable]
+  116 |  double tempF = LPS_Get_TempF();
+      |         ^~~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49544	    484	   2720	  52748	   ce0c	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 
+18:36:40 **** Incremental Build of configuration Debug for project AltimeX Final ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
+arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
+   text	   data	    bss	    dec	    hex	filename
+  49536	    484	   2720	  52740	   ce04	AltimeX Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX Final.list
+ 

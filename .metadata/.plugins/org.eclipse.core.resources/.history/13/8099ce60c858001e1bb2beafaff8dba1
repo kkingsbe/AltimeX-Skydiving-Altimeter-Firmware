@@ -1,0 +1,14 @@
+/*
+ * altimex_storage.h
+ *
+ *  Created on: Sep 21, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_ALTIMEX_STORAGE_H_
+#define INC_ALTIMEX_STORAGE_H_
+
+HAL_StatusTypeDef STORAGE_read(uint8_t offset, size_t len, uint8_t* data);
+HAL_StatusTypeDef STORAGE_write(uint8_t offset, size_t len, uint8_t* data);
+
+#endif /* INC_ALTIMEX_STORAGE_H_ */

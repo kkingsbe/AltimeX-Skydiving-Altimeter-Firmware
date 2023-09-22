@@ -1,0 +1,20 @@
+/*
+ * altimex_storage.c
+ *
+ *  Created on: Sep 21, 2023
+ *      Author: kking
+ */
+
+
+#include "altimex_storage.h"
+
+void read(uint8_t offset, size_t len, uint8_t* data)
+{
+	uint8_t data_in[len] = {'\0'};
+	HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(&hi2c1, 0xA0, 0x0, 2, &data_in, 8, 1000);
+}
+
+void write(uint8_t offset, size_t len, uint8_t* data)
+{
+
+}

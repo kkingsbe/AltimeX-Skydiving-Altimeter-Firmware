@@ -1,10 +1,41 @@
-20:40:51 **** Incremental Build of configuration Debug for project AltimeX Final ****
+18:36:40 **** Incremental Build of configuration Debug for project AltimeX Final ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/LPS22HB.h:10,
+                 from ../Core/Src/main.c:27:
+../Core/Inc/altimex_serial.h:13:6: warning: conflicting types for built-in function 'printf'; expected 'int(const char *, ...)' [-Wbuiltin-declaration-mismatch]
+   13 | void printf(float data, UART_HandleTypeDef* uart);
+      |      ^~~~~~
+../Core/Inc/altimex_serial.h:1:1: note: 'printf' is declared in header '<stdio.h>'
+  +++ |+#include <stdio.h>
+    1 | /*
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:145:29: warning: passing argument 4 of 'STORAGE_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |  STORAGE_read(&hi2c1, 0, 8, &data_read);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             uint8_t (*)[8] {aka unsigned char (*)[8]}
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/altimex_storage.h:12:95: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+   12 | HAL_StatusTypeDef STORAGE_read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+      |                                                                                      ~~~~~~~~~^~~~
+../Core/Src/main.c:115:9: warning: unused variable 'refT' [-Wunused-variable]
+  115 |  double refT = LPS_Get_Calibration_Temperature(10, 100);
+      |         ^~~~
+../Core/Src/main.c:113:10: warning: unused variable 'lps_startup_result' [-Wunused-variable]
+  113 |  uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+      |          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "AltimeX Final.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\Open Source ColorAlti FINAL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX Final.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AltimeX Final.elf
+ 
 arm-none-eabi-size   AltimeX\ Final.elf 
+arm-none-eabi-objdump -h -S  AltimeX\ Final.elf  > "AltimeX Final.list"
    text	   data	    bss	    dec	    hex	filename
-  49448	    484	   2720	  52652	   cdac	AltimeX Final.elf
+  49536	    484	   2720	  52740	   ce04	AltimeX Final.elf
 Finished building: default.size.stdout
  
+Finished building: AltimeX Final.list
+ 
 
-20:40:52 Build Finished. 0 errors, 0 warnings. (took 276ms)
+18:36:41 Build Finished. 0 errors, 4 warnings. (took 738ms)
 
