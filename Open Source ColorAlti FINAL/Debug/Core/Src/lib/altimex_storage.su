@@ -1,2 +1,0 @@
-../Core/Src/lib/altimex_storage.c:11:19:STORAGE_read	48	static
-../Core/Src/lib/altimex_storage.c:18:19:STORAGE_write	48	static

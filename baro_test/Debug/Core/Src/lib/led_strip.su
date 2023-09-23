@@ -1,4 +1,0 @@
-../Core/Src/lib/led_strip.c:10:6:Strip_Set_Timer	16	static
-../Core/Src/lib/led_strip.c:15:6:Strip_Progress_Bar_Single_Color	24	static
-../Core/Src/lib/led_strip.c:24:6:Strip_Clear	8	static
-../Core/Src/lib/led_strip.c:29:6:Strip_Send	8	static
