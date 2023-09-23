@@ -4177,22 +4177,21 @@ LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000008002324       0x50 ./Core/Src/lib/usb.o
                 0x0000000008002324                STM_USB::printd(double)
  .text._ZN7STM_USB5printEPcj
-                0x0000000008002374       0x28 ./Core/Src/lib/usb.o
+                0x0000000008002374       0x2c ./Core/Src/lib/usb.o
                 0x0000000008002374                STM_USB::print(char*, unsigned int)
  .text._ZN7STM_USB7printlnEPcj
-                0x000000000800239c       0x3c ./Core/Src/lib/usb.o
-                0x000000000800239c                STM_USB::println(char*, unsigned int)
+                0x00000000080023a0       0x3c ./Core/Src/lib/usb.o
+                0x00000000080023a0                STM_USB::println(char*, unsigned int)
  .text._ZSt3tanf
-                0x00000000080023d8       0x18 ./Core/Src/lib/ws2813b_controller.o
-                0x00000000080023d8                std::tan(float)
+                0x00000000080023dc       0x18 ./Core/Src/lib/ws2813b_controller.o
+                0x00000000080023dc                std::tan(float)
  .text._ZN17WS2813BControllerC2EP17TIM_HandleTypeDef
-                0x00000000080023f0       0x1c ./Core/Src/lib/ws2813b_controller.o
-                0x00000000080023f0                WS2813BController::WS2813BController(TIM_HandleTypeDef*)
-                0x00000000080023f0                WS2813BController::WS2813BController(TIM_HandleTypeDef*)
+                0x00000000080023f4       0x1c ./Core/Src/lib/ws2813b_controller.o
+                0x00000000080023f4                WS2813BController::WS2813BController(TIM_HandleTypeDef*)
+                0x00000000080023f4                WS2813BController::WS2813BController(TIM_HandleTypeDef*)
  .text._ZN17WS2813BController7set_ledEiiii
-                0x000000000800240c       0x58 ./Core/Src/lib/ws2813b_controller.o
-                0x000000000800240c                WS2813BController::set_led(int, int, int, int)
- *fill*         0x0000000008002464        0x4 
+                0x0000000008002410       0x58 ./Core/Src/lib/ws2813b_controller.o
+                0x0000000008002410                WS2813BController::set_led(int, int, int, int)
  .text._ZN17WS2813BController14set_brightnessEi
                 0x0000000008002468       0xec ./Core/Src/lib/ws2813b_controller.o
                 0x0000000008002468                WS2813BController::set_brightness(int)
@@ -5294,53 +5293,53 @@ LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x0000000000000000    0x1d158
- .debug_info    0x0000000000000000     0x2960 ./Core/Src/lib/LPS22HB.o
- .debug_info    0x0000000000002960     0x253d ./Core/Src/lib/altimex_led_controller.o
- .debug_info    0x0000000000004e9d     0x1ac6 ./Core/Src/lib/altimex_state_controller.o
- .debug_info    0x0000000000006963     0x2160 ./Core/Src/lib/led_strip.o
- .debug_info    0x0000000000008ac3      0x8ea ./Core/Src/lib/usb.o
- .debug_info    0x00000000000093ad     0x22f2 ./Core/Src/lib/ws2813b_controller.o
- .debug_info    0x000000000000b69f     0x35c1 ./Core/Src/main.o
- .debug_info    0x000000000000ec60     0x1144 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_info    0x000000000000fda4      0x66d ./Core/Src/stm32f1xx_it.o
- .debug_info    0x0000000000010411      0x6e0 ./Core/Src/syscalls.o
- .debug_info    0x0000000000010af1      0x171 ./Core/Src/sysmem.o
- .debug_info    0x0000000000010c62      0x23d ./Core/Src/system_stm32f1xx.o
- .debug_info    0x0000000000010e9f       0x22 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_info    0x0000000000010ec1      0x734 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x00000000000115f5      0xb20 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x0000000000012115      0x744 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_info    0x0000000000012859      0x615 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x0000000000012e6e     0x2761 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_info    0x00000000000155cf      0x865 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x0000000000015e34     0x2bab ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_info    0x00000000000189df     0x15c7 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_info    0x0000000000019fa6     0x31b2 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+.debug_info     0x0000000000000000    0x1d1b3
+ .debug_info    0x0000000000000000     0x2986 ./Core/Src/lib/LPS22HB.o
+ .debug_info    0x0000000000002986     0x253d ./Core/Src/lib/altimex_led_controller.o
+ .debug_info    0x0000000000004ec3     0x1ac6 ./Core/Src/lib/altimex_state_controller.o
+ .debug_info    0x0000000000006989     0x2160 ./Core/Src/lib/led_strip.o
+ .debug_info    0x0000000000008ae9      0x8f9 ./Core/Src/lib/usb.o
+ .debug_info    0x00000000000093e2     0x22f2 ./Core/Src/lib/ws2813b_controller.o
+ .debug_info    0x000000000000b6d4     0x35e7 ./Core/Src/main.o
+ .debug_info    0x000000000000ecbb     0x1144 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_info    0x000000000000fdff      0x66d ./Core/Src/stm32f1xx_it.o
+ .debug_info    0x000000000001046c      0x6e0 ./Core/Src/syscalls.o
+ .debug_info    0x0000000000010b4c      0x171 ./Core/Src/sysmem.o
+ .debug_info    0x0000000000010cbd      0x23d ./Core/Src/system_stm32f1xx.o
+ .debug_info    0x0000000000010efa       0x22 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_info    0x0000000000010f1c      0x734 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x0000000000011650      0xb20 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x0000000000012170      0x744 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_info    0x00000000000128b4      0x615 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x0000000000012ec9     0x2761 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_info    0x000000000001562a      0x865 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x0000000000015e8f     0x2bab ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_info    0x0000000000018a3a     0x15c7 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x000000000001a001     0x31b2 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
-.debug_abbrev   0x0000000000000000     0x3537
- .debug_abbrev  0x0000000000000000      0x3ab ./Core/Src/lib/LPS22HB.o
- .debug_abbrev  0x00000000000003ab      0x3e1 ./Core/Src/lib/altimex_led_controller.o
- .debug_abbrev  0x000000000000078c      0x29b ./Core/Src/lib/altimex_state_controller.o
- .debug_abbrev  0x0000000000000a27      0x374 ./Core/Src/lib/led_strip.o
- .debug_abbrev  0x0000000000000d9b      0x21f ./Core/Src/lib/usb.o
- .debug_abbrev  0x0000000000000fba      0x3b8 ./Core/Src/lib/ws2813b_controller.o
- .debug_abbrev  0x0000000000001372      0x4dd ./Core/Src/main.o
- .debug_abbrev  0x000000000000184f      0x247 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_abbrev  0x0000000000001a96      0x166 ./Core/Src/stm32f1xx_it.o
- .debug_abbrev  0x0000000000001bfc      0x1b3 ./Core/Src/syscalls.o
- .debug_abbrev  0x0000000000001daf       0xbb ./Core/Src/sysmem.o
- .debug_abbrev  0x0000000000001e6a      0x13b ./Core/Src/system_stm32f1xx.o
- .debug_abbrev  0x0000000000001fa5       0x12 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_abbrev  0x0000000000001fb7      0x1fb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_abbrev  0x00000000000021b2      0x2ed ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_abbrev  0x000000000000249f      0x1fe ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_abbrev  0x000000000000269d      0x1bb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_abbrev  0x0000000000002858      0x288 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_abbrev  0x0000000000002ae0      0x2a8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_abbrev  0x0000000000002d88      0x264 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_abbrev  0x0000000000002fec      0x26c ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_abbrev  0x0000000000003258      0x2df ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+.debug_abbrev   0x0000000000000000     0x3565
+ .debug_abbrev  0x0000000000000000      0x3c2 ./Core/Src/lib/LPS22HB.o
+ .debug_abbrev  0x00000000000003c2      0x3e1 ./Core/Src/lib/altimex_led_controller.o
+ .debug_abbrev  0x00000000000007a3      0x29b ./Core/Src/lib/altimex_state_controller.o
+ .debug_abbrev  0x0000000000000a3e      0x374 ./Core/Src/lib/led_strip.o
+ .debug_abbrev  0x0000000000000db2      0x21f ./Core/Src/lib/usb.o
+ .debug_abbrev  0x0000000000000fd1      0x3b8 ./Core/Src/lib/ws2813b_controller.o
+ .debug_abbrev  0x0000000000001389      0x4f4 ./Core/Src/main.o
+ .debug_abbrev  0x000000000000187d      0x247 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_abbrev  0x0000000000001ac4      0x166 ./Core/Src/stm32f1xx_it.o
+ .debug_abbrev  0x0000000000001c2a      0x1b3 ./Core/Src/syscalls.o
+ .debug_abbrev  0x0000000000001ddd       0xbb ./Core/Src/sysmem.o
+ .debug_abbrev  0x0000000000001e98      0x13b ./Core/Src/system_stm32f1xx.o
+ .debug_abbrev  0x0000000000001fd3       0x12 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_abbrev  0x0000000000001fe5      0x1fb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_abbrev  0x00000000000021e0      0x2ed ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_abbrev  0x00000000000024cd      0x1fe ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_abbrev  0x00000000000026cb      0x1bb ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_abbrev  0x0000000000002886      0x288 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_abbrev  0x0000000000002b0e      0x2a8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_abbrev  0x0000000000002db6      0x264 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_abbrev  0x000000000000301a      0x26c ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000003286      0x2df ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
 .debug_aranges  0x0000000000000000     0x1138
  .debug_aranges
@@ -5537,74 +5536,74 @@ LOAD c:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x000000000001ad79      0x1ad ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_macro   0x000000000001af26      0x1ae ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
-.debug_line     0x0000000000000000    0x16aeb
+.debug_line     0x0000000000000000    0x16aee
  .debug_line    0x0000000000000000      0xef5 ./Core/Src/lib/LPS22HB.o
  .debug_line    0x0000000000000ef5      0xed4 ./Core/Src/lib/altimex_led_controller.o
  .debug_line    0x0000000000001dc9      0xdf6 ./Core/Src/lib/altimex_state_controller.o
  .debug_line    0x0000000000002bbf      0xc51 ./Core/Src/lib/led_strip.o
- .debug_line    0x0000000000003810      0x907 ./Core/Src/lib/usb.o
- .debug_line    0x0000000000004117      0xdff ./Core/Src/lib/ws2813b_controller.o
- .debug_line    0x0000000000004f16      0xfb2 ./Core/Src/main.o
- .debug_line    0x0000000000005ec8      0x7d5 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x000000000000669d      0x77f ./Core/Src/stm32f1xx_it.o
- .debug_line    0x0000000000006e1c      0x7f9 ./Core/Src/syscalls.o
- .debug_line    0x0000000000007615      0x4ef ./Core/Src/sysmem.o
- .debug_line    0x0000000000007b04      0x70b ./Core/Src/system_stm32f1xx.o
- .debug_line    0x000000000000820f       0x86 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_line    0x0000000000008295      0x938 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x0000000000008bcd      0xb20 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x00000000000096ed      0xd91 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_line    0x000000000000a47e      0x9d1 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x000000000000ae4f     0x3a9e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_line    0x000000000000e8ed      0xd44 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x000000000000f631     0x33c3 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_line    0x00000000000129f4     0x188e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x0000000000014282     0x2869 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_line    0x0000000000003810      0x90a ./Core/Src/lib/usb.o
+ .debug_line    0x000000000000411a      0xdff ./Core/Src/lib/ws2813b_controller.o
+ .debug_line    0x0000000000004f19      0xfb2 ./Core/Src/main.o
+ .debug_line    0x0000000000005ecb      0x7d5 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x00000000000066a0      0x77f ./Core/Src/stm32f1xx_it.o
+ .debug_line    0x0000000000006e1f      0x7f9 ./Core/Src/syscalls.o
+ .debug_line    0x0000000000007618      0x4ef ./Core/Src/sysmem.o
+ .debug_line    0x0000000000007b07      0x70b ./Core/Src/system_stm32f1xx.o
+ .debug_line    0x0000000000008212       0x86 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_line    0x0000000000008298      0x938 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000000000008bd0      0xb20 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x00000000000096f0      0xd91 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_line    0x000000000000a481      0x9d1 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x000000000000ae52     0x3a9e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_line    0x000000000000e8f0      0xd44 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x000000000000f634     0x33c3 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_line    0x00000000000129f7     0x188e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x0000000000014285     0x2869 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
-.debug_str      0x0000000000000000    0x92727
- .debug_str     0x0000000000000000    0x8c4b8 ./Core/Src/lib/LPS22HB.o
-                                      0x8cb24 (size before relaxing)
- .debug_str     0x000000000008c4b8      0xa45 ./Core/Src/lib/altimex_led_controller.o
+.debug_str      0x0000000000000000    0x92751
+ .debug_str     0x0000000000000000    0x8c4e2 ./Core/Src/lib/LPS22HB.o
+                                      0x8cb56 (size before relaxing)
+ .debug_str     0x000000000008c4e2      0xa45 ./Core/Src/lib/altimex_led_controller.o
                                       0x8bb8d (size before relaxing)
- .debug_str     0x000000000008cefd      0x20c ./Core/Src/lib/altimex_state_controller.o
+ .debug_str     0x000000000008cf27      0x20c ./Core/Src/lib/altimex_state_controller.o
                                       0x8b165 (size before relaxing)
- .debug_str     0x000000000008d109       0x7b ./Core/Src/lib/led_strip.o
+ .debug_str     0x000000000008d133       0x7b ./Core/Src/lib/led_strip.o
                                       0x8b735 (size before relaxing)
- .debug_str     0x000000000008d184       0x5b ./Core/Src/lib/usb.o
+ .debug_str     0x000000000008d1ae       0x5b ./Core/Src/lib/usb.o
                                       0x896e4 (size before relaxing)
- .debug_str     0x000000000008d1df       0xb0 ./Core/Src/lib/ws2813b_controller.o
+ .debug_str     0x000000000008d209       0xb0 ./Core/Src/lib/ws2813b_controller.o
                                       0x8b6da (size before relaxing)
- .debug_str     0x000000000008d28f      0x82a ./Core/Src/main.o
-                                      0x8ddc5 (size before relaxing)
- .debug_str     0x000000000008dab9      0x2e1 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_str     0x000000000008d2b9      0x82a ./Core/Src/main.o
+                                      0x8ddf7 (size before relaxing)
+ .debug_str     0x000000000008dae3      0x2e1 ./Core/Src/stm32f1xx_hal_msp.o
                                       0x85bc8 (size before relaxing)
- .debug_str     0x000000000008dd9a      0x11b ./Core/Src/stm32f1xx_it.o
+ .debug_str     0x000000000008ddc4      0x11b ./Core/Src/stm32f1xx_it.o
                                       0x852ac (size before relaxing)
- .debug_str     0x000000000008deb5     0x1795 ./Core/Src/syscalls.o
+ .debug_str     0x000000000008dedf     0x1795 ./Core/Src/syscalls.o
                                        0x8a56 (size before relaxing)
- .debug_str     0x000000000008f64a       0x6b ./Core/Src/sysmem.o
+ .debug_str     0x000000000008f674       0x6b ./Core/Src/sysmem.o
                                        0x5d92 (size before relaxing)
- .debug_str     0x000000000008f6b5       0x7e ./Core/Src/system_stm32f1xx.o
+ .debug_str     0x000000000008f6df       0x7e ./Core/Src/system_stm32f1xx.o
                                       0x84e49 (size before relaxing)
- .debug_str     0x000000000008f733       0x36 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_str     0x000000000008f75d       0x36 ./Core/Startup/startup_stm32f103c8tx.o
                                          0x94 (size before relaxing)
- .debug_str     0x000000000008f769      0x30a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_str     0x000000000008f793      0x30a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                                       0x8557c (size before relaxing)
- .debug_str     0x000000000008fa73      0x29e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_str     0x000000000008fa9d      0x29e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
                                       0x854c8 (size before relaxing)
- .debug_str     0x000000000008fd11      0x201 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_str     0x000000000008fd3b      0x201 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
                                       0x851f2 (size before relaxing)
- .debug_str     0x000000000008ff12      0x305 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_str     0x000000000008ff3c      0x305 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
                                       0x851cf (size before relaxing)
- .debug_str     0x0000000000090217      0xb64 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_str     0x0000000000090241      0xb64 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
                                       0x85f10 (size before relaxing)
- .debug_str     0x0000000000090d7b      0x209 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_str     0x0000000000090da5      0x209 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
                                       0x85278 (size before relaxing)
- .debug_str     0x0000000000090f84      0xd33 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_str     0x0000000000090fae      0xd33 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
                                       0x8626a (size before relaxing)
- .debug_str     0x0000000000091cb7      0x493 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_str     0x0000000000091ce1      0x493 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
                                       0x85a86 (size before relaxing)
- .debug_str     0x000000000009214a      0x5dd ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_str     0x0000000000092174      0x5dd ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
                                       0x858e9 (size before relaxing)
 
 .comment        0x0000000000000000       0x50

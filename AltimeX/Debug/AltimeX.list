@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  000201dc  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001d158  00000000  00000000  00020205  2**0
+ 12 .debug_info   0001d1b3  00000000  00000000  00020205  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00003537  00000000  00000000  0003d35d  2**0
+ 13 .debug_abbrev 00003565  00000000  00000000  0003d3b8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00001138  00000000  00000000  00040898  2**3
+ 14 .debug_aranges 00001138  00000000  00000000  00040920  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00001028  00000000  00000000  000419d0  2**3
+ 15 .debug_ranges 00001028  00000000  00000000  00041a58  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001b0d4  00000000  00000000  000429f8  2**0
+ 16 .debug_macro  0001b0d4  00000000  00000000  00042a80  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00016aeb  00000000  00000000  0005dacc  2**0
+ 17 .debug_line   00016aee  00000000  00000000  0005db54  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00092727  00000000  00000000  000745b7  2**0
+ 18 .debug_str    00092751  00000000  00000000  00074642  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00106cde  2**0
+ 19 .comment      00000050  00000000  00000000  00106d93  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00005fb0  00000000  00000000  00106d30  2**2
+ 20 .debug_frame  00005fb0  00000000  00000000  00106de4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1557,7 +1557,7 @@ LPS22HB::LPS22HB(I2C_HandleTypeDef* i2c_config, uint16_t address):
 
 080011ce <_ZN7LPS22HB4initEv>:
 
-uint8_t LPS22HB::init()
+LPS22HB::LPS_INIT_STATUS LPS22HB::init()
 {
  80011ce:	b580      	push	{r7, lr}
  80011d0:	b084      	sub	sp, #16
@@ -1581,7 +1581,7 @@ uint8_t LPS22HB::init()
  80011f0:	7bfb      	ldrb	r3, [r7, #15]
  80011f2:	2b02      	cmp	r3, #2
  80011f4:	d101      	bne.n	80011fa <_ZN7LPS22HB4initEv+0x2c>
-		return 0;
+		return HAL_I2C_BUSY;
  80011f6:	2300      	movs	r3, #0
  80011f8:	e012      	b.n	8001220 <_ZN7LPS22HB4initEv+0x52>
 	}
@@ -1602,8 +1602,8 @@ uint8_t LPS22HB::init()
  800120c:	7bbb      	ldrb	r3, [r7, #14]
  800120e:	2b05      	cmp	r3, #5
  8001210:	d001      	beq.n	8001216 <_ZN7LPS22HB4initEv+0x48>
-		return 0;
- 8001212:	2300      	movs	r3, #0
+		return ODR_MISMATCH;
+ 8001212:	2301      	movs	r3, #1
  8001214:	e004      	b.n	8001220 <_ZN7LPS22HB4initEv+0x52>
 	}
 
@@ -1616,8 +1616,8 @@ uint8_t LPS22HB::init()
 	//Enable low pass filter
 	//LPS_Configure_LPFP(ODR_9);
 
-	return 1;
- 800121e:	2301      	movs	r3, #1
+	return SUCCESS;
+ 800121e:	2302      	movs	r3, #2
 }
  8001220:	4618      	mov	r0, r3
  8001222:	3710      	adds	r7, #16
@@ -2136,7 +2136,7 @@ double LPS22HB::get_calibration_temperature(uint8_t num_samples, uint8_t sample_
  80015bc:	f107 0328 	add.w	r3, r7, #40	; 0x28
  80015c0:	4611      	mov	r1, r2
  80015c2:	4618      	mov	r0, r3
- 80015c4:	f000 feea 	bl	800239c <_ZN7STM_USB7printlnEPcj>
+ 80015c4:	f000 feec 	bl	80023a0 <_ZN7STM_USB7printlnEPcj>
 
 	double cum_val = 0;
  80015c8:	f04f 0200 	mov.w	r2, #0
@@ -2252,7 +2252,7 @@ double LPS22HB::get_calibration_pressure(uint8_t num_samples, uint8_t sample_tim
  80016c4:	f107 0328 	add.w	r3, r7, #40	; 0x28
  80016c8:	4611      	mov	r1, r2
  80016ca:	4618      	mov	r0, r3
- 80016cc:	f000 fe66 	bl	800239c <_ZN7STM_USB7printlnEPcj>
+ 80016cc:	f000 fe68 	bl	80023a0 <_ZN7STM_USB7printlnEPcj>
 
 	double cum_val = 0;
  80016d0:	f04f 0200 	mov.w	r2, #0
@@ -3816,7 +3816,7 @@ LedStrip::LedStrip(TIM_HandleTypeDef* _timer): timer(_timer), controller(new WS2
  8002256:	681b      	ldr	r3, [r3, #0]
  8002258:	4619      	mov	r1, r3
  800225a:	4620      	mov	r0, r4
- 800225c:	f000 f8c8 	bl	80023f0 <_ZN17WS2813BControllerC1EP17TIM_HandleTypeDef>
+ 800225c:	f000 f8ca 	bl	80023f4 <_ZN17WS2813BControllerC1EP17TIM_HandleTypeDef>
  8002260:	687b      	ldr	r3, [r7, #4]
  8002262:	605c      	str	r4, [r3, #4]
 {
@@ -3989,7 +3989,7 @@ void STM_USB::printd(double data)
  800235a:	f107 030c 	add.w	r3, r7, #12
  800235e:	6cf9      	ldr	r1, [r7, #76]	; 0x4c
  8002360:	4618      	mov	r0, r3
- 8002362:	f000 f81b 	bl	800239c <_ZN7STM_USB7printlnEPcj>
+ 8002362:	f000 f81d 	bl	80023a0 <_ZN7STM_USB7printlnEPcj>
 }
  8002366:	bf00      	nop
  8002368:	3750      	adds	r7, #80	; 0x50
@@ -4003,160 +4003,161 @@ void STM_USB::printd(double data)
 void STM_USB::print(char* data, size_t len)
 {
  8002374:	b580      	push	{r7, lr}
- 8002376:	b082      	sub	sp, #8
+ 8002376:	b084      	sub	sp, #16
  8002378:	af00      	add	r7, sp, #0
  800237a:	6078      	str	r0, [r7, #4]
  800237c:	6039      	str	r1, [r7, #0]
+	UART_HandleTypeDef* tmp = STM_USB::uart;
+ 800237e:	4b07      	ldr	r3, [pc, #28]	; (800239c <_ZN7STM_USB5printEPcj+0x28>)
+ 8002380:	681b      	ldr	r3, [r3, #0]
+ 8002382:	60fb      	str	r3, [r7, #12]
 	HAL_UART_Transmit(STM_USB::uart, (const uint8_t*)data, len, 100);
- 800237e:	4b06      	ldr	r3, [pc, #24]	; (8002398 <_ZN7STM_USB5printEPcj+0x24>)
- 8002380:	6818      	ldr	r0, [r3, #0]
- 8002382:	683b      	ldr	r3, [r7, #0]
- 8002384:	b29a      	uxth	r2, r3
- 8002386:	2364      	movs	r3, #100	; 0x64
- 8002388:	6879      	ldr	r1, [r7, #4]
- 800238a:	f004 fac1 	bl	8006910 <HAL_UART_Transmit>
+ 8002384:	4b05      	ldr	r3, [pc, #20]	; (800239c <_ZN7STM_USB5printEPcj+0x28>)
+ 8002386:	6818      	ldr	r0, [r3, #0]
+ 8002388:	683b      	ldr	r3, [r7, #0]
+ 800238a:	b29a      	uxth	r2, r3
+ 800238c:	2364      	movs	r3, #100	; 0x64
+ 800238e:	6879      	ldr	r1, [r7, #4]
+ 8002390:	f004 fabe 	bl	8006910 <HAL_UART_Transmit>
 }
- 800238e:	bf00      	nop
- 8002390:	3708      	adds	r7, #8
- 8002392:	46bd      	mov	sp, r7
- 8002394:	bd80      	pop	{r7, pc}
- 8002396:	bf00      	nop
- 8002398:	200001fc 	.word	0x200001fc
+ 8002394:	bf00      	nop
+ 8002396:	3710      	adds	r7, #16
+ 8002398:	46bd      	mov	sp, r7
+ 800239a:	bd80      	pop	{r7, pc}
+ 800239c:	200001fc 	.word	0x200001fc
 
-0800239c <_ZN7STM_USB7printlnEPcj>:
+080023a0 <_ZN7STM_USB7printlnEPcj>:
 
 void STM_USB::println(char* data, size_t len)
 {
- 800239c:	b580      	push	{r7, lr}
- 800239e:	b084      	sub	sp, #16
- 80023a0:	af00      	add	r7, sp, #0
- 80023a2:	6078      	str	r0, [r7, #4]
- 80023a4:	6039      	str	r1, [r7, #0]
+ 80023a0:	b580      	push	{r7, lr}
+ 80023a2:	b084      	sub	sp, #16
+ 80023a4:	af00      	add	r7, sp, #0
+ 80023a6:	6078      	str	r0, [r7, #4]
+ 80023a8:	6039      	str	r1, [r7, #0]
 	STM_USB::print(data, len);
- 80023a6:	6839      	ldr	r1, [r7, #0]
- 80023a8:	6878      	ldr	r0, [r7, #4]
- 80023aa:	f7ff ffe3 	bl	8002374 <_ZN7STM_USB5printEPcj>
+ 80023aa:	6839      	ldr	r1, [r7, #0]
+ 80023ac:	6878      	ldr	r0, [r7, #4]
+ 80023ae:	f7ff ffe1 	bl	8002374 <_ZN7STM_USB5printEPcj>
 
 	char newline[3] = "\r\n";
- 80023ae:	4a09      	ldr	r2, [pc, #36]	; (80023d4 <_ZN7STM_USB7printlnEPcj+0x38>)
- 80023b0:	f107 030c 	add.w	r3, r7, #12
- 80023b4:	6812      	ldr	r2, [r2, #0]
- 80023b6:	4611      	mov	r1, r2
- 80023b8:	8019      	strh	r1, [r3, #0]
- 80023ba:	3302      	adds	r3, #2
- 80023bc:	0c12      	lsrs	r2, r2, #16
- 80023be:	701a      	strb	r2, [r3, #0]
+ 80023b2:	4a09      	ldr	r2, [pc, #36]	; (80023d8 <_ZN7STM_USB7printlnEPcj+0x38>)
+ 80023b4:	f107 030c 	add.w	r3, r7, #12
+ 80023b8:	6812      	ldr	r2, [r2, #0]
+ 80023ba:	4611      	mov	r1, r2
+ 80023bc:	8019      	strh	r1, [r3, #0]
+ 80023be:	3302      	adds	r3, #2
+ 80023c0:	0c12      	lsrs	r2, r2, #16
+ 80023c2:	701a      	strb	r2, [r3, #0]
 	STM_USB::print(newline, 2);
- 80023c0:	f107 030c 	add.w	r3, r7, #12
- 80023c4:	2102      	movs	r1, #2
- 80023c6:	4618      	mov	r0, r3
- 80023c8:	f7ff ffd4 	bl	8002374 <_ZN7STM_USB5printEPcj>
+ 80023c4:	f107 030c 	add.w	r3, r7, #12
+ 80023c8:	2102      	movs	r1, #2
+ 80023ca:	4618      	mov	r0, r3
+ 80023cc:	f7ff ffd2 	bl	8002374 <_ZN7STM_USB5printEPcj>
 }
- 80023cc:	bf00      	nop
- 80023ce:	3710      	adds	r7, #16
- 80023d0:	46bd      	mov	sp, r7
- 80023d2:	bd80      	pop	{r7, pc}
- 80023d4:	0800bd50 	.word	0x0800bd50
+ 80023d0:	bf00      	nop
+ 80023d2:	3710      	adds	r7, #16
+ 80023d4:	46bd      	mov	sp, r7
+ 80023d6:	bd80      	pop	{r7, pc}
+ 80023d8:	0800bd50 	.word	0x0800bd50
 
-080023d8 <_ZSt3tanf>:
+080023dc <_ZSt3tanf>:
   using ::tan;
 
 #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
   inline _GLIBCXX_CONSTEXPR float
   tan(float __x)
   { return __builtin_tanf(__x); }
- 80023d8:	b580      	push	{r7, lr}
- 80023da:	b082      	sub	sp, #8
- 80023dc:	af00      	add	r7, sp, #0
- 80023de:	6078      	str	r0, [r7, #4]
- 80023e0:	6878      	ldr	r0, [r7, #4]
- 80023e2:	f005 f883 	bl	80074ec <tanf>
- 80023e6:	4603      	mov	r3, r0
- 80023e8:	4618      	mov	r0, r3
- 80023ea:	3708      	adds	r7, #8
- 80023ec:	46bd      	mov	sp, r7
- 80023ee:	bd80      	pop	{r7, pc}
+ 80023dc:	b580      	push	{r7, lr}
+ 80023de:	b082      	sub	sp, #8
+ 80023e0:	af00      	add	r7, sp, #0
+ 80023e2:	6078      	str	r0, [r7, #4]
+ 80023e4:	6878      	ldr	r0, [r7, #4]
+ 80023e6:	f005 f881 	bl	80074ec <tanf>
+ 80023ea:	4603      	mov	r3, r0
+ 80023ec:	4618      	mov	r0, r3
+ 80023ee:	3708      	adds	r7, #8
+ 80023f0:	46bd      	mov	sp, r7
+ 80023f2:	bd80      	pop	{r7, pc}
 
-080023f0 <_ZN17WS2813BControllerC1EP17TIM_HandleTypeDef>:
+080023f4 <_ZN17WS2813BControllerC1EP17TIM_HandleTypeDef>:
 
 uint16_t pwmData[(24*MAX_LED)+50];
 uint8_t datasentflag = 0;
 */
 
 WS2813BController::WS2813BController(TIM_HandleTypeDef* _timer): timer(_timer)
- 80023f0:	b480      	push	{r7}
- 80023f2:	b083      	sub	sp, #12
- 80023f4:	af00      	add	r7, sp, #0
- 80023f6:	6078      	str	r0, [r7, #4]
- 80023f8:	6039      	str	r1, [r7, #0]
- 80023fa:	687b      	ldr	r3, [r7, #4]
- 80023fc:	683a      	ldr	r2, [r7, #0]
- 80023fe:	601a      	str	r2, [r3, #0]
+ 80023f4:	b480      	push	{r7}
+ 80023f6:	b083      	sub	sp, #12
+ 80023f8:	af00      	add	r7, sp, #0
+ 80023fa:	6078      	str	r0, [r7, #4]
+ 80023fc:	6039      	str	r1, [r7, #0]
+ 80023fe:	687b      	ldr	r3, [r7, #4]
+ 8002400:	683a      	ldr	r2, [r7, #0]
+ 8002402:	601a      	str	r2, [r3, #0]
 {
 
 }
- 8002400:	687b      	ldr	r3, [r7, #4]
- 8002402:	4618      	mov	r0, r3
- 8002404:	370c      	adds	r7, #12
- 8002406:	46bd      	mov	sp, r7
- 8002408:	bc80      	pop	{r7}
- 800240a:	4770      	bx	lr
+ 8002404:	687b      	ldr	r3, [r7, #4]
+ 8002406:	4618      	mov	r0, r3
+ 8002408:	370c      	adds	r7, #12
+ 800240a:	46bd      	mov	sp, r7
+ 800240c:	bc80      	pop	{r7}
+ 800240e:	4770      	bx	lr
 
-0800240c <_ZN17WS2813BController7set_ledEiiii>:
+08002410 <_ZN17WS2813BController7set_ledEiiii>:
 
 void WS2813BController::set_led (int LEDnum, int Red, int Green, int Blue)
 {
- 800240c:	b480      	push	{r7}
- 800240e:	b085      	sub	sp, #20
- 8002410:	af00      	add	r7, sp, #0
- 8002412:	60f8      	str	r0, [r7, #12]
- 8002414:	60b9      	str	r1, [r7, #8]
- 8002416:	607a      	str	r2, [r7, #4]
- 8002418:	603b      	str	r3, [r7, #0]
+ 8002410:	b480      	push	{r7}
+ 8002412:	b085      	sub	sp, #20
+ 8002414:	af00      	add	r7, sp, #0
+ 8002416:	60f8      	str	r0, [r7, #12]
+ 8002418:	60b9      	str	r1, [r7, #8]
+ 800241a:	607a      	str	r2, [r7, #4]
+ 800241c:	603b      	str	r3, [r7, #0]
 	this->LED_Data[LEDnum][0] = LEDnum;
- 800241a:	68bb      	ldr	r3, [r7, #8]
- 800241c:	b2d9      	uxtb	r1, r3
- 800241e:	68fa      	ldr	r2, [r7, #12]
- 8002420:	68bb      	ldr	r3, [r7, #8]
- 8002422:	009b      	lsls	r3, r3, #2
- 8002424:	4413      	add	r3, r2
- 8002426:	460a      	mov	r2, r1
- 8002428:	715a      	strb	r2, [r3, #5]
+ 800241e:	68bb      	ldr	r3, [r7, #8]
+ 8002420:	b2d9      	uxtb	r1, r3
+ 8002422:	68fa      	ldr	r2, [r7, #12]
+ 8002424:	68bb      	ldr	r3, [r7, #8]
+ 8002426:	009b      	lsls	r3, r3, #2
+ 8002428:	4413      	add	r3, r2
+ 800242a:	460a      	mov	r2, r1
+ 800242c:	715a      	strb	r2, [r3, #5]
 	this->LED_Data[LEDnum][1] = Green;
- 800242a:	683b      	ldr	r3, [r7, #0]
- 800242c:	b2d9      	uxtb	r1, r3
- 800242e:	68fa      	ldr	r2, [r7, #12]
- 8002430:	68bb      	ldr	r3, [r7, #8]
- 8002432:	009b      	lsls	r3, r3, #2
- 8002434:	4413      	add	r3, r2
- 8002436:	460a      	mov	r2, r1
- 8002438:	719a      	strb	r2, [r3, #6]
+ 800242e:	683b      	ldr	r3, [r7, #0]
+ 8002430:	b2d9      	uxtb	r1, r3
+ 8002432:	68fa      	ldr	r2, [r7, #12]
+ 8002434:	68bb      	ldr	r3, [r7, #8]
+ 8002436:	009b      	lsls	r3, r3, #2
+ 8002438:	4413      	add	r3, r2
+ 800243a:	460a      	mov	r2, r1
+ 800243c:	719a      	strb	r2, [r3, #6]
 	this->LED_Data[LEDnum][2] = Red;
- 800243a:	687b      	ldr	r3, [r7, #4]
- 800243c:	b2d9      	uxtb	r1, r3
- 800243e:	68fa      	ldr	r2, [r7, #12]
- 8002440:	68bb      	ldr	r3, [r7, #8]
- 8002442:	009b      	lsls	r3, r3, #2
- 8002444:	4413      	add	r3, r2
- 8002446:	460a      	mov	r2, r1
- 8002448:	71da      	strb	r2, [r3, #7]
+ 800243e:	687b      	ldr	r3, [r7, #4]
+ 8002440:	b2d9      	uxtb	r1, r3
+ 8002442:	68fa      	ldr	r2, [r7, #12]
+ 8002444:	68bb      	ldr	r3, [r7, #8]
+ 8002446:	009b      	lsls	r3, r3, #2
+ 8002448:	4413      	add	r3, r2
+ 800244a:	460a      	mov	r2, r1
+ 800244c:	71da      	strb	r2, [r3, #7]
 	this->LED_Data[LEDnum][3] = Blue;
- 800244a:	69bb      	ldr	r3, [r7, #24]
- 800244c:	b2d9      	uxtb	r1, r3
- 800244e:	68fa      	ldr	r2, [r7, #12]
- 8002450:	68bb      	ldr	r3, [r7, #8]
- 8002452:	009b      	lsls	r3, r3, #2
- 8002454:	4413      	add	r3, r2
- 8002456:	460a      	mov	r2, r1
- 8002458:	721a      	strb	r2, [r3, #8]
+ 800244e:	69bb      	ldr	r3, [r7, #24]
+ 8002450:	b2d9      	uxtb	r1, r3
+ 8002452:	68fa      	ldr	r2, [r7, #12]
+ 8002454:	68bb      	ldr	r3, [r7, #8]
+ 8002456:	009b      	lsls	r3, r3, #2
+ 8002458:	4413      	add	r3, r2
+ 800245a:	460a      	mov	r2, r1
+ 800245c:	721a      	strb	r2, [r3, #8]
 }
- 800245a:	bf00      	nop
- 800245c:	3714      	adds	r7, #20
- 800245e:	46bd      	mov	sp, r7
- 8002460:	bc80      	pop	{r7}
- 8002462:	4770      	bx	lr
- 8002464:	0000      	movs	r0, r0
-	...
+ 800245e:	bf00      	nop
+ 8002460:	3714      	adds	r7, #20
+ 8002462:	46bd      	mov	sp, r7
+ 8002464:	bc80      	pop	{r7}
+ 8002466:	4770      	bx	lr
 
 08002468 <_ZN17WS2813BController14set_brightnessEi>:
 
@@ -4244,7 +4245,7 @@ void WS2813BController::set_brightness (int brightness)  // 0-45
  80024fc:	f7fe fbee 	bl	8000cdc <__aeabi_i2f>
  8002500:	4604      	mov	r4, r0
  8002502:	68f8      	ldr	r0, [r7, #12]
- 8002504:	f7ff ff68 	bl	80023d8 <_ZSt3tanf>
+ 8002504:	f7ff ff6a 	bl	80023dc <_ZSt3tanf>
  8002508:	4603      	mov	r3, r0
  800250a:	4619      	mov	r1, r3
  800250c:	4620      	mov	r0, r4
@@ -4589,7 +4590,7 @@ void WS2813BController::set_led_from_rgb(int LEDnum, struct RGB* rgb)
  8002700:	460b      	mov	r3, r1
  8002702:	68b9      	ldr	r1, [r7, #8]
  8002704:	68f8      	ldr	r0, [r7, #12]
- 8002706:	f7ff fe81 	bl	800240c <_ZN17WS2813BController7set_ledEiiii>
+ 8002706:	f7ff fe83 	bl	8002410 <_ZN17WS2813BController7set_ledEiiii>
 }
  800270a:	bf00      	nop
  800270c:	3710      	adds	r7, #16
@@ -4655,7 +4656,7 @@ int main(void)
  800276c:	f107 0350 	add.w	r3, r7, #80	; 0x50
  8002770:	4611      	mov	r1, r2
  8002772:	4618      	mov	r0, r3
- 8002774:	f7ff fe12 	bl	800239c <_ZN7STM_USB7printlnEPcj>
+ 8002774:	f7ff fe14 	bl	80023a0 <_ZN7STM_USB7printlnEPcj>
 	LPS22HB* barometer = new LPS22HB(&hi2c1, LPS_DEFAULT_ADDRESS);
  8002778:	200c      	movs	r0, #12
  800277a:	f004 fe9d 	bl	80074b8 <_Znwj>
@@ -4666,7 +4667,7 @@ int main(void)
  8002786:	4620      	mov	r0, r4
  8002788:	f7fe fd08 	bl	800119c <_ZN7LPS22HBC1EP17I2C_HandleTypeDeft>
  800278c:	f8c7 4080 	str.w	r4, [r7, #128]	; 0x80
-	uint8_t baro_init_status = barometer->init();
+	LPS22HB::LPS_INIT_STATUS baro_init_status = barometer->init();
  8002790:	f8d7 0080 	ldr.w	r0, [r7, #128]	; 0x80
  8002794:	f7fe fd1b 	bl	80011ce <_ZN7LPS22HB4initEv>
  8002798:	4603      	mov	r3, r0

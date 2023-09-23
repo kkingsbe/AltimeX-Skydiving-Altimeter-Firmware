@@ -52,6 +52,8 @@ enum LPS_LPFP_BANDWIDTH {
 	ODR_20 = 0x3 //ODR/20
 };
 
+
+
 #define LPS_DEFAULT_ADDRESS 0x5C
 
 class LPS22HB {
@@ -64,8 +66,13 @@ private:
     double get_calibration_temperature(uint8_t num_samples, uint8_t sample_time_ms);
     double get_calibration_pressure(uint8_t num_samples, uint8_t sample_time_ms);
 public:
+    enum LPS_INIT_STATUS {
+    	HAL_I2C_BUSY,
+    	ODR_MISMATCH,
+    	SUCCESS
+    };
     LPS22HB(I2C_HandleTypeDef* i2c_config, uint16_t address);
-    uint8_t init();
+    LPS22HB::LPS_INIT_STATUS init();
     void reg_read(uint16_t reg_addr, uint16_t reg_size, uint8_t* data_output);
     void set_odr(enum LPS_ODR new_odr);
     enum LPS_ODR get_odr();

@@ -83,7 +83,7 @@ int main(void)
 	char message[] = "AltimeX Boot...";
 	STM_USB::println(message, strlen(message));
 	LPS22HB* barometer = new LPS22HB(&hi2c1, LPS_DEFAULT_ADDRESS);
-	uint8_t baro_init_status = barometer->init();
+	LPS22HB::LPS_INIT_STATUS baro_init_status = barometer->init();
 	barometer->calibrate(10, 100);
 	double tempF = barometer->get_tempf();
 	double alt = 0.0;

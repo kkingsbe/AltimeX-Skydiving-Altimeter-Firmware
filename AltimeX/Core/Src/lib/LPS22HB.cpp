@@ -15,14 +15,14 @@ LPS22HB::LPS22HB(I2C_HandleTypeDef* i2c_config, uint16_t address):
 
 }
 
-uint8_t LPS22HB::init()
+LPS22HB::LPS_INIT_STATUS LPS22HB::init()
 {
 	HAL_Delay(1000);
 
 	//Make sure the sensor is powered on and discovered on the I2C bus
 	HAL_StatusTypeDef i2c_status = HAL_I2C_IsDeviceReady(i2c_config, (uint16_t)(LPS_DEFAULT_ADDRESS<<1), 3, 5);
 	if(i2c_status == HAL_BUSY) {
-		return 0;
+		return HAL_I2C_BUSY;
 	}
 
 	//Set the ouptut data rate (odr)
@@ -31,7 +31,7 @@ uint8_t LPS22HB::init()
 	//Make sure the odr matches the desired odr
 	enum LPS_ODR odr = this->get_odr();
 	if(odr != ODR_75hz) {
-		return 0;
+		return ODR_MISMATCH;
 	}
 
 	//Set FIFO mode to BYPASS
@@ -40,7 +40,7 @@ uint8_t LPS22HB::init()
 	//Enable low pass filter
 	//LPS_Configure_LPFP(ODR_9);
 
-	return 1;
+	return SUCCESS;
 }
 
 void LPS22HB::reg_read(uint16_t reg_addr, uint16_t reg_size, uint8_t* data_output)

@@ -1,5 +1,5 @@
 ../Core/Src/lib/LPS22HB.cpp:9:1:LPS22HB::LPS22HB(I2C_HandleTypeDef*, uint16_t)	24	static
-../Core/Src/lib/LPS22HB.cpp:18:9:uint8_t LPS22HB::init()	24	static
+../Core/Src/lib/LPS22HB.cpp:18:26:LPS22HB::LPS_INIT_STATUS LPS22HB::init()	24	static
 ../Core/Src/lib/LPS22HB.cpp:46:6:void LPS22HB::reg_read(uint16_t, uint16_t, uint8_t*)	40	static
 ../Core/Src/lib/LPS22HB.cpp:52:6:void LPS22HB::set_odr(LPS_ODR)	40	static
 ../Core/Src/lib/LPS22HB.cpp:75:14:LPS_ODR LPS22HB::get_odr()	24	static

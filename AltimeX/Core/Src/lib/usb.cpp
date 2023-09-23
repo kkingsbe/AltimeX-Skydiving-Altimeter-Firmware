@@ -32,6 +32,7 @@ void STM_USB::printd(double data)
 
 void STM_USB::print(char* data, size_t len)
 {
+	UART_HandleTypeDef* tmp = STM_USB::uart;
 	HAL_UART_Transmit(STM_USB::uart, (const uint8_t*)data, len, 100);
 }
 

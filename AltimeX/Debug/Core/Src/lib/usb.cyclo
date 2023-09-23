@@ -2,4 +2,4 @@ usb.cpp:12:6:static void STM_USB::init(UART_HandleTypeDef*)	1
 usb.cpp:17:6:static void STM_USB::printf(float)	1
 usb.cpp:25:6:static void STM_USB::printd(double)	1
 usb.cpp:33:6:static void STM_USB::print(char*, size_t)	1
-usb.cpp:38:6:static void STM_USB::println(char*, size_t)	1
+usb.cpp:39:6:static void STM_USB::println(char*, size_t)	1
