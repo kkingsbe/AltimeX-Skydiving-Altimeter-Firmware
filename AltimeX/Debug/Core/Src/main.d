@@ -25,10 +25,11 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/LPS22HB.h ../Core/Inc/usb.h \
- ../Core/Inc/altimex_led_controller.h \
+ ../Core/Inc/altimex.h ../Core/Inc/LPS22HB.h ../Core/Inc/usb.h \
+ ../Core/Inc/usb.h ../Core/Inc/altimex_led_controller.h \
  ../Core/Inc/altimex_state_controller.h ../Core/Inc/altimex_config.h \
- ../Core/Inc/led_strip.h ../Core/Inc/ws2813b_controller.h
+ ../Core/Inc/led_strip.h ../Core/Inc/ws2813b_controller.h \
+ ../Core/Inc/altimex_state_controller.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -56,10 +57,13 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+../Core/Inc/altimex.h:
 ../Core/Inc/LPS22HB.h:
+../Core/Inc/usb.h:
 ../Core/Inc/usb.h:
 ../Core/Inc/altimex_led_controller.h:
 ../Core/Inc/altimex_state_controller.h:
 ../Core/Inc/altimex_config.h:
 ../Core/Inc/led_strip.h:
 ../Core/Inc/ws2813b_controller.h:
+../Core/Inc/altimex_state_controller.h:

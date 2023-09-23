@@ -1,0 +1,2 @@
+altimex.cpp:9:1:Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)	2
+altimex.cpp:34:6:void Altimex::tick()	2

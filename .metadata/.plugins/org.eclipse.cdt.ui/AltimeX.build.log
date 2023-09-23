@@ -1,21 +1,28 @@
-13:30:44 **** Incremental Build of configuration Debug for project AltimeX ****
+14:49:00 **** Incremental Build of configuration Debug for project AltimeX ****
 make -j16 all 
-arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.cpp: In function 'int main()':
-../Core/Src/main.cpp:86:27: warning: unused variable 'baro_init_status' [-Wunused-variable]
-   86 |  LPS22HB::LPS_INIT_STATUS baro_init_status = barometer->init();
-      |                           ^~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
 arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: AltimeX.elf
  
 arm-none-eabi-size   AltimeX.elf 
 arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
    text	   data	    bss	    dec	    hex	filename
-  50536	    484	   1972	  52992	   cf00	AltimeX.elf
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
 Finished building: default.size.stdout
  
 Finished building: AltimeX.list
  
 
-13:30:45 Build Finished. 0 errors, 1 warnings. (took 762ms)
+14:49:01 Build Finished. 0 errors, 3 warnings. (took 766ms)
 

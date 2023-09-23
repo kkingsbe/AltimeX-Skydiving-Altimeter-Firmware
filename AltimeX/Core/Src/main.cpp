@@ -18,10 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "LPS22HB.h"
-#include "usb.h"
-#include "altimex_led_controller.h"
-#include "altimex_state_controller.h"
+#include "altimex.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -53,6 +50,7 @@ DMA_HandleTypeDef hdma_tim2_ch2_ch4;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -79,33 +77,7 @@ static void MX_USART1_UART_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	STM_USB::init(&huart1);
-	char message[] = "AltimeX Boot...";
-	STM_USB::println(message, strlen(message));
-	LPS22HB* barometer = new LPS22HB(&hi2c1, LPS_DEFAULT_ADDRESS);
-	LPS22HB::LPS_INIT_STATUS baro_init_status = barometer->init();
-	barometer->calibrate(10, 100);
-	double tempF = barometer->get_tempf();
-	double alt = 0.0;
 
-	struct AltimexConfig config;
-	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
-	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
-	config.deployTestThresholdTime = 2000;     //ms, threshold time that vertical speed has to be under 50mph
-	config.gearCheckNotificationLength = 5000; //ms, the length of the gearcheck notification
-	config.freefallThresholdTime = 2000;       //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
-	config.exit = 12500.0;                     //Exit altitude
-	config.breakoff = 5500.0;                  //Breakoff altitude
-	config.deploy = 4500.0;                    //Deployment altitude
-	config.standbyFlashOnLength = 100;         //How long the light is on for when in standby mode
-	config.standbyFlashOffLength = 10000;      //Period between each flash in standby mode
-	config.numLeds = 10;                       //The number of leds being used
-	config.gearCheckAlt = 10000.0;             //The altitude that the gear check notification is given
-	config.brightness = 20;                    //LED brightness
-	config.standbyBrightness = 5;              //Brightness of LEDS while in standby mode
-
-	AltimexLedController* ledController = new AltimexLedController(&config, &htim2);
-	AltimexStateController* stateController = new AltimexStateController(&config);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -133,49 +105,31 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+	struct AltimexConfig config;
+	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
+	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
+	config.deployTestThresholdTime = 2000;     //ms, threshold time that vertical speed has to be under 50mph
+	config.gearCheckNotificationLength = 5000; //ms, the length of the gearcheck notification
+	config.freefallThresholdTime = 2000;       //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
+	config.exit = 12500.0;                     //Exit altitude
+	config.breakoff = 5500.0;                  //Breakoff altitude
+	config.deploy = 4500.0;                    //Deployment altitude
+	config.standbyFlashOnLength = 100;         //How long the light is on for when in standby mode
+	config.standbyFlashOffLength = 10000;      //Period between each flash in standby mode
+	config.numLeds = 10;                       //The number of leds being used
+	config.gearCheckAlt = 10000.0;             //The altitude that the gear check notification is given
+	config.brightness = 20;                    //LED brightness
+	config.standbyBrightness = 5;              //Brightness of LEDS while in standby mode
+
+	Altimex* altimex = new Altimex(&huart1, &hi2c1, &htim2, &config);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint16_t step = 0;
   while (1)
   {
-		//STORAGE_write(&hi2c1, 0, 8, &data);
-		//uint8_t data_read[8] = {'\0'};
-		//STORAGE_read(&hi2c1, 0, 8, &data_read);
-		//println(data_read, strlen(data_read), &huart1);
-
-		tempF = barometer->get_tempf();
-		STM_USB::printd(tempF);
-		  /*
-		  if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
-		  if(alt < 0) alt = 12500;
-		  if(HAL_GetTick() > 70000)
-		  {
-			if(alt < 2500) alt -= 5;
-			else alt -= 29;
-		  }
-		*/
-
-		  alt = barometer->get_relalt_ft();
-		  stateController->update_state(alt);
-		  ledController->display_leds(stateController->get_state(), step, alt);
-		  step++;
-		  if(step > 100) step = 0;
-
-		  /*
-		  char data[10];
-		  sprintf(data, "%f", alt);
-		  HAL_UART_Transmit(&huart1, data, sizeof(data), 100);
-		  */
-
-		  //printd(alt, &huart1);
-
-		  //Data is received one byte at a time
-		  //uint8_t Rx_data[1];
-		  //HAL_UART_Receive(&huart1, Rx_data, 100, 100);
-
-		  HAL_Delay(100); //10hz
+	  altimex->tick();
+	  HAL_Delay(100); //10hz
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -34083,3 +34083,952 @@ Finished building: default.size.stdout
  
 Finished building: AltimeX.list
  
+13:37:49 **** Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c8tx.d" -MT"Core/Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c8tx.o" "../Core/Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-g++ "../Core/Src/lib/LPS22HB.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/altimex_state_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+../Core/Src/lib/usb.cpp: In static member function 'static void STM_USB::print(char*, size_t)':
+../Core/Src/lib/usb.cpp:35:22: warning: unused variable 'tmp' [-Wunused-variable]
+   35 |  UART_HandleTypeDef* tmp = STM_USB::uart;
+      |                      ^~~
+In file included from ../Core/Src/lib/altimex_state_controller.cpp:8:
+../Core/Inc/altimex_state_controller.h: In constructor 'AltimexStateController::AltimexStateController(AltimexConfig*)':
+../Core/Inc/altimex_state_controller.h:32:17: warning: 'AltimexStateController::config' will be initialized after [-Wreorder]
+   32 |  AltimexConfig* config;
+      |                 ^~~~~~
+../Core/Inc/altimex_state_controller.h:31:15: warning:   'AltimexState AltimexStateController::currentState' [-Wreorder]
+   31 |  AltimexState currentState;
+      |               ^~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp:10:1: warning:   when initialized here [-Wreorder]
+   10 | AltimexStateController::AltimexStateController(AltimexConfig* _config):
+      | ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:88:22: warning: comparison between 'enum LPS22HB::LPS_INIT_STATUS' and 'enum ErrorStatus' [-Wenum-compare]
+   88 |  if(baro_init_status != SUCCESS) {
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/main.cpp:88:22: warning: comparison between types 'LPS22HB::LPS_INIT_STATUS' and 'ErrorStatus' [-Wsign-compare]
+../Core/Src/lib/altimex_state_controller.cpp: In member function 'void AltimexStateController::update_state(double)':
+../Core/Src/lib/altimex_state_controller.cpp:90:41: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   90 |   if(displayedGearCheck & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |                           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:179:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  179 |   STM_USB::print(".", 1);
+      |                  ^~~
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:201:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  201 |   STM_USB::print(".", 1);
+      |                  ^~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+13:38:10 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+13:38:40 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+13:39:10 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+13:42:18 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-g++ "../Core/Src/lib/LPS22HB.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:179:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  179 |   STM_USB::print(".", 1);
+      |                  ^~~
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:201:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  201 |   STM_USB::print(".", 1);
+      |                  ^~~
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/altimex_state_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+In file included from ../Core/Src/lib/altimex_state_controller.cpp:8:
+../Core/Inc/altimex_state_controller.h: In constructor 'AltimexStateController::AltimexStateController(AltimexConfig*)':
+../Core/Inc/altimex_state_controller.h:32:17: warning: 'AltimexStateController::config' will be initialized after [-Wreorder]
+   32 |  AltimexConfig* config;
+      |                 ^~~~~~
+../Core/Inc/altimex_state_controller.h:31:15: warning:   'AltimexState AltimexStateController::currentState' [-Wreorder]
+   31 |  AltimexState currentState;
+      |               ^~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp:10:1: warning:   when initialized here [-Wreorder]
+   10 | AltimexStateController::AltimexStateController(AltimexConfig* _config):
+      | ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp: In member function 'void AltimexStateController::update_state(double)':
+../Core/Src/lib/altimex_state_controller.cpp:90:41: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   90 |   if(displayedGearCheck & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |                           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/usb.cpp: In static member function 'static void STM_USB::print(char*, size_t)':
+../Core/Src/lib/usb.cpp:35:22: warning: unused variable 'tmp' [-Wunused-variable]
+   35 |  UART_HandleTypeDef* tmp = STM_USB::uart;
+      |                      ^~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  27428	    484	   1956	  29868	   74ac	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+13:42:32 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27428	    484	   1956	  29868	   74ac	AltimeX.elf
+Finished building: default.size.stdout
+ 
+13:43:07 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+13:50:40 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-g++ "../Core/Src/lib/LPS22HB.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:179:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  179 |   STM_USB::print(".", 1);
+      |                  ^~~
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:201:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  201 |   STM_USB::print(".", 1);
+      |                  ^~~
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/altimex_state_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+In file included from ../Core/Src/lib/altimex_state_controller.cpp:8:
+../Core/Inc/altimex_state_controller.h: In constructor 'AltimexStateController::AltimexStateController(AltimexConfig*)':
+../Core/Inc/altimex_state_controller.h:32:17: warning: 'AltimexStateController::config' will be initialized after [-Wreorder]
+   32 |  AltimexConfig* config;
+      |                 ^~~~~~
+../Core/Inc/altimex_state_controller.h:31:15: warning:   'AltimexState AltimexStateController::currentState' [-Wreorder]
+   31 |  AltimexState currentState;
+      |               ^~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp:10:1: warning:   when initialized here [-Wreorder]
+   10 | AltimexStateController::AltimexStateController(AltimexConfig* _config):
+      | ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp: In member function 'void AltimexStateController::update_state(double)':
+../Core/Src/lib/altimex_state_controller.cpp:90:41: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   90 |   if(displayedGearCheck & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |                           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/usb.cpp: In static member function 'static void STM_USB::print(char*, size_t)':
+../Core/Src/lib/usb.cpp:35:22: warning: unused variable 'tmp' [-Wunused-variable]
+   35 |  UART_HandleTypeDef* tmp = STM_USB::uart;
+      |                      ^~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    484	   1972	  53112	   cf78	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+13:57:12 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50664	    484	   1972	  53120	   cf80	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:17:51 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+../Core/Src/altimex.cpp:8:1: error: 'Altimex' does not name a type
+    8 | Altimex::boot(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer)
+      | ^~~~~~~
+../Core/Src/altimex.cpp:48:1: error: 'Altimex' does not name a type
+   48 | Altimex::tick()
+      | ^~~~~~~
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/lib/usb.cpp: In static member function 'static void STM_USB::print(char*, size_t)':
+../Core/Src/lib/usb.cpp:35:22: warning: unused variable 'tmp' [-Wunused-variable]
+   35 |  UART_HandleTypeDef* tmp = STM_USB::uart;
+      |                      ^~~
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:111:12: warning: unused variable 'step' [-Wunused-variable]
+  111 |   uint16_t step = 0;
+      |            ^~~~
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:18:12 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+../Core/Src/altimex.cpp:9:1: error: ISO C++ forbids declaration of 'boot' with no type [-fpermissive]
+    9 | Altimex::boot(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer)
+      | ^~~~~~~
+../Core/Src/altimex.cpp:9:1: error: no declaration matches 'int Altimex::boot(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)'
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h:19:7: note: candidate is: 'void Altimex::boot(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)'
+   19 |  void boot(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer);
+      |       ^~~~
+../Core/Inc/altimex.h:16:7: note: 'class Altimex' defined here
+   16 | class Altimex {
+      |       ^~~~~~~
+../Core/Src/altimex.cpp:49:1: error: ISO C++ forbids declaration of 'tick' with no type [-fpermissive]
+   49 | Altimex::tick()
+      | ^~~~~~~
+../Core/Src/altimex.cpp:49:1: error: no declaration matches 'int Altimex::tick()'
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h:20:7: note: candidate is: 'void Altimex::tick()'
+   20 |  void tick();
+      |       ^~~~
+../Core/Inc/altimex.h:16:7: note: 'class Altimex' defined here
+   16 | class Altimex {
+      |       ^~~~~~~
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:18:56 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/altimex.cpp: In member function 'void Altimex::boot(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)':
+../Core/Src/altimex.cpp:26:9: warning: unused variable 'tempF' [-Wunused-variable]
+   26 |  double tempF = barometer->get_tempf();
+      |         ^~~~~
+../Core/Src/altimex.cpp:27:9: warning: unused variable 'alt' [-Wunused-variable]
+   27 |  double alt = 0.0;
+      |         ^~~
+../Core/Src/altimex.cpp:45:24: warning: unused variable 'ledController' [-Wunused-variable]
+   45 |  AltimexLedController* ledController = new AltimexLedController(&config, _timer);
+      |                        ^~~~~~~~~~~~~
+../Core/Src/altimex.cpp:46:26: warning: unused variable 'stateController' [-Wunused-variable]
+   46 |  AltimexStateController* stateController = new AltimexStateController(&config);
+      |                          ^~~~~~~~~~~~~~~
+../Core/Src/altimex.cpp: In member function 'void Altimex::tick()':
+../Core/Src/altimex.cpp:56:2: error: 'tempF' was not declared in this scope; did you mean 'tempnam'?
+   56 |  tempF = barometer->get_tempf();
+      |  ^~~~~
+      |  tempnam
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:111:12: warning: unused variable 'step' [-Wunused-variable]
+  111 |   uint16_t step = 0;
+      |            ^~~~
+../Core/Src/altimex.cpp:56:10: error: 'barometer' was not declared in this scope
+   56 |  tempF = barometer->get_tempf();
+      |          ^~~~~~~~~
+../Core/Src/altimex.cpp:68:4: error: 'alt' was not declared in this scope
+   68 |    alt = barometer->get_relalt_ft();
+      |    ^~~
+../Core/Src/altimex.cpp:69:4: error: 'stateController' was not declared in this scope
+   69 |    stateController->update_state(alt);
+      |    ^~~~~~~~~~~~~~~
+../Core/Src/altimex.cpp:70:4: error: 'ledController' was not declared in this scope; did you mean 'AltimexLedController'?
+   70 |    ledController->display_leds(stateController->get_state(), step, alt);
+      |    ^~~~~~~~~~~~~
+      |    AltimexLedController
+../Core/Src/altimex.cpp:70:62: error: 'step' was not declared in this scope; did you mean 'strsep'?
+   70 |    ledController->display_leds(stateController->get_state(), step, alt);
+      |                                                              ^~~~
+      |                                                              strsep
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:23:02 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:87:33: error: no matching function for call to 'Altimex::Altimex()'
+   87 |  Altimex* altimex = new Altimex();
+      |                                 ^
+In file included from ../Core/Src/main.cpp:21:
+../Core/Inc/altimex.h:24:2: note: candidate: 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)'
+   24 |  Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer);
+      |  ^~~~~~~
+../Core/Inc/altimex.h:24:2: note:   candidate expects 3 arguments, 0 provided
+../Core/Inc/altimex.h:16:7: note: candidate: 'constexpr Altimex::Altimex(const Altimex&)'
+   16 | class Altimex {
+      |       ^~~~~~~
+../Core/Inc/altimex.h:16:7: note:   candidate expects 1 argument, 0 provided
+../Core/Inc/altimex.h:16:7: note: candidate: 'constexpr Altimex::Altimex(Altimex&&)'
+../Core/Inc/altimex.h:16:7: note:   candidate expects 1 argument, 0 provided
+../Core/Src/main.cpp:88:11: error: 'class Altimex' has no member named 'boot'
+   88 |  altimex->boot(&huart1, &hi2c1, &htim2);
+      |           ^~~~
+../Core/Src/main.cpp:111:12: warning: unused variable 'step' [-Wunused-variable]
+  111 |   uint16_t step = 0;
+      |            ^~~~
+../Core/Src/altimex.cpp: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)':
+../Core/Src/altimex.cpp:10:42: error: 'config' was not declared in this scope
+   10 |  ledController(new AltimexLedController(&config, _timer)),
+      |                                          ^~~~~~
+../Core/Src/altimex.cpp: In member function 'void Altimex::tick()':
+../Core/Src/altimex.cpp:70:62: error: 'step' was not declared in this scope; did you mean 'strsep'?
+   70 |    ledController->display_leds(stateController->get_state(), step, alt);
+      |                                                              ^~~~
+      |                                                              strsep
+make: *** [Core/Src/subdir.mk:41: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:24:28 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:103:33: error: no matching function for call to 'Altimex::Altimex()'
+  103 |  Altimex* altimex = new Altimex();
+      |                                 ^
+In file included from ../Core/Src/main.cpp:21:
+../Core/Inc/altimex.h:24:2: note: candidate: 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)'
+   24 |  Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config);
+      |  ^~~~~~~
+../Core/Inc/altimex.h:24:2: note:   candidate expects 4 arguments, 0 provided
+../Core/Inc/altimex.h:16:7: note: candidate: 'constexpr Altimex::Altimex(const Altimex&)'
+   16 | class Altimex {
+      |       ^~~~~~~
+../Core/Inc/altimex.h:16:7: note:   candidate expects 1 argument, 0 provided
+../Core/Inc/altimex.h:16:7: note: candidate: 'constexpr Altimex::Altimex(Altimex&&)'
+../Core/Inc/altimex.h:16:7: note:   candidate expects 1 argument, 0 provided
+../Core/Src/main.cpp:104:11: error: 'class Altimex' has no member named 'boot'
+  104 |  altimex->boot(&huart1, &hi2c1, &htim2);
+      |           ^~~~
+../Core/Src/altimex.cpp: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Src/altimex.cpp:11:52: error: no matching function for call to 'AltimexStateController::AltimexStateController(AltimexConfig**)'
+   11 |  stateController(new AltimexStateController(&config)),
+      |                                                    ^
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Inc/altimex.h:13,
+                 from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex_state_controller.h:50:2: note: candidate: 'AltimexStateController::AltimexStateController(AltimexConfig*)'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.cpp:127:12: warning: unused variable 'step' [-Wunused-variable]
+  127 |   uint16_t step = 0;
+      |            ^~~~
+../Core/Inc/altimex_state_controller.h:50:40: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexConfig*'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |                         ~~~~~~~~~~~~~~~^~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(const AltimexStateController&)'
+   29 | class AltimexStateController {
+      |       ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'const AltimexStateController&'
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(AltimexStateController&&)'
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexStateController&&'
+../Core/Src/altimex.cpp: In member function 'void Altimex::tick()':
+../Core/Src/altimex.cpp:54:62: error: 'step' was not declared in this scope; did you mean 'strsep'?
+   54 |    ledController->display_leds(stateController->get_state(), step, alt);
+      |                                                              ^~~~
+      |                                                              strsep
+make: *** [Core/Src/subdir.mk:41: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:25:21 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/altimex.cpp: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Src/altimex.cpp:11:52: error: no matching function for call to 'AltimexStateController::AltimexStateController(AltimexConfig**)'
+   11 |  stateController(new AltimexStateController(&config)),
+      |                                                    ^
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Inc/altimex.h:13,
+                 from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex_state_controller.h:50:2: note: candidate: 'AltimexStateController::AltimexStateController(AltimexConfig*)'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:50:40: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexConfig*'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |                         ~~~~~~~~~~~~~~~^~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(const AltimexStateController&)'
+   29 | class AltimexStateController {
+      |       ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'const AltimexStateController&'
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:126:12: warning: unused variable 'step' [-Wunused-variable]
+  126 |   uint16_t step = 0;
+      |            ^~~~
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(AltimexStateController&&)'
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexStateController&&'
+../Core/Src/altimex.cpp: In member function 'void Altimex::tick()':
+../Core/Src/altimex.cpp:54:62: error: 'step' was not declared in this scope; did you mean 'strsep'?
+   54 |    ledController->display_leds(stateController->get_state(), step, alt);
+      |                                                              ^~~~
+      |                                                              strsep
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:26:58 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/altimex.cpp: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Src/altimex.cpp:11:52: error: no matching function for call to 'AltimexStateController::AltimexStateController(AltimexConfig**)'
+   11 |  stateController(new AltimexStateController(&config)),
+      |                                                    ^
+In file included from ../Core/Inc/altimex_led_controller.h:10,
+                 from ../Core/Inc/altimex.h:13,
+                 from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex_state_controller.h:50:2: note: candidate: 'AltimexStateController::AltimexStateController(AltimexConfig*)'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:50:40: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexConfig*'
+   50 |  AltimexStateController(AltimexConfig* _config);
+      |                         ~~~~~~~~~~~~~~~^~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(const AltimexStateController&)'
+   29 | class AltimexStateController {
+      |       ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'const AltimexStateController&'
+../Core/Inc/altimex_state_controller.h:29:7: note: candidate: 'constexpr AltimexStateController::AltimexStateController(AltimexStateController&&)'
+../Core/Inc/altimex_state_controller.h:29:7: note:   no known conversion for argument 1 from 'AltimexConfig**' to 'AltimexStateController&&'
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+../Core/Src/main.cpp: In function 'int main()':
+../Core/Src/main.cpp:126:12: warning: unused variable 'step' [-Wunused-variable]
+  126 |   uint16_t step = 0;
+      |            ^~~~
+make: *** [Core/Src/subdir.mk:41: Core/Src/altimex.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:27:17 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50792	    484	   1972	  53248	   d000	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:28:02 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50792	    484	   1972	  53248	   d000	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:28:30 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50792	    484	   1972	  53248	   d000	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:29:12 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50792	    484	   1972	  53248	   d000	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:31:42 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-g++ "../Core/Src/lib/LPS22HB.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/LPS22HB.d" -MT"Core/Src/lib/LPS22HB.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/LPS22HB.o"
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:179:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  179 |   STM_USB::print(".", 1);
+      |                  ^~~
+../Core/Src/lib/LPS22HB.cpp: In member function 'double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)':
+../Core/Src/lib/LPS22HB.cpp:201:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  201 |   STM_USB::print(".", 1);
+      |                  ^~~
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/altimex_state_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_state_controller.d" -MT"Core/Src/lib/altimex_state_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_state_controller.o"
+arm-none-eabi-gcc "../Core/Src/lib/altimex_storage.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_storage.d" -MT"Core/Src/lib/altimex_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_storage.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+In file included from ../Core/Src/lib/altimex_state_controller.cpp:8:
+../Core/Inc/altimex_state_controller.h: In constructor 'AltimexStateController::AltimexStateController(AltimexConfig*)':
+../Core/Inc/altimex_state_controller.h:32:17: warning: 'AltimexStateController::config' will be initialized after [-Wreorder]
+   32 |  AltimexConfig* config;
+      |                 ^~~~~~
+../Core/Inc/altimex_state_controller.h:31:15: warning:   'AltimexState AltimexStateController::currentState' [-Wreorder]
+   31 |  AltimexState currentState;
+      |               ^~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp:10:1: warning:   when initialized here [-Wreorder]
+   10 | AltimexStateController::AltimexStateController(AltimexConfig* _config):
+      | ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_state_controller.cpp: In member function 'void AltimexStateController::update_state(double)':
+../Core/Src/lib/altimex_state_controller.cpp:90:41: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   90 |   if(displayedGearCheck & HAL_GetTick() > gearCheckNotificationStart + config->gearCheckNotificationLength)
+      |                           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/usb.cpp: In static member function 'static void STM_USB::print(char*, size_t)':
+../Core/Src/lib/usb.cpp:35:22: warning: unused variable 'tmp' [-Wunused-variable]
+   35 |  UART_HandleTypeDef* tmp = STM_USB::uart;
+      |                      ^~~
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:32:12 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:32:56 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:33:22 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:33:45 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:34:31 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50784	    484	   1972	  53240	   cff8	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:35:47 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50840	    484	   1972	  53296	   d030	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:37:37 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:38:25 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:38:58 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:40:21 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:41:54 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:42:30 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50848	    484	   1972	  53304	   d038	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:44:15 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/ws2813b_controller.cpp: In function 'void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef*)':
+../Core/Src/lib/ws2813b_controller.cpp:144:23: error: 'timer' was not declared in this scope
+  144 |  HAL_TIM_PWM_Stop_DMA(timer, TIM_CHANNEL_2);
+      |                       ^~~~~
+../Core/Src/lib/ws2813b_controller.cpp:145:2: error: 'data_sent_flag' was not declared in this scope
+  145 |  data_sent_flag = true;
+      |  ^~~~~~~~~~~~~~
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+make: *** [Core/Src/lib/subdir.mk:41: Core/Src/lib/ws2813b_controller.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:47:00 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/altimex_led_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_led_controller.d" -MT"Core/Src/lib/altimex_led_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_led_controller.o"
+arm-none-eabi-g++ "../Core/Src/lib/led_strip.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/led_strip.d" -MT"Core/Src/lib/led_strip.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/led_strip.o"
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/lib/ws2813b_controller.cpp: In constructor 'WS2813BController::WS2813BController(TIM_HandleTypeDef*)':
+../Core/Src/lib/ws2813b_controller.cpp:19:66: error: 'TIM_HandleTypeDef* WS2813BController::timer' is a static data member; it can only be initialized at its definition
+   19 | WS2813BController::WS2813BController(TIM_HandleTypeDef* _timer): timer(_timer)
+      |                                                                  ^~~~~
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+make: *** [Core/Src/lib/subdir.mk:41: Core/Src/lib/ws2813b_controller.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:47:17 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/ws2813b_controller.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/ws2813b_controller.d" -MT"Core/Src/lib/ws2813b_controller.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/ws2813b_controller.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:47:58 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
+Finished building: default.size.stdout
+ 
+14:48:15 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:48:33 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+14:49:00 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/altimex.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/altimex.d" -MT"Core/Src/altimex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/altimex.o"
+In file included from ../Core/Src/altimex.cpp:7:
+../Core/Inc/altimex.h: In constructor 'Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)':
+../Core/Inc/altimex.h:23:11: warning: 'Altimex::barometer' will be initialized after [-Wreorder]
+   23 |  LPS22HB* barometer;
+      |           ^~~~~~~~~
+../Core/Inc/altimex.h:22:11: warning:   'uint16_t Altimex::step' [-Wreorder]
+   22 |  uint16_t step;
+      |           ^~~~
+../Core/Src/altimex.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config):
+      | ^~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51264	    484	   1980	  53728	   d1e0	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 

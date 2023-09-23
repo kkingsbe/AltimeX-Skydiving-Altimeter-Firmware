@@ -17,21 +17,21 @@ void LedStrip::progress_bar_single_color(uint8_t num_filled, enum COLOR color)
 	this->clear();
 	if(num_filled > MAX_LED) num_filled = MAX_LED;
 	for(uint8_t i = 0; i < num_filled; i++) {
-		this->controller->set_led_from_color_name(i, color);
+		controller->set_led_from_color_name(i, color);
 	}
 }
 
 void LedStrip::clear()
 {
-	this->clear();
+	controller->clear();
 }
 
 void LedStrip::send()
 {
-	this->controller->send();
+	controller->send();
 }
 
 void LedStrip::set_brightness(int brightness)
 {
-	this->controller->set_brightness(brightness);
+	controller->set_brightness(brightness);
 }
