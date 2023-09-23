@@ -1,0 +1,17 @@
+13:19:31 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/usb.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/usb.d" -MT"Core/Src/lib/usb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/usb.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  50536	    484	   1972	  52992	   cf00	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+
+13:19:32 Build Finished. 0 errors, 0 warnings. (took 760ms)
+

@@ -1,0 +1,5 @@
+led_strip.cpp:10:1:LedStrip::LedStrip(TIM_HandleTypeDef*)	1
+led_strip.cpp:15:6:void LedStrip::progress_bar_single_color(uint8_t, COLOR)	3
+led_strip.cpp:24:6:void LedStrip::clear()	1
+led_strip.cpp:29:6:void LedStrip::send()	1
+led_strip.cpp:34:6:void LedStrip::set_brightness(int)	1

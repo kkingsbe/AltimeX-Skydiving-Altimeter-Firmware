@@ -1,0 +1,42 @@
+/*
+ * altimex_serial.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#include <usb.h>
+
+static void USB::init(UART_HandleTypeDef* _uart)
+{
+	USB.uart = uart;
+}
+
+static void USB::printf(float data)
+{
+	char charData[64] = {'\0'};
+	sprintf(charData, "%f", data);
+	size_t len = strlen(charData);
+	println(charData, len, uart);
+}
+
+static void USB::printd(double data)
+{
+	char charData[64] = {'\0'};
+	sprintf(charData, "%f", data);
+	size_t len = strlen(charData);
+	println(charData, len, uart);
+}
+
+static void USB::print(char* data, size_t len)
+{
+	HAL_UART_Transmit(uart, data, len, 100);
+}
+
+static void USB::println(char* data, size_t len)
+{
+	print(data, len, uart);
+
+	char newline[2] = "\r\n";
+	print(newline, 2, uart);
+}

@@ -110,10 +110,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	HAL_Delay(1000);
-	uint8_t lps_startup_result = LPS_Init(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
-	double refP = LPS_Get_Calibration_Pressure(10, 100);
-	double refT = LPS_Get_Calibration_Temperature(10, 100);
-	double tempF = LPS_Get_TempF();
+	//LPS22HB barometer = new LPS22HB(&hi2c1, LPS_DEFAULT_ADDRESS, &huart1);
+	//double refP = barometer.get_calibration_pressure(10, 100);
+	//double refT = barometer.get_calibration_temperature(10, 100);
+	//double tempF = barometer.get_tempf();
 	double alt = 0.0;
 	//uint16_t alt = 0;
 
@@ -141,12 +141,12 @@ int main(void)
   {
 	//uint8_t data[] = "hello!!!";
 	//STORAGE_write(&hi2c1, 0, 8, &data);
-	uint8_t data_read[8] = {'\0'};
-	STORAGE_read(&hi2c1, 0, 8, &data_read);
+	//uint8_t data_read[8] = {'\0'};
+	//STORAGE_read(&hi2c1, 0, 8, &data_read);
 	//println(data_read, strlen(data_read), &huart1);
 
-	tempF = LPS_Get_TempF();
-	printd(tempF, &huart1);
+	//tempF = barometer.get_tempf();
+	//printd(tempF, &huart1);
     /*
     if(HAL_GetTick() > 10000 && HAL_GetTick() < 70000) alt = ((HAL_GetTick() - 10000) / (double)60000) * 12500;
     if(alt < 0) alt = 12500;
@@ -157,9 +157,9 @@ int main(void)
     }
 	*/
 
-    alt = LPS_Get_RelAlt_Ft(refP);
-    StateController_updateState(&config, alt);
-    Altimex_displayLeds(StateController_currentState, step, &config, alt);
+    //alt = barometer.get_relalt_ft(refP);
+    //StateController_updateState(&config, alt);
+    //Altimex_displayLeds(StateController_currentState, step, &config, alt);
     step++;
     if(step > 100) step = 0;
 

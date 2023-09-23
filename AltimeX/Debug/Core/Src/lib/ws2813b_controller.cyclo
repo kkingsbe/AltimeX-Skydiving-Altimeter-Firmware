@@ -1,0 +1,10 @@
+cmath:482:3:constexpr float std::tan(float)	1
+ws2813b_controller.cpp:16:1:WS2813BController::WS2813BController(TIM_HandleTypeDef*)	1
+ws2813b_controller.cpp:21:6:void WS2813BController::set_led(int, int, int, int)	1
+ws2813b_controller.cpp:31:6:void WS2813BController::set_brightness(int)	4
+ws2813b_controller.cpp:51:6:void WS2813BController::send()	6
+ws2813b_controller.cpp:91:6:void WS2813BController::color_to_rgb(RGB*, COLOR)	7
+ws2813b_controller.cpp:130:6:void WS2813BController::set_led_from_rgb(int, RGB*)	1
+ws2813b_controller.cpp:135:6:void WS2813BController::set_led_from_color_name(int, COLOR)	1
+ws2813b_controller.cpp:142:6:void WS2813BController::hal_tim_pwm_pulse_finished_callback(TIM_HandleTypeDef*)	1
+ws2813b_controller.cpp:148:6:void WS2813BController::clear()	2

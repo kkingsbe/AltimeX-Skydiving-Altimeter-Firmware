@@ -1,0 +1,32 @@
+/*
+ * led_strip.c
+ *
+ *  Created on: Apr 15, 2023
+ *      Author: kking
+ */
+
+#include "led_strip.h"
+
+LedStrip::LedStrip(TIM_HandleTypeDef* _timer)
+{
+	this->timer = _timer;
+}
+
+void LedStrip::progress_bar_single_color(uint8_t num_filled, enum COLOR color)
+{
+	this->clear();
+	if(num_filled > MAX_LED) num_filled = MAX_LED;
+	for(uint8_t i = 0; i < num_filled; i++) {
+		this->set_led_from_color_name(i, color);
+	}
+}
+
+void LedStrip::clear()
+{
+	this->clear();
+}
+
+void LedStrip::send()
+{
+	this->send();
+}

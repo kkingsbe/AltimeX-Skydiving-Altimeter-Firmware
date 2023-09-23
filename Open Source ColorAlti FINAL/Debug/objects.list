@@ -1,4 +1,3 @@
-"./Core/Src/lib/LPS22HB.o"
 "./Core/Src/lib/altimex_led_controller.o"
 "./Core/Src/lib/altimex_serial.o"
 "./Core/Src/lib/altimex_state_controller.o"

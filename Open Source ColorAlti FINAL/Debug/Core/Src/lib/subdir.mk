@@ -5,7 +5,6 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/lib/LPS22HB.c \
 ../Core/Src/lib/altimex_led_controller.c \
 ../Core/Src/lib/altimex_serial.c \
 ../Core/Src/lib/altimex_state_controller.c \
@@ -15,7 +14,6 @@ C_SRCS += \
 ../Core/Src/lib/ws2813b_controller.c 
 
 OBJS += \
-./Core/Src/lib/LPS22HB.o \
 ./Core/Src/lib/altimex_led_controller.o \
 ./Core/Src/lib/altimex_serial.o \
 ./Core/Src/lib/altimex_state_controller.o \
@@ -25,7 +23,6 @@ OBJS += \
 ./Core/Src/lib/ws2813b_controller.o 
 
 C_DEPS += \
-./Core/Src/lib/LPS22HB.d \
 ./Core/Src/lib/altimex_led_controller.d \
 ./Core/Src/lib/altimex_serial.d \
 ./Core/Src/lib/altimex_state_controller.d \
@@ -42,7 +39,7 @@ Core/Src/lib/%.o Core/Src/lib/%.su Core/Src/lib/%.cyclo: ../Core/Src/lib/%.c Cor
 clean: clean-Core-2f-Src-2f-lib
 
 clean-Core-2f-Src-2f-lib:
-	-$(RM) ./Core/Src/lib/LPS22HB.cyclo ./Core/Src/lib/LPS22HB.d ./Core/Src/lib/LPS22HB.o ./Core/Src/lib/LPS22HB.su ./Core/Src/lib/altimex_led_controller.cyclo ./Core/Src/lib/altimex_led_controller.d ./Core/Src/lib/altimex_led_controller.o ./Core/Src/lib/altimex_led_controller.su ./Core/Src/lib/altimex_serial.cyclo ./Core/Src/lib/altimex_serial.d ./Core/Src/lib/altimex_serial.o ./Core/Src/lib/altimex_serial.su ./Core/Src/lib/altimex_state_controller.cyclo ./Core/Src/lib/altimex_state_controller.d ./Core/Src/lib/altimex_state_controller.o ./Core/Src/lib/altimex_state_controller.su ./Core/Src/lib/altimex_storage.cyclo ./Core/Src/lib/altimex_storage.d ./Core/Src/lib/altimex_storage.o ./Core/Src/lib/altimex_storage.su ./Core/Src/lib/bmp581.cyclo ./Core/Src/lib/bmp581.d ./Core/Src/lib/bmp581.o ./Core/Src/lib/bmp581.su ./Core/Src/lib/led_strip.cyclo ./Core/Src/lib/led_strip.d ./Core/Src/lib/led_strip.o ./Core/Src/lib/led_strip.su ./Core/Src/lib/ws2813b_controller.cyclo ./Core/Src/lib/ws2813b_controller.d ./Core/Src/lib/ws2813b_controller.o ./Core/Src/lib/ws2813b_controller.su
+	-$(RM) ./Core/Src/lib/altimex_led_controller.cyclo ./Core/Src/lib/altimex_led_controller.d ./Core/Src/lib/altimex_led_controller.o ./Core/Src/lib/altimex_led_controller.su ./Core/Src/lib/altimex_serial.cyclo ./Core/Src/lib/altimex_serial.d ./Core/Src/lib/altimex_serial.o ./Core/Src/lib/altimex_serial.su ./Core/Src/lib/altimex_state_controller.cyclo ./Core/Src/lib/altimex_state_controller.d ./Core/Src/lib/altimex_state_controller.o ./Core/Src/lib/altimex_state_controller.su ./Core/Src/lib/altimex_storage.cyclo ./Core/Src/lib/altimex_storage.d ./Core/Src/lib/altimex_storage.o ./Core/Src/lib/altimex_storage.su ./Core/Src/lib/bmp581.cyclo ./Core/Src/lib/bmp581.d ./Core/Src/lib/bmp581.o ./Core/Src/lib/bmp581.su ./Core/Src/lib/led_strip.cyclo ./Core/Src/lib/led_strip.d ./Core/Src/lib/led_strip.o ./Core/Src/lib/led_strip.su ./Core/Src/lib/ws2813b_controller.cyclo ./Core/Src/lib/ws2813b_controller.d ./Core/Src/lib/ws2813b_controller.o ./Core/Src/lib/ws2813b_controller.su
 
 .PHONY: clean-Core-2f-Src-2f-lib
 
