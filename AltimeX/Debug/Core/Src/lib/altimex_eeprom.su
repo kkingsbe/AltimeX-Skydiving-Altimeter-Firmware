@@ -1,3 +1,3 @@
 ../Core/Src/lib/altimex_eeprom.cpp:10:1:AltimexEeprom::AltimexEeprom(uint16_t, I2C_HandleTypeDef*)	32	static
-../Core/Src/lib/altimex_eeprom.cpp:16:6:void AltimexEeprom::save_configuration(AltimexConfig*)	24	static
-../Core/Src/lib/altimex_eeprom.cpp:22:6:void AltimexEeprom::load_configuration(AltimexConfig*)	104	static
+../Core/Src/lib/altimex_eeprom.cpp:16:6:void AltimexEeprom::save_configuration(AltimexConfig*)	96	static
+../Core/Src/lib/altimex_eeprom.cpp:26:6:void AltimexEeprom::load_configuration(AltimexConfig*)	104	static

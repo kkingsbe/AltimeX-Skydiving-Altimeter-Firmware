@@ -15,11 +15,7 @@ AltimexEeprom::AltimexEeprom(uint16_t _address, I2C_HandleTypeDef* _i2cx):
 
 void AltimexEeprom::save_configuration(AltimexConfig* config)
 {
-	uint8_t data[sizeof(AltimexConfig)]; // Create a byte array of the same size as the struct
-
-	// Copy the struct data into the byte array
-	memcpy(data, config, sizeof(AltimexConfig));
-
+	uint8_t* data = (uint8_t*)&config;
 	storage->write_from(CONFIGURATION_OFFSET, sizeof(AltimexConfig), data);
 }
 

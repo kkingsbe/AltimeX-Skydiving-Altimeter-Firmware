@@ -37564,3 +37564,177 @@ Finished building: default.size.stdout
  
 Finished building: AltimeX.list
  
+15:12:57 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51588	    484	   1980	  54052	   d324	AltimeX.elf
+Finished building: default.size.stdout
+ 
+15:16:26 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+../Core/Src/lib/eeprom_storage.cpp: In member function 'HAL_StatusTypeDef EepromStorage::write(size_t, uint8_t*)':
+../Core/Src/lib/eeprom_storage.cpp:50:99: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'uint8_t*' {aka 'unsigned char*'} [-fpermissive]
+   50 |   HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, currentOffset + i, 2, data[i], size, 1000);
+      |                                                                                             ~~~~~~^
+      |                                                                                                   |
+      |                                                                                                   uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/eeprom_storage.h:7,
+                 from ../Core/Src/lib/eeprom_storage.cpp:9:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:567:134: note:   initializing argument 5 of 'HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef*, uint16_t, uint16_t, uint16_t, uint8_t*, uint16_t, uint32_t)'
+  567 | HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                                                                             ~~~~~~~~~^~~~~
+../Core/Src/lib/eeprom_storage.cpp:52:6: error: 'read_res' was not declared in this scope; did you mean 'readAddress'?
+   52 |   if(read_res != HAL_OK) {
+      |      ^~~~~~~~
+      |      readAddress
+../Core/Src/lib/eeprom_storage.cpp:50:21: warning: unused variable 'write_res' [-Wunused-variable]
+   50 |   HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, currentOffset + i, 2, data[i], size, 1000);
+      |                     ^~~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:43: Core/Src/lib/eeprom_storage.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:16:52 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+../Core/Src/lib/eeprom_storage.cpp: In member function 'HAL_StatusTypeDef EepromStorage::write(size_t, uint8_t*)':
+../Core/Src/lib/eeprom_storage.cpp:52:6: error: 'read_res' was not declared in this scope; did you mean 'readAddress'?
+   52 |   if(read_res != HAL_OK) {
+      |      ^~~~~~~~
+      |      readAddress
+../Core/Src/lib/eeprom_storage.cpp:50:21: warning: unused variable 'write_res' [-Wunused-variable]
+   50 |   HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, currentOffset + i, 2, &data[i], size, 1000);
+      |                     ^~~~~~~~~
+make: *** [Core/Src/lib/subdir.mk:43: Core/Src/lib/eeprom_storage.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:17:02 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+../Core/Src/lib/eeprom_storage.cpp: In member function 'HAL_StatusTypeDef EepromStorage::write(size_t, uint8_t*)':
+../Core/Src/lib/eeprom_storage.cpp:53:13: error: 'read_res' was not declared in this scope; did you mean 'readAddress'?
+   53 |    status = read_res;
+      |             ^~~~~~~~
+      |             readAddress
+make: *** [Core/Src/lib/subdir.mk:43: Core/Src/lib/eeprom_storage.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:17:09 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51588	    484	   1980	  54052	   d324	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:17:40 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51636	    484	   1980	  54100	   d354	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:18:14 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51636	    484	   1980	  54100	   d354	AltimeX.elf
+Finished building: default.size.stdout
+ 
+15:18:35 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51636	    484	   1980	  54100	   d354	AltimeX.elf
+Finished building: default.size.stdout
+ 
+15:19:46 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51636	    484	   1980	  54100	   d354	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:21:17 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/altimex_eeprom.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/altimex_eeprom.d" -MT"Core/Src/lib/altimex_eeprom.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/altimex_eeprom.o"
+../Core/Src/lib/altimex_eeprom.cpp: In member function 'void AltimexEeprom::load_configuration(AltimexConfig*)':
+../Core/Src/lib/altimex_eeprom.cpp:34:23: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   34 |      STM_USB::println("Loaded configuration!");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/lib/altimex_eeprom.cpp:36:23: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |      STM_USB::println("Error loading configuration from EEPROM");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51652	    484	   1980	  54116	   d364	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:22:19 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/lib/eeprom_storage.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lib/eeprom_storage.d" -MT"Core/Src/lib/eeprom_storage.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lib/eeprom_storage.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51604	    484	   1980	  54068	   d334	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:22:48 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51604	    484	   1980	  54068	   d334	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
+15:23:29 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "AltimeX.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kking\OneDrive\Documents\code\Open-Source-Skydiving-Altimeter-Firmware\AltimeX\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AltimeX.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: AltimeX.elf
+ 
+arm-none-eabi-size   AltimeX.elf 
+arm-none-eabi-objdump -h -S  AltimeX.elf  > "AltimeX.list"
+   text	   data	    bss	    dec	    hex	filename
+  51604	    484	   1980	  54068	   d334	AltimeX.elf
+Finished building: default.size.stdout
+ 
+Finished building: AltimeX.list
+ 
