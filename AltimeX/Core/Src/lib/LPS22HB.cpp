@@ -168,44 +168,40 @@ void LPS22HB::calibrate(uint8_t num_samples, uint8_t sample_time_ms)
 
 double LPS22HB::get_calibration_temperature(uint8_t num_samples, uint8_t sample_time_ms)
 {
-	char msg[] = "\r\n\nCalibrating LPS Temperature:";
-	STM_USB::println(msg, strlen(msg));
+	STM_USB::println("\r\n\nCalibrating LPS Temperature:");
 
 	double cum_val = 0;
 	double avg_val = 0;
 	uint8_t sample = 0;
 	while(sample < num_samples) {
 		double _temp = this->get_temp();
-		STM_USB::print(".", 1);
+		STM_USB::print(".");
 		cum_val += _temp;
 		HAL_Delay(sample_time_ms);
 		sample ++;
 	}
 	avg_val = cum_val / (double)num_samples;
-	char msg2[] = "\r\nAverage Temperature (C): ";
-	STM_USB::print(msg2, strlen(msg2));
+	STM_USB::print("\r\nAverage Temperature (C): ");
 	STM_USB::printd(avg_val);
 	return avg_val;
 }
 
 double LPS22HB::get_calibration_pressure(uint8_t num_samples, uint8_t sample_time_ms)
 {
-	char msg[] = "\r\n\nCalibrating LPS Pressure:\n";
-	STM_USB::println(msg, strlen(msg));
+	STM_USB::println("\r\n\nCalibrating LPS Pressure:\n");
 
 	double cum_val = 0;
 	double avg_val = 0;
 	uint8_t sample = 0;
 	while(sample < num_samples) {
 		double _temp = this->get_pressure();
-		STM_USB::print(".", 1);
+		STM_USB::print(".");
 		cum_val += _temp;
 		HAL_Delay(sample_time_ms);
 		sample ++;
 	}
 	avg_val = cum_val / (double)num_samples;
-	char msg2[] = "\r\nAverage Pressure (PA): ";
-	STM_USB::print(msg2, strlen(msg2));
+	STM_USB::print("\r\nAverage Pressure (PA): ");
 	STM_USB::printd(avg_val);
 	return avg_val;
 }

@@ -1,0 +1,2 @@
+../Core/Src/lib/altimex.cpp:9:1:Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)	120	static
+../Core/Src/lib/altimex.cpp:39:6:void Altimex::tick()	32	static

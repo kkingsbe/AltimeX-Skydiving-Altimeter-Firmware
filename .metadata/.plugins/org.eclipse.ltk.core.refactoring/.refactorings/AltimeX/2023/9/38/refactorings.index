@@ -16,3 +16,6 @@
 1695484226349	Rename resource 'altimex_led_controller.c'
 1695485178932	Rename resource 'altimex_state_controller.c'
 1695491159867	Rename resource 'main.c'
+1695499118188	Rename resource 'altimex_storage.h'
+1695499124442	Rename resource 'altimex_storage.c'
+1695499132276	Rename resource 'eeprom_storage.c'

@@ -12,6 +12,7 @@
 #include "usb.h"
 #include "altimex_led_controller.h"
 #include "altimex_state_controller.h"
+#include "altimex_eeprom.h"
 
 class Altimex {
 private:
@@ -21,6 +22,7 @@ private:
 	double alt;
 	uint16_t step;
 	LPS22HB* barometer;
+	AltimexEeprom* eeprom;
 public:
 	Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config);
 	void tick();

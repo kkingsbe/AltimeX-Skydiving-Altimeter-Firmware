@@ -11,4 +11,4 @@ LPS22HB.cpp:143:8:double LPS22HB::get_pressureatm()	1
 LPS22HB.cpp:150:8:double LPS22HB::get_relalt_ft()	1
 LPS22HB.cpp:163:6:void LPS22HB::calibrate(uint8_t, uint8_t)	1
 LPS22HB.cpp:169:8:double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)	2
-LPS22HB.cpp:191:8:double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)	2
+LPS22HB.cpp:189:8:double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)	2

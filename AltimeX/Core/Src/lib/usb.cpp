@@ -19,7 +19,7 @@ void STM_USB::printf(float data)
 	char charData[64] = {'\0'};
 	sprintf(charData, "%f", data);
 	size_t len = strlen(charData);
-	STM_USB::println(charData, len);
+	STM_USB::println(charData);
 }
 
 void STM_USB::printd(double data)
@@ -27,19 +27,19 @@ void STM_USB::printd(double data)
 	char charData[64] = {'\0'};
 	sprintf(charData, "%f", data);
 	size_t len = strlen(charData);
-	STM_USB::println(charData, len);
+	STM_USB::println(charData);
 }
 
-void STM_USB::print(char* data, size_t len)
+void STM_USB::print(char* data)
 {
 	UART_HandleTypeDef* tmp = STM_USB::uart;
-	HAL_UART_Transmit(STM_USB::uart, (const uint8_t*)data, len, 100);
+	HAL_UART_Transmit(STM_USB::uart, (const uint8_t*)data, strlen(data), 100);
 }
 
-void STM_USB::println(char* data, size_t len)
+void STM_USB::println(char* data)
 {
-	STM_USB::print(data, len);
+	STM_USB::print(data);
 
 	char newline[3] = "\r\n";
-	STM_USB::print(newline, 2);
+	STM_USB::print(newline);
 }

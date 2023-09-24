@@ -1,0 +1,20 @@
+/*
+ * altimex_storage.h
+ *
+ *  Created on: Sep 21, 2023
+ *      Author: kking
+ */
+#include "stm32f1xx_hal.h"
+
+#ifndef INC_EEPROM_STORAGE_H_
+#define INC_EEPROM_STORAGE_H_
+
+class EepromStorage {
+private:
+	uint16_t currentOffset;
+public:
+	HAL_StatusTypeDef read(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+	HAL_StatusTypeDef write(I2C_HandleTypeDef* i2cx, uint16_t offset, size_t len, uint8_t* data);
+};
+
+#endif /* INC_EEPROM_STORAGE_H_ */

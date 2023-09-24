@@ -1,0 +1,3 @@
+altimex_eeprom.cpp:10:1:AltimexEeprom::AltimexEeprom(uint16_t, I2C_HandleTypeDef*)	1
+altimex_eeprom.cpp:16:6:void AltimexEeprom::save_configuration(AltimexConfig*)	1
+altimex_eeprom.cpp:22:6:void AltimexEeprom::load_configuration(AltimexConfig*)	2

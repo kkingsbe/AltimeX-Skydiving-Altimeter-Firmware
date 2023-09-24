@@ -16,10 +16,10 @@ private:
 	static UART_HandleTypeDef* uart;
 public:
 	static void init(UART_HandleTypeDef* _uart);
-	static void print(char* data, size_t len);
+	static void print(char* data);
 	static void printf(float data);
 	static void printd(double data);
-	static void println(char* data, size_t len);
+	static void println(char* data);
 };
 
 #endif /* INC_USB_H_ */

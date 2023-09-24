@@ -1,0 +1,63 @@
+/*
+ * altimex_storage.c
+ *
+ *  Created on: Sep 21, 2023
+ *      Author: kking
+ */
+
+
+#include <eeprom_storage.h>
+
+/*
+ * Address should be the "base" address of the chip. For example if you provide 0xA0 as the address
+ * then the read address will be 0xA0 and the write address will be 0xA1
+ */
+EepromStorage::EepromStorage(uint16_t _address, I2C_HandleTypeDef* _i2cx):
+	readAddress(_address),
+	writeAddress(_address + 1),
+	i2cx(_i2cx)
+{
+
+}
+
+HAL_StatusTypeDef EepromStorage::read(uint16_t offset, size_t len, uint8_t* data)
+{
+	//HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(i2cx, 0xA0, offset, 2, data, len, 1000);
+	//uint8_t realdata[len];
+	HAL_StatusTypeDef status = HAL_OK;
+	uint16_t i = 0;
+	while(i < len) {
+		uint8_t read_byte = 0;
+		HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(i2cx, readAddress, offset + i, 2, &read_byte, 1, 1000);
+		if(read_res != HAL_OK) {
+			status = read_res;
+			break;
+		}
+		realdata[i] = read_byte;
+		i++;
+	}
+
+	HAL_Delay(100);
+	return status;
+}
+
+HAL_StatusTypeDef EepromStorage::write(size_t size, uint8_t* data)
+{
+	//HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, 0xA1, currentOffset, 2, data, size, 1000);
+	HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, currentOffset, 2, data, size, 1000);
+	currentOffset += size;
+	HAL_Delay(100);
+	return write_res;
+}
+
+HAL_StatusTypeDef EepromStorage::write_from(uint16_t offset, size_t size, uint8_t* data)
+{
+	HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, offset, 2, data, size, 1000);
+	HAL_Delay(100);
+	return write_res;
+}
+
+void EepromStorage::set_offset(uint16_t newOffset)
+{
+	currentOffset = newOffset;
+}
