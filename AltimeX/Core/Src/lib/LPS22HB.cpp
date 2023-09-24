@@ -182,7 +182,7 @@ double LPS22HB::get_calibration_temperature(uint8_t num_samples, uint8_t sample_
 	}
 	avg_val = cum_val / (double)num_samples;
 	STM_USB::print("\r\nAverage Temperature (C): ");
-	STM_USB::printd(avg_val);
+	STM_USB::print(avg_val);
 	return avg_val;
 }
 
@@ -202,7 +202,7 @@ double LPS22HB::get_calibration_pressure(uint8_t num_samples, uint8_t sample_tim
 	}
 	avg_val = cum_val / (double)num_samples;
 	STM_USB::print("\r\nAverage Pressure (PA): ");
-	STM_USB::printd(avg_val);
+	STM_USB::print(avg_val);
 	return avg_val;
 }
 

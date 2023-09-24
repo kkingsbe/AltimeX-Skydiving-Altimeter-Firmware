@@ -20,12 +20,14 @@ private:
 	AltimexStateController* stateController;
 	double tempF;
 	double alt;
+	AltimexConfig config;
 	uint16_t step;
 	LPS22HB* barometer;
 	AltimexEeprom* eeprom;
 public:
-	Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, AltimexConfig* config);
+	Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer);
 	void tick();
+	void print_config_to_usb();
 };
 
 

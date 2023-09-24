@@ -1,2 +1,3 @@
-altimex.cpp:9:1:Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*, AltimexConfig*)	2
-altimex.cpp:39:6:void Altimex::tick()	2
+altimex.cpp:9:1:Altimex::Altimex(UART_HandleTypeDef*, I2C_HandleTypeDef*, TIM_HandleTypeDef*)	2
+altimex.cpp:42:6:void Altimex::print_config_to_usb()	1
+altimex.cpp:84:6:void Altimex::tick()	2

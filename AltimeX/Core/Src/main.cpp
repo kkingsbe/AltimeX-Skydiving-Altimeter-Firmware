@@ -18,11 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "altimex.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "altimex.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +47,7 @@ TIM_HandleTypeDef htim2;
 DMA_HandleTypeDef hdma_tim2_ch2_ch4;
 
 UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_rx;
 
 /* USER CODE BEGIN PV */
 
@@ -104,7 +104,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  /*
 	struct AltimexConfig config;
 	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
 	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
@@ -120,8 +120,9 @@ int main(void)
 	config.gearCheckAlt = 10000.0;             //The altitude that the gear check notification is given
 	config.brightness = 20;                    //LED brightness
 	config.standbyBrightness = 5;              //Brightness of LEDS while in standby mode
+   */
 
-	Altimex* altimex = new Altimex(&huart1, &hi2c1, &htim2, &config);
+	Altimex* altimex = new Altimex(&huart1, &hi2c1, &htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,7 +130,6 @@ int main(void)
   while (1)
   {
 	  altimex->tick();
-	  HAL_Delay(100); //10hz
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -361,6 +361,9 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
   /* DMA1_Channel7_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);

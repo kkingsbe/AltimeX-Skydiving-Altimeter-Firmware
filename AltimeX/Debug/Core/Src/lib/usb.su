@@ -1,5 +1,15 @@
-../Core/Src/lib/usb.cpp:12:6:static void STM_USB::init(UART_HandleTypeDef*)	16	static
-../Core/Src/lib/usb.cpp:17:6:static void STM_USB::printf(float)	88	static
-../Core/Src/lib/usb.cpp:25:6:static void STM_USB::printd(double)	88	static
-../Core/Src/lib/usb.cpp:33:6:static void STM_USB::print(char*)	32	static
-../Core/Src/lib/usb.cpp:39:6:static void STM_USB::println(char*)	24	static
+../Core/Src/lib/usb.cpp:13:6:static void STM_USB::init(UART_HandleTypeDef*)	16	static
+../Core/Src/lib/usb.cpp:19:6:static void STM_USB::print(float)	80	static
+../Core/Src/lib/usb.cpp:26:6:static void STM_USB::print(double)	80	static
+../Core/Src/lib/usb.cpp:33:6:static void STM_USB::print(uint8_t)	80	static
+../Core/Src/lib/usb.cpp:40:6:static void STM_USB::print(uint16_t)	80	static
+../Core/Src/lib/usb.cpp:47:6:static void STM_USB::print(uint32_t)	80	static
+../Core/Src/lib/usb.cpp:54:6:static void STM_USB::print(char*)	24	static
+../Core/Src/lib/usb.cpp:59:6:static void STM_USB::println(char*)	24	static
+../Core/Src/lib/usb.cpp:67:6:static void STM_USB::readln(char*)	16	static
+../Core/Src/lib/usb.cpp:72:6:static void STM_USB::readto(char*, char)	24	static
+../Core/Src/lib/usb.cpp:84:6:static char STM_USB::read_next()	16	static
+../Core/Src/lib/usb.cpp:91:6:static void STM_USB::shift_buffer()	16	static
+../Core/Src/lib/usb.cpp:101:6:static bool STM_USB::has_buffer_overrun()	8	static
+../Core/Src/lib/usb.cpp:106:6:static bool STM_USB::data_ready()	8	static
+../Core/Src/lib/usb.cpp:111:10:static uint16_t STM_USB::get_buffer_size()	8	static
