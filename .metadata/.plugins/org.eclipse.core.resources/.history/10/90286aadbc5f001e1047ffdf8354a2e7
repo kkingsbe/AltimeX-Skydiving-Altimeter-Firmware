@@ -1,0 +1,41 @@
+/*
+ * altimex_usb.cpp
+ *
+ *  Created on: Sep 24, 2023
+ *      Author: kking
+ */
+
+#include "altimex_usb.h"
+
+AltimexCommand AltimexUsb::command_table[ALTIMEX_COMMAND_TABLE_SIZE] = {
+		{
+			"Test Command",
+			"test\r\n"
+		}
+};
+
+void AltimexUsb::handle_received_command()
+{
+	uint16_t buffer_size = STM_USB::get_buffer_size();
+
+	if(buffer_size != 0) {
+		char data[STM_USB::get_max_buffer_size()] = {'\0'};
+
+		STM_USB::readto(data, end_flag);
+		STM_USB::println(data);
+
+		for(uint8_t i = 0; i < STM_USB::get_max_buffer_size(); i++) {
+			if(data[i] == '\r' || data[i] == '\n') {
+				data[i] = '\0';
+			}
+		}
+
+		for(uint8_t i = 0; i < ALTIMEX_COMMAND_TABLE_SIZE; i++) {
+			if(command_table[i].identifier == data) {
+				STM_USB::println("Command received");
+			}
+		}
+	}
+}
+
+

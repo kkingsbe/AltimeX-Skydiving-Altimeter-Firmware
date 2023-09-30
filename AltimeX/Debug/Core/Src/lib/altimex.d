@@ -26,11 +26,11 @@ Core/Src/lib/altimex.o: ../Core/Src/lib/altimex.cpp ../Core/Inc/altimex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/usb.h ../Core/Inc/usb.h ../Core/Inc/altimex_led_controller.h \
- ../Core/Inc/altimex_state_controller.h ../Core/Inc/altimex_config.h \
- ../Core/Inc/led_strip.h ../Core/Inc/ws2813b_controller.h \
- ../Core/Inc/altimex_state_controller.h ../Core/Inc/altimex_eeprom.h \
- ../Core/Inc/eeprom_storage.h
+ ../Core/Inc/usb.h ../Core/Inc/usb.h ../Core/Inc/altimex_usb.h \
+ ../Core/Inc/altimex_eeprom.h ../Core/Inc/eeprom_storage.h \
+ ../Core/Inc/altimex_config.h ../Core/Inc/altimex_led_controller.h \
+ ../Core/Inc/altimex_state_controller.h ../Core/Inc/led_strip.h \
+ ../Core/Inc/ws2813b_controller.h ../Core/Inc/altimex_state_controller.h
 ../Core/Inc/altimex.h:
 ../Core/Inc/LPS22HB.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -61,11 +61,12 @@ Core/Src/lib/altimex.o: ../Core/Src/lib/altimex.cpp ../Core/Inc/altimex.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/usb.h:
 ../Core/Inc/usb.h:
+../Core/Inc/altimex_usb.h:
+../Core/Inc/altimex_eeprom.h:
+../Core/Inc/eeprom_storage.h:
+../Core/Inc/altimex_config.h:
 ../Core/Inc/altimex_led_controller.h:
 ../Core/Inc/altimex_state_controller.h:
-../Core/Inc/altimex_config.h:
 ../Core/Inc/led_strip.h:
 ../Core/Inc/ws2813b_controller.h:
 ../Core/Inc/altimex_state_controller.h:
-../Core/Inc/altimex_eeprom.h:
-../Core/Inc/eeprom_storage.h:

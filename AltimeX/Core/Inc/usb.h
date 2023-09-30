@@ -16,7 +16,9 @@ class STM_USB {
 private:
 	static UART_HandleTypeDef* uart;
 	static uint8_t buffer[USB_BUFFER_SIZE]; //Data received over usb will be put into this buffer
-	static void shift_buffer();
+	static uint16_t read_index;
+	static void increment_read_index();
+	static void consume_next();
 public:
 	static void init(UART_HandleTypeDef* _uart);
 	static void print(char* data);
@@ -29,9 +31,9 @@ public:
 	static void readln(char* data);
 	static void readto(char* data, char flag);
 	static char read_next();
-	static bool has_buffer_overrun();
 	static bool data_ready();
 	static uint16_t get_buffer_size();
+	static uint16_t get_max_buffer_size();
 };
 
 #endif /* INC_USB_H_ */

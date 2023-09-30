@@ -3,6 +3,7 @@
 "./Core/Src/lib/altimex_eeprom.o"
 "./Core/Src/lib/altimex_led_controller.o"
 "./Core/Src/lib/altimex_state_controller.o"
+"./Core/Src/lib/altimex_usb.o"
 "./Core/Src/lib/eeprom_storage.o"
 "./Core/Src/lib/led_strip.o"
 "./Core/Src/lib/usb.o"

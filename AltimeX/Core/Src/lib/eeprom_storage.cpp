@@ -22,8 +22,6 @@ EepromStorage::EepromStorage(uint16_t _address, I2C_HandleTypeDef* _i2cx):
 
 HAL_StatusTypeDef EepromStorage::read(uint16_t offset, size_t len, uint8_t* data)
 {
-	//HAL_StatusTypeDef read_res = HAL_I2C_Mem_Read(i2cx, 0xA0, offset, 2, data, len, 1000);
-	//uint8_t realdata[len];
 	HAL_StatusTypeDef status = HAL_OK;
 	uint16_t i = 0;
 	while(i < len) {
@@ -37,23 +35,22 @@ HAL_StatusTypeDef EepromStorage::read(uint16_t offset, size_t len, uint8_t* data
 		i++;
 	}
 
-	HAL_Delay(100);
+	HAL_Delay(10);
 	return status;
 }
 
 HAL_StatusTypeDef EepromStorage::write(size_t size, uint8_t* data)
 {
-	//HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, 0xA1, currentOffset, 2, data, size, 1000);
 	HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, currentOffset, 2, data, size, 1000);
 	currentOffset += size;
-	HAL_Delay(100);
+	HAL_Delay(10);
 	return write_res;
 }
 
 HAL_StatusTypeDef EepromStorage::write_from(uint16_t offset, size_t size, uint8_t* data)
 {
 	HAL_StatusTypeDef write_res = HAL_I2C_Mem_Write(i2cx, writeAddress, offset, 2, data, size, 1000);
-	HAL_Delay(100);
+	HAL_Delay(10);
 	return write_res;
 }
 

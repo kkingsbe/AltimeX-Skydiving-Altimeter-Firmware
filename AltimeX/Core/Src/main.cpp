@@ -104,25 +104,8 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  /*
-	struct AltimexConfig config;
-	config.ascentThreshold = 500;              //The altitude you must pass for it to transition into the ascent state
-	config.ascentThresholdTime = 1000;         //ms that altitude must be above the ascentThreshold before transitioning between states
-	config.deployTestThresholdTime = 2000;     //ms, threshold time that vertical speed has to be under 50mph
-	config.gearCheckNotificationLength = 5000; //ms, the length of the gearcheck notification
-	config.freefallThresholdTime = 2000;       //ms, the amount of time that the vertical speed must be above the freefall threshold speed to transition into freefall state
-	config.exit = 12500.0;                     //Exit altitude
-	config.breakoff = 5500.0;                  //Breakoff altitude
-	config.deploy = 4500.0;                    //Deployment altitude
-	config.standbyFlashOnLength = 100;         //How long the light is on for when in standby mode
-	config.standbyFlashOffLength = 10000;      //Period between each flash in standby mode
-	config.numLeds = 10;                       //The number of leds being used
-	config.gearCheckAlt = 10000.0;             //The altitude that the gear check notification is given
-	config.brightness = 20;                    //LED brightness
-	config.standbyBrightness = 5;              //Brightness of LEDS while in standby mode
-   */
 
-	Altimex* altimex = new Altimex(&huart1, &hi2c1, &htim2);
+  Altimex* altimex = new Altimex(&huart1, &hi2c1, &htim2, 10000);
   /* USER CODE END 2 */
 
   /* Infinite loop */

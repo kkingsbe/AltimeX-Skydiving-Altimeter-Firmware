@@ -1,0 +1,27 @@
+/*
+ * altimex_usb.h
+ *
+ *  Created on: Sep 24, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_ALTIMEX_USB_H_
+#define INC_ALTIMEX_USB_H_
+
+#include "usb.h"
+
+struct AltimexCommand {
+	char* name;
+	char* identifier;
+};
+
+class AltimexUsb {
+private:
+	static const char end_flag = ';';
+	static AltimexCommand* command_table;
+public:
+	static void handle_received_command();
+};
+
+
+#endif /* INC_ALTIMEX_USB_H_ */

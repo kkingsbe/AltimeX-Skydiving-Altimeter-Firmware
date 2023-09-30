@@ -10,6 +10,7 @@ CPP_SRCS += \
 ../Core/Src/lib/altimex_eeprom.cpp \
 ../Core/Src/lib/altimex_led_controller.cpp \
 ../Core/Src/lib/altimex_state_controller.cpp \
+../Core/Src/lib/altimex_usb.cpp \
 ../Core/Src/lib/eeprom_storage.cpp \
 ../Core/Src/lib/led_strip.cpp \
 ../Core/Src/lib/usb.cpp \
@@ -21,6 +22,7 @@ OBJS += \
 ./Core/Src/lib/altimex_eeprom.o \
 ./Core/Src/lib/altimex_led_controller.o \
 ./Core/Src/lib/altimex_state_controller.o \
+./Core/Src/lib/altimex_usb.o \
 ./Core/Src/lib/eeprom_storage.o \
 ./Core/Src/lib/led_strip.o \
 ./Core/Src/lib/usb.o \
@@ -32,6 +34,7 @@ CPP_DEPS += \
 ./Core/Src/lib/altimex_eeprom.d \
 ./Core/Src/lib/altimex_led_controller.d \
 ./Core/Src/lib/altimex_state_controller.d \
+./Core/Src/lib/altimex_usb.d \
 ./Core/Src/lib/eeprom_storage.d \
 ./Core/Src/lib/led_strip.d \
 ./Core/Src/lib/usb.d \
@@ -45,7 +48,7 @@ Core/Src/lib/%.o Core/Src/lib/%.su Core/Src/lib/%.cyclo: ../Core/Src/lib/%.cpp C
 clean: clean-Core-2f-Src-2f-lib
 
 clean-Core-2f-Src-2f-lib:
-	-$(RM) ./Core/Src/lib/LPS22HB.cyclo ./Core/Src/lib/LPS22HB.d ./Core/Src/lib/LPS22HB.o ./Core/Src/lib/LPS22HB.su ./Core/Src/lib/altimex.cyclo ./Core/Src/lib/altimex.d ./Core/Src/lib/altimex.o ./Core/Src/lib/altimex.su ./Core/Src/lib/altimex_eeprom.cyclo ./Core/Src/lib/altimex_eeprom.d ./Core/Src/lib/altimex_eeprom.o ./Core/Src/lib/altimex_eeprom.su ./Core/Src/lib/altimex_led_controller.cyclo ./Core/Src/lib/altimex_led_controller.d ./Core/Src/lib/altimex_led_controller.o ./Core/Src/lib/altimex_led_controller.su ./Core/Src/lib/altimex_state_controller.cyclo ./Core/Src/lib/altimex_state_controller.d ./Core/Src/lib/altimex_state_controller.o ./Core/Src/lib/altimex_state_controller.su ./Core/Src/lib/eeprom_storage.cyclo ./Core/Src/lib/eeprom_storage.d ./Core/Src/lib/eeprom_storage.o ./Core/Src/lib/eeprom_storage.su ./Core/Src/lib/led_strip.cyclo ./Core/Src/lib/led_strip.d ./Core/Src/lib/led_strip.o ./Core/Src/lib/led_strip.su ./Core/Src/lib/usb.cyclo ./Core/Src/lib/usb.d ./Core/Src/lib/usb.o ./Core/Src/lib/usb.su ./Core/Src/lib/ws2813b_controller.cyclo ./Core/Src/lib/ws2813b_controller.d ./Core/Src/lib/ws2813b_controller.o ./Core/Src/lib/ws2813b_controller.su
+	-$(RM) ./Core/Src/lib/LPS22HB.cyclo ./Core/Src/lib/LPS22HB.d ./Core/Src/lib/LPS22HB.o ./Core/Src/lib/LPS22HB.su ./Core/Src/lib/altimex.cyclo ./Core/Src/lib/altimex.d ./Core/Src/lib/altimex.o ./Core/Src/lib/altimex.su ./Core/Src/lib/altimex_eeprom.cyclo ./Core/Src/lib/altimex_eeprom.d ./Core/Src/lib/altimex_eeprom.o ./Core/Src/lib/altimex_eeprom.su ./Core/Src/lib/altimex_led_controller.cyclo ./Core/Src/lib/altimex_led_controller.d ./Core/Src/lib/altimex_led_controller.o ./Core/Src/lib/altimex_led_controller.su ./Core/Src/lib/altimex_state_controller.cyclo ./Core/Src/lib/altimex_state_controller.d ./Core/Src/lib/altimex_state_controller.o ./Core/Src/lib/altimex_state_controller.su ./Core/Src/lib/altimex_usb.cyclo ./Core/Src/lib/altimex_usb.d ./Core/Src/lib/altimex_usb.o ./Core/Src/lib/altimex_usb.su ./Core/Src/lib/eeprom_storage.cyclo ./Core/Src/lib/eeprom_storage.d ./Core/Src/lib/eeprom_storage.o ./Core/Src/lib/eeprom_storage.su ./Core/Src/lib/led_strip.cyclo ./Core/Src/lib/led_strip.d ./Core/Src/lib/led_strip.o ./Core/Src/lib/led_strip.su ./Core/Src/lib/usb.cyclo ./Core/Src/lib/usb.d ./Core/Src/lib/usb.o ./Core/Src/lib/usb.su ./Core/Src/lib/ws2813b_controller.cyclo ./Core/Src/lib/ws2813b_controller.d ./Core/Src/lib/ws2813b_controller.o ./Core/Src/lib/ws2813b_controller.su
 
 .PHONY: clean-Core-2f-Src-2f-lib
 

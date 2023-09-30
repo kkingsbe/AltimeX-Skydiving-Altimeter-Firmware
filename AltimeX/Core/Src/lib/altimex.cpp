@@ -6,13 +6,16 @@
  */
 #include "altimex.h"
 
-Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer):
+Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_HandleTypeDef* _timer, uint16_t _writeInterval):
 	tempF(0.0),
 	alt(0.0),
 	barometer(new LPS22HB(i2c_config, LPS_DEFAULT_ADDRESS)),
 	step(0),
-	eeprom(new AltimexEeprom(0xA0, i2c_config))
+	eeprom(new AltimexEeprom(0xA0, i2c_config)),
+	lastWrite(0),
+	writeInterval(_writeInterval)
 {
+	AltimexUsb::init(eeprom);
 	STM_USB::init(_uart);
 	STM_USB::println("\r\n\n\n\n\n\nAltimex Boot...");
 	LPS22HB::LPS_INIT_STATUS baro_init_status = barometer->init();
@@ -37,6 +40,12 @@ Altimex::Altimex(UART_HandleTypeDef* _uart, I2C_HandleTypeDef* i2c_config, TIM_H
 
 	barometer->calibrate(10, 100);
 	tempF = barometer->get_tempf();
+
+	//struct AltimexDataFrame dataFrames[100] = {};
+	//eeprom->load_dataframes(0, 100, dataFrames);
+	//eeprom->load_dataframe(0, &dataFrame);
+
+	STM_USB::println("Setup complete");
 }
 
 void Altimex::print_config_to_usb()
@@ -84,14 +93,7 @@ void Altimex::print_config_to_usb()
 void Altimex::tick()
 {
 	tempF = barometer->get_tempf();
-	bool usb_data_avail = STM_USB::data_ready();
-	if(usb_data_avail) {
-		//STM_USB::println("Data available");
-	}
-
-	char data[1024];
-	STM_USB::readln(data);
-	STM_USB::println(data);
+	AltimexUsb::handle_received_command();
 
 	//STM_USB::printd(tempF);
 	  /*
@@ -107,20 +109,14 @@ void Altimex::tick()
 	alt = barometer->get_relalt_ft();
 	stateController->update_state(alt);
 	ledController->display_leds(stateController->get_state(), step, alt);
+
+	uint16_t temp = HAL_GetTick() - lastWrite;
+	if(HAL_GetTick() - lastWrite > writeInterval) {
+		eeprom->save_dataframe(tempF, alt, stateController->get_state());
+		lastWrite = HAL_GetTick();
+		STM_USB::println("Saved data to storage.");
+	}
+
 	step++;
 	if(step > 100) step = 0;
-
-	/*
-	char data[10];
-	sprintf(data, "%f", alt);
-	HAL_UART_Transmit(&huart1, data, sizeof(data), 100);
-	*/
-
-	//printd(alt, &huart1);
-
-	//Data is received one byte at a time
-	//uint8_t Rx_data[1];
-	//HAL_UART_Receive(&huart1, Rx_data, 100, 100);
-
-	//HAL_Delay(100); //10hz
 }

@@ -1,0 +1,61 @@
+/*
+ * altimex_usb.cpp
+ *
+ *  Created on: Sep 24, 2023
+ *      Author: kking
+ */
+
+#include "altimex_usb.h"
+
+AltimexUsb::data_eeprom = null;
+
+AltimexCommand AltimexUsb::command_table[ALTIMEX_COMMAND_TABLE_SIZE] = {
+		{
+			"Download Data",
+			"download_data"
+		}
+};
+
+void AltimexUsb::init(AltimexEeprom* eeprom)
+{
+	data_eeprom = eeprom;
+}
+
+void AltimexUsb::handle_received_command()
+{
+	uint16_t buffer_size = STM_USB::get_buffer_size();
+
+	if(buffer_size != 0) {
+		char data[STM_USB::get_max_buffer_size()] = {'\0'};
+
+		STM_USB::readto(data, end_flag);
+		STM_USB::println(data);
+
+		//Detect if the received data is empty. Also remove any special characters
+		bool empty_data = true;
+		for(uint16_t i = 0; i < STM_USB::get_max_buffer_size(); i++) {
+			if(data[i] == '\r' || data[i] == '\n') {
+				data[i] = '\0';
+			}
+			if(data[i] != '\0') {
+				empty_data = false;
+			}
+		}
+
+		if(empty_data) {
+			return;
+		}
+
+		for(uint8_t i = 0; i < ALTIMEX_COMMAND_TABLE_SIZE; i++) {
+			AltimexCommand test_command = command_table[i];
+			if(strcmp(command_table[i].identifier, data) == 0) {
+				STM_USB::println("Command received");
+			}
+		}
+	}
+}
+
+void AltimexUsb::handle_download_data()
+{
+
+}

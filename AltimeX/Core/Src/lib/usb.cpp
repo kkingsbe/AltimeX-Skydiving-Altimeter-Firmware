@@ -8,8 +8,25 @@
 #include <usb.h>
 
 UART_HandleTypeDef* STM_USB::uart = 0; //Set STM_USB::uart to dummy value
-uint8_t STM_USB::buffer[USB_BUFFER_SIZE] = {'\0'};
+uint8_t STM_USB::buffer[USB_BUFFER_SIZE] = {0};
+uint16_t STM_USB::read_index = 0;
 
+//=== Private Functions ===
+//Manages incrementing the read index for the circular buffer
+void STM_USB::increment_read_index()
+{
+	if(read_index == USB_BUFFER_SIZE - 1) read_index = 0;
+	else read_index++;
+}
+
+//Consumes (removes) the next character from the buffer
+void STM_USB::consume_next()
+{
+	buffer[read_index] = {'\0'}; //Resets the just-read character to a null-terminator so that we can know where the data "ends"
+	increment_read_index();
+}
+
+//=== Public Functions ===
 void STM_USB::init(UART_HandleTypeDef* _uart)
 {
 	STM_USB::uart = _uart; //Set STM_USB::uart to actual value
@@ -71,36 +88,35 @@ void STM_USB::readln(char* data)
 
 void STM_USB::readto(char* data, char flag)
 {
-	uint16_t i = 0;
-	char next_char = {'\0'};
-	do {
-		next_char = read_next();
+	if(get_buffer_size() == 0) {
+		return;
+	}
+
+	//char next_char = peek_next();
+	char next_char = buffer[read_index];
+
+	uint16_t i = 0; //Prevents infinite loop if buffer becomes full and flag cannot be found
+	while(i < USB_BUFFER_SIZE && next_char != flag && next_char != '\0') {
 		data[i] = next_char;
-		i++;
-	} while(i < USB_BUFFER_SIZE && next_char != flag && next_char != '\0');
+		consume_next();
+		next_char = buffer[read_index];
+		i ++;
+	}
+
+	consume_next(); //Removes flag from buffer
+
+	//If there was a trailing newline, remove that
+	while(buffer[read_index] == '\r' || buffer[read_index] == '\n') {
+		consume_next();
+	}
 }
 
 //Reads the next character from the buffer
 char STM_USB::read_next()
 {
-	char next = STM_USB::buffer[0];
-	STM_USB::shift_buffer();
+	char next = buffer[read_index];;
+	consume_next();
 	return next;
-}
-
-void STM_USB::shift_buffer()
-{
-	uint16_t i = 0;
-	while(i < USB_BUFFER_SIZE - 1) {
-		STM_USB::buffer[i] = STM_USB::buffer[i + 1];
-		i++;
-	}
-	STM_USB::buffer[USB_BUFFER_SIZE - 1] = {'\0'};
-}
-
-bool STM_USB::has_buffer_overrun()
-{
-	return get_buffer_size() >= USB_BUFFER_SIZE;
 }
 
 bool STM_USB::data_ready()
@@ -110,5 +126,18 @@ bool STM_USB::data_ready()
 
 uint16_t STM_USB::get_buffer_size()
 {
-	return strlen((const char*)STM_USB::buffer);
+	uint16_t i = read_index;
+	uint16_t iterations = 0;
+	char next = buffer[i];
+	while(iterations < USB_BUFFER_SIZE && next != '\0') {
+		next = buffer[i];
+		i ++;
+		iterations ++;
+	}
+	return iterations;
+}
+
+uint16_t STM_USB::get_max_buffer_size()
+{
+	return USB_BUFFER_SIZE;
 }

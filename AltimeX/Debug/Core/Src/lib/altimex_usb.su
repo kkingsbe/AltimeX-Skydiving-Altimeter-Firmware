@@ -1,0 +1,4 @@
+../Core/Src/lib/altimex_usb.cpp:25:6:static void AltimexUsb::init(AltimexEeprom*)	16	static
+../Core/Src/lib/altimex_usb.cpp:30:6:static void AltimexUsb::handle_received_command()	64	dynamic
+../Core/Src/lib/altimex_usb.cpp:65:6:static void AltimexUsb::handle_download_data_pretty()	24	static
+../Core/Src/lib/altimex_usb.cpp:88:6:static void AltimexUsb::handle_download_data_raw()	24	static
