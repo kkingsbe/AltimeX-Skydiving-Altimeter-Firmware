@@ -1,4 +1,4 @@
-15:07:27 **** Incremental Build of configuration Debug for project baro_test ****
+13:11:58 **** Incremental Build of configuration Debug for project baro_test ****
 make -j16 all 
 arm-none-eabi-size   baro_test.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   baro_test.elf
 Finished building: default.size.stdout
  
 
-15:07:28 Build Finished. 0 errors, 0 warnings. (took 225ms)
+13:11:58 Build Finished. 0 errors, 0 warnings. (took 175ms)
 

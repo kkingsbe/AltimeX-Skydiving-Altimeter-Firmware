@@ -1,0 +1,5 @@
+../Core/Src/lib/eeprom_storage.cpp:15:1:EepromStorage::EepromStorage(uint16_t, I2C_HandleTypeDef*)	24	static
+../Core/Src/lib/eeprom_storage.cpp:23:19:HAL_StatusTypeDef EepromStorage::read(uint16_t, size_t, uint8_t*)	48	static
+../Core/Src/lib/eeprom_storage.cpp:42:19:HAL_StatusTypeDef EepromStorage::write(size_t, uint8_t*)	56	static
+../Core/Src/lib/eeprom_storage.cpp:50:19:HAL_StatusTypeDef EepromStorage::write_from(uint16_t, size_t, uint8_t*)	56	static
+../Core/Src/lib/eeprom_storage.cpp:57:6:void EepromStorage::set_offset(uint16_t)	16	static

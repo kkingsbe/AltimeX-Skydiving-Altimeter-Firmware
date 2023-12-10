@@ -1,0 +1,35 @@
+/*
+ * altimex_serial.h
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_USB_H_
+#define INC_USB_H_
+#include "stm32f1xx_hal.h"
+#include "string.h"
+#include<stdio.h>
+#define USB_BUFFER_SIZE 1024 //Change as needed. This sets the buffer size and also the maximum word length
+
+class STM_USB {
+private:
+	static UART_HandleTypeDef* uart;
+	static c buffer[USB_BUFFER_SIZE]; //Data received over usb will be put into this buffer
+	static bool buffer_overrun; //True when the bfufer has been completely filled
+	static void shift_buffer();
+public:
+	static void init(UART_HandleTypeDef* _uart);
+	static void print(char* data);
+	static void printf(float data);
+	static void printd(double data);
+	static void println(char* data);
+	static void readln(char* data);
+	static void readto(char* data, char flag);
+	static char read_next();
+	static bool has_buffer_overrun();
+	static bool reset_buffer_overrun();
+	static bool data_ready();
+};
+
+#endif /* INC_USB_H_ */

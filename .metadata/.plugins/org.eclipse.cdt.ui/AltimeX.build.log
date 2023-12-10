@@ -1,0 +1,10 @@
+18:17:41 **** Incremental Build of configuration Debug for project AltimeX ****
+make -j16 all 
+arm-none-eabi-size   AltimeX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55084	    676	   3076	  58836	   e5d4	AltimeX.elf
+Finished building: default.size.stdout
+ 
+
+18:17:42 Build Finished. 0 errors, 0 warnings. (took 729ms)
+

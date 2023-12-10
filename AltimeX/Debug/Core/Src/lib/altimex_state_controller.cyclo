@@ -1,0 +1,3 @@
+altimex_state_controller.cpp:10:1:AltimexStateController::AltimexStateController(AltimexConfig*)	1
+altimex_state_controller.cpp:30:19:AltimexState AltimexStateController::get_state()	1
+altimex_state_controller.cpp:35:6:void AltimexStateController::update_state(double)	37

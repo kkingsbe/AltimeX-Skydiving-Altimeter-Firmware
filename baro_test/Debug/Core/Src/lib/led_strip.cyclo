@@ -1,4 +1,0 @@
-led_strip.c:10:6:Strip_Set_Timer	1
-led_strip.c:15:6:Strip_Progress_Bar_Single_Color	3
-led_strip.c:24:6:Strip_Clear	1
-led_strip.c:29:6:Strip_Send	1

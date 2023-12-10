@@ -1,0 +1,2 @@
+../Core/Src/lib/altimex_led_controller.cpp:13:1:AltimexLedController::AltimexLedController(AltimexConfig*, TIM_HandleTypeDef*)	32	static
+../Core/Src/lib/altimex_led_controller.cpp:20:6:void AltimexLedController::display_leds(AltimexState, uint16_t, uint16_t)	72	static

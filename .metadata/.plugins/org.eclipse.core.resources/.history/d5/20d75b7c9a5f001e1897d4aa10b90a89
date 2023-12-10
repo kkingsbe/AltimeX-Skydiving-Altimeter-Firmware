@@ -1,0 +1,40 @@
+/*
+ * altimex_serial.h
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: kking
+ */
+
+#ifndef INC_USB_H_
+#define INC_USB_H_
+#include "stm32f1xx_hal.h"
+#include "string.h"
+#include<stdio.h>
+
+class STM_USB {
+private:
+	static UART_HandleTypeDef* uart;
+	static uint8_t buffer; //Data received over usb will be put into this buffer
+	static uint16_t read_index;
+	static uint16_t max_buffer_size;
+	static void increment_read_index();
+	static void shift_buffer();
+	static void consume_next();
+public:
+	static void init(UART_HandleTypeDef* _uart, uint16_t _max_buffer_size);
+	static void print(char* data);
+	static void print(float data);
+	static void print(double data);
+	static void print(uint8_t data);
+	static void print(uint16_t data);
+	static void print(uint32_t data);
+	static void println(char* data);
+	static void readln(char* data);
+	static void readto(char* data, char flag);
+	static char peek_next();
+	static char read_next();
+	static bool data_ready();
+	static uint16_t get_buffer_size();
+};
+
+#endif /* INC_USB_H_ */

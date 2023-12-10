@@ -1,0 +1,14 @@
+LPS22HB.cpp:9:1:LPS22HB::LPS22HB(I2C_HandleTypeDef*, uint16_t)	1
+LPS22HB.cpp:18:26:LPS22HB::LPS_INIT_STATUS LPS22HB::init()	3
+LPS22HB.cpp:46:6:void LPS22HB::reg_read(uint16_t, uint16_t, uint8_t*)	1
+LPS22HB.cpp:52:6:void LPS22HB::set_odr(LPS_ODR)	1
+LPS22HB.cpp:75:14:LPS_ODR LPS22HB::get_odr()	1
+LPS22HB.cpp:85:6:void LPS22HB::configure_fifo(LPS_FIFO)	2
+LPS22HB.cpp:105:8:double LPS22HB::get_pressure()	1
+LPS22HB.cpp:123:8:double LPS22HB::get_temp()	1
+LPS22HB.cpp:137:8:double LPS22HB::get_tempf()	1
+LPS22HB.cpp:143:8:double LPS22HB::get_pressureatm()	1
+LPS22HB.cpp:150:8:double LPS22HB::get_relalt_ft()	1
+LPS22HB.cpp:163:6:void LPS22HB::calibrate(uint8_t, uint8_t)	1
+LPS22HB.cpp:169:8:double LPS22HB::get_calibration_temperature(uint8_t, uint8_t)	2
+LPS22HB.cpp:189:8:double LPS22HB::get_calibration_pressure(uint8_t, uint8_t)	2

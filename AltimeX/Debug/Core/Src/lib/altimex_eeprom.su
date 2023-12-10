@@ -1,0 +1,6 @@
+../Core/Src/lib/altimex_eeprom.cpp:10:1:AltimexEeprom::AltimexEeprom(uint16_t, I2C_HandleTypeDef*)	32	static
+../Core/Src/lib/altimex_eeprom.cpp:17:6:void AltimexEeprom::save_configuration(AltimexConfig*)	96	static
+../Core/Src/lib/altimex_eeprom.cpp:27:6:void AltimexEeprom::load_configuration(AltimexConfig*)	104	static
+../Core/Src/lib/altimex_eeprom.cpp:41:6:void AltimexEeprom::save_dataframe(double, double, uint8_t)	64	static
+../Core/Src/lib/altimex_eeprom.cpp:63:6:void AltimexEeprom::load_dataframe(uint16_t, AltimexDataFrame*)	48	static
+../Core/Src/lib/altimex_eeprom.cpp:70:6:void AltimexEeprom::load_dataframes(uint16_t, uint16_t, AltimexDataFrame*)	88	dynamic

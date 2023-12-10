@@ -1,0 +1,4 @@
+STM_USB::buffer
+STM_USB::read_index
+AltimexUsb::command_table
+AltimexEeprom::dataFrameWriteIndex
